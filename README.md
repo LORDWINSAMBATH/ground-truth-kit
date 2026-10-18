@@ -45,7 +45,7 @@ discipline des paliers (en particulier, ne mets pas `corpus/pdf_v2/` dans ton in
 | Chemin | Rôle |
 |---|---|
 | `corpus/manifest.json` | Les 130 documents : identifiant, source, URL officielle, date, licence, version du corpus, empreinte SHA-256 |
-| `corpus/download_corpus.py` | Télécharge le corpus depuis les sites officiels et vérifie les empreintes |
+| `corpus/download_corpus.py` | Télécharge le corpus (release `corpus-v1`, sites officiels en secours) et vérifie les empreintes |
 | `corpus/make_scans.py` | Transforme 10 documents en PDF image sans texte (appelé automatiquement) |
 | `data/validation_v1.json` | 100 questions **avec** réponses et pages de preuve, corpus v1 |
 | `data/classement_v1_questions.json` | 200 questions sans réponses, leaderboard v1 |
@@ -74,6 +74,8 @@ discipline des paliers (en particulier, ne mets pas `corpus/pdf_v2/` dans ton in
   sont remplacés par un rendu image dégradé (gris, rotation, bruit, JPEG), sans couche texte. Le
   contenu est inchangé ; il faut de l'OCR pour le lire. N'utilise pas les originaux : à la finale, ton
   pipeline reçoit le corpus tel que produit par le script.
+
+Le corpus est figé dans la [release `corpus-v1`](https://github.com/Mathos34/ground-truth-kit/releases/tag/corpus-v1) de ce dépôt (copie des fichiers tels que publiés, sans modification) : `download_corpus.py` les télécharge de là, vérifie les empreintes et se rabat sur les sites d'origine si besoin. Les sources restent l'Insee et la Cour des comptes, dont les licences et les crédits sont inchangés.
 
 Licences : Insee, Licence Ouverte 2.0 (« Source : Insee ») ; Cour des comptes, reproduction autorisée
 par les mentions légales de www.ccomptes.fr (citer la source, ne pas altérer les contenus).
