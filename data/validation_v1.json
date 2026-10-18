@@ -1,0 +1,2534 @@
+{
+ "version": "1.0",
+ "split": "validation_v1",
+ "corpus": "v1 (110 documents, corpus/pdf)",
+ "pages": "index physique dans le PDF, à partir de 1",
+ "questions": [
+  {
+   "qid": "val1-001",
+   "question": "Combien d'exploitants touchaient les paiements européens en 2022 puis en 2023, après que les règles ont exclu davantage de personnes du statut d'exploitant en activité ?",
+   "lang": "fr",
+   "type": "texte",
+   "difficulty": "moyen",
+   "answerable": true,
+   "answer": "Il a baissé de 308 000 à 276 600 bénéficiaires, notamment du fait de la sortie d'exploitants âgés cultivant de petites surfaces, pour une économie de 99 M€.",
+   "key_values": [
+    "308 000",
+    "276 600"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "cc-pac",
+      "page": 25
+     }
+    ]
+   ],
+   "source_quote": "une baisse du nombre des bénéficiaires de la PAC entre 2022 et 2023 de 308 000 à 276 600",
+   "corpus_version": 1
+  },
+  {
+   "qid": "val1-002",
+   "question": "En 2023, sur les terres qui alimentent les nappes et sources où l'on puise l'eau du robinet, quelle part était couverte par un engagement agroenvironnemental ou une aide au bio ?",
+   "lang": "fr",
+   "type": "texte",
+   "difficulty": "difficile",
+   "answerable": true,
+   "answer": "Seulement 4 % des surfaces des aires d'alimentation de captage (AAC) étaient couvertes, soit 218 000 ha sur 5,7 Mha.",
+   "key_values": [
+    "4 %",
+    "218 000 ha"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "cc-pac",
+      "page": 88
+     }
+    ]
+   ],
+   "source_quote": "seulement 4 % des surfaces des AAC sont couvertes par une aide MAEC ou une aide à l’agriculture biologique (soit 218 000 ha sur une surface totale de 5,7 Mha classée en AAC.",
+   "corpus_version": 1
+  },
+  {
+   "qid": "val1-003",
+   "question": "D'après l'Insee, combien de pharmacies y avait-il en France en 2022, et en 2015 ?",
+   "lang": "fr",
+   "type": "scan",
+   "difficulty": "facile",
+   "answerable": true,
+   "answer": "En 2022, on dénombre 22 700 officines, contre 23 400 en 2015, soit une baisse de 3 %.",
+   "key_values": [
+    "22 700",
+    "23 400"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "insee-ip2036",
+      "page": 2
+     }
+    ]
+   ],
+   "source_quote": "en 2022, on en dénombre 22 700, contre 23 400 en 2015, soit une baisse de 3 %.",
+   "corpus_version": 1
+  },
+  {
+   "qid": "val1-004",
+   "question": "Quelles leçons la Cour des comptes tire-t-elle, dans son rapport de juin 2026 sur les finances publiques, des pays de la zone euro qui ont réussi à assainir leurs comptes, comme l'Allemagne, le Portugal ou l'Italie ?",
+   "lang": "fr",
+   "type": "synthese",
+   "difficulty": "difficile",
+   "answerable": true,
+   "answer": "La Cour retient quatre enseignements : une consolidation choisie vaut mieux qu'une consolidation subie sous la pression des marchés ou des créanciers, avec un effort important dès le début puis une trajectoire pluriannuelle visant un excédent primaire ; les mesures doivent minimiser les coûts macroéconomiques et sociaux et s'adosser à une politique de soutien à la compétitivité et à la croissance potentielle (réformes des retraites et de l'assurance chômage, investissements structurants) ; la qualité du cadre institutionnel (institutions budgétaires indépendantes, règles budgétaires) favorise la réussite ; face aux crises, il faut privilégier des mesures temporaires et ciblées, puis normaliser rapidement pour éviter l'effet de cliquet, les épisodes inflationnistes pouvant même servir à freiner la dépense (sous-indexation temporaire).",
+   "key_values": [],
+   "evidence": [
+    [
+     {
+      "doc_id": "cc-rspfp-2026",
+      "page": 20
+     },
+     {
+      "doc_id": "cc-rspfp-2026",
+      "page": 21
+     },
+     {
+      "doc_id": "cc-rspfp-2026-synthese",
+      "page": 19
+     },
+     {
+      "doc_id": "cc-rspfp-2026-synthese",
+      "page": 20
+     },
+     {
+      "doc_id": "cc-rspfp-2026",
+      "page": 142
+     },
+     {
+      "doc_id": "cc-rspfp-2026",
+      "page": 143
+     }
+    ]
+   ],
+   "source_quote": "En premier lieu, une consolidation choisie est préférable à une consolidation subie dans l’urgence sous l’effet d’une contrainte de marché ou de la pression des créanciers",
+   "corpus_version": 1,
+   "key_points": [
+    "Consolidation choisie plutôt que subie, effort initial puis trajectoire pluriannuelle",
+    "Minimiser les coûts macroéconomiques et sociaux, soutenir la croissance potentielle",
+    "Qualité du cadre institutionnel (institutions indépendantes, règles budgétaires)",
+    "Mesures de crise temporaires et ciblées pour éviter l'effet de cliquet"
+   ],
+   "min_points": 3
+  },
+  {
+   "qid": "val1-005",
+   "question": "Quelles motivations poussent les sociétés d'au moins 50 salariés à transférer certaines de leurs fonctions hors de l'Hexagone au début des années 2020 ?",
+   "lang": "fr",
+   "type": "synthese",
+   "difficulty": "moyen",
+   "answerable": true,
+   "answer": "Le motif économique le plus cité est la réduction du coût de la main-d'œuvre (55 %), surtout dans l'industrie. Près d'une entreprise sur deux (47 %) mentionne aussi une décision stratégique de la tête de groupe, motif qui domine pour les multinationales sous contrôle étranger. Beaucoup moins cités viennent la réduction des autres coûts et le manque de main-d'œuvre qualifiée en France (17 % chacun), puis l'accès à de nouveaux marchés (13 %) et la réduction des délais de livraison (10 %).",
+   "key_values": [],
+   "evidence": [
+    [
+     {
+      "doc_id": "insee-ip2115",
+      "page": 1
+     },
+     {
+      "doc_id": "insee-ip2115",
+      "page": 3
+     }
+    ]
+   ],
+   "source_quote": "Le motif économique de délocalisation le plus cité est la réduction du coût de la main-d'œuvre (55 %)",
+   "corpus_version": 1,
+   "key_points": [
+    "Réduction du coût de la main-d'œuvre, motif principal",
+    "Décision stratégique de la tête de groupe",
+    "Volonté de réduire les autres coûts",
+    "Manque de main-d'œuvre qualifiée en France",
+    "Accès à de nouveaux marchés ou délais de livraison"
+   ],
+   "min_points": 3
+  },
+  {
+   "qid": "val1-006",
+   "question": "Entre 2018 et 2025, quelle année a vu le moins souvent le cours spot horaire du courant dépasser le barème de compensation dû aux fournisseurs ?",
+   "lang": "fr",
+   "type": "graphique",
+   "difficulty": "moyen",
+   "answerable": true,
+   "answer": "C'est 2023 : le nombre d'heures à prix spot supérieur au barème du versement fournisseur y est le plus faible de la période, inférieur à 1 000 heures (environ 800).",
+   "key_values": [],
+   "evidence": [
+    [
+     {
+      "doc_id": "cc-effacements-electricite",
+      "page": 38
+     },
+     {
+      "doc_id": "cc-effacements-electricite",
+      "page": 64
+     }
+    ]
+   ],
+   "source_quote": "Graphique n° 7 : la barre 2023 « NB heures à prix spot > barème » (environ 800 heures) est la plus basse des années 2018 à 2025",
+   "corpus_version": 1
+  },
+  {
+   "qid": "val1-007",
+   "question": "Riches et pauvres face à la mort : que montre l'Insee sur la longévité selon les revenus pour la période 2020-2024 ?",
+   "lang": "fr",
+   "type": "synthese",
+   "difficulty": "moyen",
+   "answerable": true,
+   "answer": "L'espérance de vie croît avec le niveau de vie, mais de moins en moins vite à mesure que celui-ci augmente. Les femmes parmi les 5 % les plus aisées vivent en moyenne 17 ans de plus que les hommes parmi les 5 % les plus modestes. À 50 ans, le risque de décès dans l'année des hommes est 7 fois plus élevé chez les plus modestes que chez les plus aisés. Entre 2012-2016 et 2020-2024, l'écart entre modestes et aisés s'est accru. À sexe, âge et niveau de vie donnés, on vit le plus longtemps dans les Pays de la Loire et en Occitanie.",
+   "key_values": [],
+   "evidence": [
+    [
+     {
+      "doc_id": "insee-ip2085",
+      "page": 1
+     },
+     {
+      "doc_id": "insee-ip2085",
+      "page": 2
+     },
+     {
+      "doc_id": "insee-ip2085",
+      "page": 3
+     }
+    ]
+   ],
+   "source_quote": "En 8 ans, l'écart d'espérance de vie entre les personnes modestes et aisées s'est accru",
+   "corpus_version": 1,
+   "key_points": [
+    "Gain d'espérance de vie décroissant avec le niveau de vie",
+    "Femmes aisées : 17 ans de plus que hommes modestes",
+    "À 50 ans, risque de décès 7 fois plus élevé chez les hommes modestes",
+    "Écart modestes-aisés accru depuis 2012-2016",
+    "Espérance de vie la plus longue en Pays de la Loire et Occitanie"
+   ],
+   "min_points": 3
+  },
+  {
+   "qid": "val1-008",
+   "question": "Parmi les personnes immigrées entrées en France en 2014, quelle proportion était originaire d'Espagne, d'Italie ou du Portugal ?",
+   "lang": "fr",
+   "type": "tableau",
+   "difficulty": "difficile",
+   "answerable": true,
+   "answer": "En 2014, 16 % des personnes immigrées entrées en France étaient nées dans un pays d'Europe du Sud (Espagne, Italie, Portugal).",
+   "key_values": [
+    "16"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "insee-ip2051",
+      "page": 2
+     }
+    ]
+   ],
+   "source_quote": "Figure 3, ligne Europe du Sud : 11 (2006), 11 (2010), 16 (2014), 11 (2018), 7 (2023)",
+   "corpus_version": 1
+  },
+  {
+   "qid": "val1-009",
+   "question": "Combien d'argent les grands programmes de recherche thématiques financés par France 2030 avaient-ils mis, au milieu de 2025, dans des projets menés avec des entreprises ?",
+   "lang": "fr",
+   "type": "texte",
+   "difficulty": "difficile",
+   "answerable": true,
+   "answer": "Les PEPR n'avaient consacré que 23 M€ à des projets public-privé sur 2,45 Md€ engagés à la mi-2025, car ils ont été conçus comme des programmes « public-public ».",
+   "key_values": [
+    "23 M€",
+    "2,45 Md€"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "cc-recherche-entreprises",
+      "page": 51
+     },
+     {
+      "doc_id": "cc-recherche-entreprises",
+      "page": 222
+     }
+    ]
+   ],
+   "source_quote": "qui n’y avaient consacré que 23 M€ sur 2,45 Md€ engagés à la mi-2025.",
+   "corpus_version": 1
+  },
+  {
+   "qid": "val1-010",
+   "question": "En 2025, en métropole, combien de personnes sur cent disent que, pour le climat, aucune incitation ne les ferait bouger davantage car elles refusent tout effort ?",
+   "lang": "fr",
+   "type": "graphique",
+   "difficulty": "moyen",
+   "answerable": true,
+   "answer": "2,6 % des personnes déclarent refuser de faire des efforts pour le climat.",
+   "key_values": [
+    "2,6 %"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "insee-ip2113",
+      "page": 4
+     }
+    ]
+   ],
+   "source_quote": "Figure 4 (anneau), segment « Rien, je refuse de faire des efforts » étiqueté 2,6 %.",
+   "corpus_version": 1
+  },
+  {
+   "qid": "val1-011",
+   "question": "Selon le compte provisoire de l'agriculture pour 2024, combien rapporte la vigne en vin cette année-là et de combien cette valeur a-t-elle bougé par rapport à 2023 ?",
+   "lang": "fr",
+   "type": "tableau",
+   "difficulty": "difficile",
+   "answerable": true,
+   "answer": "La production de vin vaut 10,9 milliards d'euros en 2024, en recul de 28,7 % en valeur (volume -28,8 %, prix +0,1 %).",
+   "key_values": [
+    "10,9",
+    "28,7 %"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "insee-ip2062",
+      "page": 2
+     }
+    ]
+   ],
+   "source_quote": "Figure 3, ligne « Vin » : valeur 2024 10,9 Md€ ; évolution volume -28,8, prix 0,1, valeur -28,7.",
+   "corpus_version": 1
+  },
+  {
+   "qid": "val1-012",
+   "question": "Dans les campagnes les plus isolées, où l'habitat est très éparpillé, de combien a progressé entre avril 2024 et mai 2025 le nombre de prises de recharge pour voitures électriques ouvertes à tous ?",
+   "lang": "fr",
+   "type": "tableau",
+   "difficulty": "moyen",
+   "answerable": true,
+   "answer": "Dans le rural à habitat très dispersé, le nombre de points de charge a augmenté de 101 % entre 2024 et 2025, pour atteindre 1 992 points.",
+   "key_values": [
+    "101 %"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "insee-ip2082",
+      "page": 1
+     }
+    ]
+   ],
+   "source_quote": "Rural à habitat très dispersé 1 992 1 655 411 12 10 2,9 101",
+   "corpus_version": 1
+  },
+  {
+   "qid": "val1-013",
+   "question": "Je prépare un papier sur les bistrots : comment leur rentabilité, vue comme la part de la valeur créée que conserve l'entreprise (taux de marge), a-t-elle évolué entre 2016 et 2023 ?",
+   "lang": "fr",
+   "type": "texte",
+   "difficulty": "moyen",
+   "answerable": true,
+   "answer": "Le taux de marge des débits de boissons a perdu près de 6 points entre 2016 et 2023, passant de 29,6 % à 24,0 %.",
+   "key_values": [
+    "29,6 %",
+    "24,0 %"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "insee-ip2123",
+      "page": 2
+     }
+    ]
+   ],
+   "source_quote": "Entre 2016 et 2023, il perd cependant près de 6 points, de 29,6 % à 24,0 %",
+   "corpus_version": 1
+  },
+  {
+   "qid": "val1-014",
+   "question": "Selon la Cour des comptes, quel est le montant moyen de la pension mensuelle des anciens ouvriers de l'État (régime du FSPOEIE) ?",
+   "lang": "fr",
+   "type": "piege",
+   "difficulty": "moyen",
+   "answerable": false,
+   "answer": "INTROUVABLE",
+   "key_values": [],
+   "evidence": [],
+   "source_quote": "",
+   "corpus_version": 1,
+   "false_premise": false
+  },
+  {
+   "qid": "val1-015",
+   "question": "En 2021, combien de mètres carrés de terrain artificialisé par habitant compte-t-on dans les campagnes à habitat très éparpillé, et dans les grandes villes ?",
+   "lang": "fr",
+   "type": "scan",
+   "difficulty": "moyen",
+   "answerable": true,
+   "answer": "La surface artificialisée par habitant atteint 2 830 m² dans le rural à habitat très dispersé, contre 204 m² dans les grands centres urbains (714 m² en moyenne en France hors Guyane).",
+   "key_values": [
+    "2 830",
+    "204"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "insee-ip2103",
+      "page": 2
+     }
+    ]
+   ],
+   "source_quote": "Figure 2, colonne « Surfaces artificialisées par habitant (en m²) » : Rural à habitat très dispersé 2 830 ; Grands centres urbains 204 ; France hors Guyane 714.",
+   "corpus_version": 1
+  },
+  {
+   "qid": "val1-016",
+   "question": "Quel poids représente l'effort de vaccination de 2024 chiffré par la Cour des comptes dans l'ensemble des dépenses publiques de santé estimées par l'Insee pour la même année ?",
+   "lang": "fr",
+   "type": "multi-doc",
+   "difficulty": "difficile",
+   "answerable": true,
+   "answer": "La politique de vaccination a représenté 1,4 Md€ en 2024 selon la Cour, à rapporter aux 261 Md€ de dépenses publiques de santé estimées par l'Insee pour 2024, soit environ 0,5 %.",
+   "key_values": [
+    "1,4 Md€",
+    "261",
+    "0,5 %"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "cc-vaccination",
+      "page": 8
+     },
+     {
+      "doc_id": "cc-vaccination",
+      "page": 18
+     },
+     {
+      "doc_id": "cc-vaccination-synthese",
+      "page": 6
+     }
+    ],
+    [
+     {
+      "doc_id": "insee-ip2093",
+      "page": 1
+     },
+     {
+      "doc_id": "insee-ip2093",
+      "page": 3
+     }
+    ]
+   ],
+   "source_quote": "cc-vaccination : « la politique de vaccination a représenté une dépense de 1,4 Md€ en 2024 » ; ip2093 : « la santé (16 %, 261 milliards d'euros) »",
+   "corpus_version": 1
+  },
+  {
+   "qid": "val1-017",
+   "question": "Selon l'audit flash de la Cour sur l'IA et le ministère de la culture, quels moyens financiers le Louvre dédie-t-il spécifiquement à l'intelligence artificielle ?",
+   "lang": "fr",
+   "type": "piege",
+   "difficulty": "moyen",
+   "answerable": false,
+   "answer": "INTROUVABLE",
+   "key_values": [],
+   "evidence": [],
+   "source_quote": "",
+   "corpus_version": 1,
+   "false_premise": false
+  },
+  {
+   "qid": "val1-018",
+   "question": "Combien de foyers trouve-t-on en moyenne par hectare de terrain bâti en immeubles collectifs dans les grandes villes, et dans le rural le plus éparpillé ?",
+   "lang": "fr",
+   "type": "scan",
+   "difficulty": "moyen",
+   "answerable": true,
+   "answer": "On compte en moyenne 195 ménages par hectare de bâti collectif dans les grands centres urbains, contre seulement 29 dans le rural à habitat très dispersé.",
+   "key_values": [
+    "195",
+    "29"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "insee-ip2103",
+      "page": 1
+     },
+     {
+      "doc_id": "insee-ip2103",
+      "page": 3
+     }
+    ]
+   ],
+   "source_quote": "nettement plus élevé dans les grands centres urbains et les centres urbains intermédiaires (195 et 124 ménages en moyenne) [...] (41 et 29 ménages par hectare)",
+   "corpus_version": 1
+  },
+  {
+   "qid": "val1-019",
+   "question": "Combien le DILICO ponctionne-t-il sur les budgets des collectivités en 2026, comparé à 2025 ?",
+   "lang": "fr",
+   "type": "texte",
+   "difficulty": "facile",
+   "answerable": true,
+   "answer": "Le DILICO prélève 740 M€ en 2026, contre 1 Md€ en 2025, les communes en ayant été exemptées en année d'élections.",
+   "key_values": [
+    "740 M€",
+    "1 Md€"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "cc-finances-locales-2026-synthese",
+      "page": 11
+     },
+     {
+      "doc_id": "cc-finances-locales-2026",
+      "page": 14
+     },
+     {
+      "doc_id": "cc-finances-locales-2026",
+      "page": 134
+     }
+    ]
+   ],
+   "source_quote": "alors qu’il diminue en 2026 (740 M€ contre 1 Md€ en 2025), les communes en ayant été exemptées en année d’élections.",
+   "corpus_version": 1
+  },
+  {
+   "qid": "val1-020",
+   "question": "En 2025, combien de prénoms donnés aux nouveau-nés conviennent aux deux sexes, et combien d'enfants sur 10 000 naissances en portent un ?",
+   "lang": "fr",
+   "type": "scan",
+   "difficulty": "moyen",
+   "answerable": true,
+   "answer": "En 2025, 5 699 prénoms mixtes ont été donnés ; ils sont portés par 536 bébés pour 10 000 naissances.",
+   "key_values": [
+    "5 699",
+    "536"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "insee-ip2127",
+      "page": 4
+     }
+    ]
+   ],
+   "source_quote": "En 2025, 5 699 prénoms mixtes ont été donnés. Ils sont portés par 536 bébés pour 10 000 naissances.",
+   "corpus_version": 1
+  },
+  {
+   "qid": "val1-021",
+   "question": "Parmi les auto-entrepreneurs livreurs inscrits au premier semestre 2018, quelle part s'est réellement mise au travail ?",
+   "lang": "fr",
+   "type": "tableau",
+   "difficulty": "moyen",
+   "answerable": true,
+   "answer": "Le taux de démarrage des micro-entrepreneurs de la livraison immatriculés en 2018 est de 46 % ; parmi eux, seuls 14 % sont pérennes à cinq ans.",
+   "key_values": [
+    "46 %"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "insee-ip2069",
+      "page": 2
+     }
+    ]
+   ],
+   "source_quote": "Livraison 9,6 6 46 14",
+   "corpus_version": 1
+  },
+  {
+   "qid": "val1-022",
+   "question": "Dans l'argent public consacré à l'informatique quantique entre 2020 et 2025 (en autorisations d'engagement), combien pèse le programme PROQCIMA, et quelle part du total représente-t-il ?",
+   "lang": "fr",
+   "type": "graphique",
+   "difficulty": "difficile",
+   "answerable": true,
+   "answer": "Sur les AE 2020-2025, la source « SNQ - PROQCIMA » représente 133 M€, soit 19 % des crédits publics consacrés à l'informatique quantique.",
+   "key_values": [
+    "133 M€",
+    "19 %"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "cc-informatique-quantique",
+      "page": 39
+     }
+    ]
+   ],
+   "source_quote": "Graphique n° 3 (répartition des crédits par source de financement, AE 2020-2025) : flux étiqueté « SNQ - PROQCIMA (133 M€ - 19 %) ».",
+   "corpus_version": 1
+  },
+  {
+   "qid": "val1-023",
+   "question": "En 2021, combien de projets le Fonds de transformation numérique et de cybersécurité (FTNC) du ministère de la culture a-t-il soutenus ?",
+   "lang": "fr",
+   "type": "piege",
+   "difficulty": "moyen",
+   "answerable": false,
+   "answer": "INTROUVABLE",
+   "key_values": [],
+   "evidence": [],
+   "source_quote": "",
+   "corpus_version": 1,
+   "false_premise": false
+  },
+  {
+   "qid": "val1-024",
+   "question": "Quelle quantité moyenne de fioul, en litres, une résidence principale chauffée au fioul consomme-t-elle chaque année ?",
+   "lang": "fr",
+   "type": "piege",
+   "difficulty": "moyen",
+   "answerable": false,
+   "answer": "INTROUVABLE",
+   "key_values": [],
+   "evidence": [],
+   "source_quote": "",
+   "corpus_version": 1,
+   "false_premise": false
+  },
+  {
+   "qid": "val1-025",
+   "question": "D'après le rapport de la Cour des comptes sur les finances locales, à combien s'élevait l'épargne brute de la ville de Toulouse en 2025 ?",
+   "lang": "fr",
+   "type": "piege",
+   "difficulty": "moyen",
+   "answerable": false,
+   "answer": "INTROUVABLE",
+   "key_values": [],
+   "evidence": [],
+   "source_quote": "",
+   "corpus_version": 1,
+   "false_premise": false
+  },
+  {
+   "qid": "val1-026",
+   "question": "En 2023, quelle proportion de l'empreinte carbone liée à la consommation touristique vient uniquement des résidences secondaires ?",
+   "lang": "fr",
+   "type": "piege",
+   "difficulty": "difficile",
+   "answerable": false,
+   "answer": "INTROUVABLE",
+   "key_values": [],
+   "evidence": [],
+   "source_quote": "",
+   "corpus_version": 1,
+   "false_premise": false
+  },
+  {
+   "qid": "val1-027",
+   "question": "Sur 2012-2021, hors Mayotte, quelle branche parmi les sept étudiées contribue le moins au grignotage des terres par les activités économiques ?",
+   "lang": "fr",
+   "type": "graphique",
+   "difficulty": "moyen",
+   "answerable": true,
+   "answer": "C'est l'agriculture, dont la part dans la consommation d'espace économique est quasi nulle, la plus faible des sept secteurs (devant l'hébergement-restauration, 6 %).",
+   "key_values": [],
+   "evidence": [
+    [
+     {
+      "doc_id": "insee-ip2039",
+      "page": 2
+     }
+    ]
+   ],
+   "source_quote": "Figure 2 : la barre « Agriculture » (poids dans la consommation d'espace économique) est la plus courte, proche de 0 %, bien en dessous de l'hébergement-restauration.",
+   "corpus_version": 1
+  },
+  {
+   "qid": "val1-028",
+   "question": "En 2023 en métropole, de combien, en pourcentage, le niveau de vie typique des personnes pauvres se situe-t-il sous la limite de pauvreté, et quel montant mensuel en euros de 2023 sépare la moitié la plus démunie d'entre elles de l'autre moitié ?",
+   "lang": "fr",
+   "type": "texte",
+   "difficulty": "moyen",
+   "answerable": true,
+   "answer": "En 2023, la moitié des personnes pauvres ont un niveau de vie inférieur à 1 041 euros par mois (en euros de 2023), soit 19,2 % de moins que le seuil de pauvreté : l'intensité de la pauvreté est de 19,2 %, en léger recul (-0,2 point). (L'édition suivante, Insee Première n° 2117, exprime ce même niveau 2023 en euros constants de 2024 : 1 062 euros.)",
+   "key_values": [
+    "19,2 %",
+    "1 041 euros"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "insee-ip2063",
+      "page": 3
+     }
+    ]
+   ],
+   "source_quote": "En 2023, la moitié des personnes en situation de pauvreté ont un niveau de vie inférieur à 1 041 euros par mois, inférieur de 19,2 % au seuil de pauvreté.",
+   "corpus_version": 1
+  },
+  {
+   "qid": "val1-029",
+   "question": "Combien d'argent le ministère de la défense a-t-il programmé de 2019 à 2025 pour faire avancer les technologies issues de la physique quantique ?",
+   "lang": "fr",
+   "type": "texte",
+   "difficulty": "difficile",
+   "answerable": true,
+   "answer": "Le ministère des armées n'a inscrit que 50 M€ dans la LPM sur 2019-2025 pour les technologies quantiques, l'essentiel étant alloué aux capteurs et à la communication quantique plutôt qu'au calcul.",
+   "key_values": [
+    "50 M€"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "cc-informatique-quantique",
+      "page": 41
+     }
+    ]
+   ],
+   "source_quote": "Pourtant, le ministère n’a inscrit que 50 M€ dans la LPM pour, sur la période 2019- 2025, développer les technologies quantiques.",
+   "corpus_version": 1
+  },
+  {
+   "qid": "val1-030",
+   "question": "D'après la Cour des comptes, quelle part de la population se disait plutôt ou très favorable aux vaccins en 2010, puis en 2024 ?",
+   "lang": "fr",
+   "type": "scan",
+   "difficulty": "moyen",
+   "answerable": true,
+   "answer": "La proportion de personnes plutôt ou très favorables à la vaccination est passée de 61 % en 2010 à 84 % en 2023, avant de redescendre à 80 % en 2024.",
+   "key_values": [
+    "61 %",
+    "80 %"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "cc-vaccination-synthese",
+      "page": 6
+     },
+     {
+      "doc_id": "cc-vaccination",
+      "page": 7
+     }
+    ]
+   ],
+   "source_quote": "La proportion de personnes plutôt ou très favorables à la vaccination est passée de 61 % en 2010 à 84 % en 2023, puis 80 % en 2024.",
+   "corpus_version": 1
+  },
+  {
+   "qid": "val1-031",
+   "question": "En 2021, quel pourcentage des salariés en France travaillaient à distance au moins un jour par semaine ?",
+   "lang": "fr",
+   "type": "piege",
+   "difficulty": "moyen",
+   "answerable": false,
+   "answer": "INTROUVABLE",
+   "key_values": [],
+   "evidence": [],
+   "source_quote": "",
+   "corpus_version": 1,
+   "false_premise": false
+  },
+  {
+   "qid": "val1-032",
+   "question": "D'après les photographies annuelles du marché du travail publiées par l'Insee pour 2024 et pour 2025, quelles tendances se confirment d'une année sur l'autre, et comment le chômage évolue-t-il ?",
+   "lang": "fr",
+   "type": "synthese",
+   "difficulty": "difficile",
+   "answerable": true,
+   "answer": "Plusieurs tendances se poursuivent : le taux d'activité des 15-64 ans atteint les deux années son plus haut niveau depuis 1975, le taux d'emploi des seniors continue d'augmenter, la part des emplois à durée limitée (CDD, intérim) recule, la part du temps partiel augmente et les emplois occupés sont de plus en plus qualifiés. En revanche, le chômage, quasi stable à 7,4 % en 2024, repart à la hausse en 2025 pour atteindre 7,7 % en moyenne.",
+   "key_values": [],
+   "evidence": [
+    [
+     {
+      "doc_id": "insee-ip2044",
+      "page": 1
+     },
+     {
+      "doc_id": "insee-ip2044",
+      "page": 2
+     },
+     {
+      "doc_id": "insee-ip2044",
+      "page": 3
+     },
+     {
+      "doc_id": "insee-ip2044",
+      "page": 4
+     }
+    ],
+    [
+     {
+      "doc_id": "insee-ip2096",
+      "page": 1
+     },
+     {
+      "doc_id": "insee-ip2096",
+      "page": 2
+     },
+     {
+      "doc_id": "insee-ip2096",
+      "page": 3
+     },
+     {
+      "doc_id": "insee-ip2096",
+      "page": 4
+     }
+    ]
+   ],
+   "source_quote": "Le chômage repart à la hausse et atteint 7,7 % en moyenne sur l'année (ip2096 p.3) / À 7,4 %, le chômage reste quasi stable en 2024 (ip2044 p.3)",
+   "corpus_version": 1,
+   "key_points": [
+    "Taux d'activité au plus haut depuis 1975 les deux années",
+    "Hausse continue du taux d'emploi des seniors",
+    "Recul de la part des CDD et de l'intérim",
+    "Part de l'emploi à temps partiel en hausse",
+    "Emplois de plus en plus qualifiés",
+    "Chômage quasi stable en 2024, en hausse en 2025"
+   ],
+   "min_points": 4
+  },
+  {
+   "qid": "val1-033",
+   "question": "Quel pourcentage des adolescentes de Nouvelle-Calédonie est vacciné contre le HPV (papillomavirus) ?",
+   "lang": "fr",
+   "type": "piege",
+   "difficulty": "moyen",
+   "answerable": false,
+   "answer": "INTROUVABLE",
+   "key_values": [],
+   "evidence": [],
+   "source_quote": "",
+   "corpus_version": 1,
+   "false_premise": false
+  },
+  {
+   "qid": "val1-034",
+   "question": "En 2024, combien Voltalis a-t-il touché grâce aux appels d'offres d'effacement (AOE) ?",
+   "lang": "fr",
+   "type": "piege",
+   "difficulty": "difficile",
+   "answerable": false,
+   "answer": "INTROUVABLE",
+   "key_values": [],
+   "evidence": [],
+   "source_quote": "",
+   "corpus_version": 1,
+   "false_premise": false
+  },
+  {
+   "qid": "val1-035",
+   "question": "Comment expliquer la baisse du chômage, tel que le mesure le BIT, en France en 2025 ?",
+   "lang": "fr",
+   "type": "piege",
+   "difficulty": "moyen",
+   "answerable": false,
+   "answer": "INTROUVABLE",
+   "key_values": [],
+   "evidence": [],
+   "source_quote": "",
+   "corpus_version": 1,
+   "false_premise": true,
+   "premise_correction": "La prémisse est fausse : le taux de chômage au sens du BIT ne recule pas en 2025, il repart à la hausse de 0,3 point et atteint 7,7 % en moyenne sur l'année.",
+   "correction_evidence": [
+    [
+     {
+      "doc_id": "insee-ip2096",
+      "page": 1
+     },
+     {
+      "doc_id": "insee-ip2096",
+      "page": 3
+     }
+    ]
+   ]
+  },
+  {
+   "qid": "val1-036",
+   "question": "Travailler le bois paie-t-il moins bien qu'ailleurs ? En 2021, combien d'euros nets par heure manquait-il en moyenne aux salariés de cette filière par rapport à l'ensemble de l'économie ?",
+   "lang": "fr",
+   "type": "texte",
+   "difficulty": "difficile",
+   "answerable": true,
+   "answer": "Un salarié de la filière bois gagne en moyenne 14,4 euros net de l'heure contre 16,3 euros dans l'ensemble de l'économie, soit 1,9 euro de moins par heure.",
+   "key_values": [
+    "1,9"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "insee-ip2035",
+      "page": 4
+     }
+    ]
+   ],
+   "source_quote": "En moyenne, un salarié de la filière bois gagne 14,4 euros net de l’heure, soit moins que dans l’ensemble de l’économie (16,3 euros).",
+   "corpus_version": 1
+  },
+  {
+   "qid": "val1-037",
+   "question": "D'après la Cour des comptes, combien a rapporté en 2025 la taxe sur les achats d'actions, et quelle recette supplémentaire le rapport sur la situation des finances publiques prévoit-il en 2026 grâce au relèvement de son taux ?",
+   "lang": "fr",
+   "type": "multi-doc",
+   "difficulty": "difficile",
+   "answerable": true,
+   "answer": "La taxe sur les transactions financières a rapporté de l'ordre de 2,5 Md€ en 2025 (son taux étant passé de 0,3 % à 0,4 % en avril 2025) ; parmi les mesures nouvelles en prélèvements obligatoires prévues en 2026, la hausse de son taux représente 0,2 Md€.",
+   "key_values": [
+    "2,5 Md€",
+    "0,2 Md€"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "cc-taxe-transactions-financieres-synthese",
+      "page": 7
+     },
+     {
+      "doc_id": "cc-taxe-transactions-financieres-synthese",
+      "page": 9
+     },
+     {
+      "doc_id": "cc-taxe-transactions-financieres",
+      "page": 7
+     },
+     {
+      "doc_id": "cc-taxe-transactions-financieres",
+      "page": 8
+     },
+     {
+      "doc_id": "cc-taxe-transactions-financieres",
+      "page": 13
+     },
+     {
+      "doc_id": "cc-taxe-transactions-financieres",
+      "page": 19
+     },
+     {
+      "doc_id": "cc-taxe-transactions-financieres",
+      "page": 59
+     },
+     {
+      "doc_id": "cc-taxe-transactions-financieres",
+      "page": 93
+     }
+    ],
+    [
+     {
+      "doc_id": "cc-rspfp-2026",
+      "page": 64
+     }
+    ]
+   ],
+   "source_quote": "cc-ttf : « un rendement significatif, de l'ordre de 2,5 Md€ en 2025 » ; cc-rspfp (tableau 13) : « Hausse de taux de la taxe sur les transactions financières 0,2 »",
+   "corpus_version": 1
+  },
+  {
+   "qid": "val1-038",
+   "question": "En 2025, quel est le taux de contribution patronale appliqué au traitement des fonctionnaires civils de l'État, quel est celui des employeurs territoriaux à la CNRACL, et combien de points les séparent ?",
+   "lang": "fr",
+   "type": "multi-doc",
+   "difficulty": "difficile",
+   "answerable": true,
+   "answer": "En 2025, les employeurs de fonctionnaires civils de l'État acquittent une contribution de 78,28 % du traitement, contre un taux de cotisation employeur de 34,65 % à la CNRACL pour les employeurs territoriaux, soit un écart de 43,63 points.",
+   "key_values": [
+    "78,28 %",
+    "34,65 %",
+    "43,63"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "cc-retraites-fonctionnaires-etat",
+      "page": 10
+     },
+     {
+      "doc_id": "cc-retraites-fonctionnaires-etat",
+      "page": 15
+     },
+     {
+      "doc_id": "cc-retraites-fonctionnaires-etat",
+      "page": 76
+     },
+     {
+      "doc_id": "cc-retraites-fonctionnaires-etat",
+      "page": 78
+     },
+     {
+      "doc_id": "cc-retraites-fonctionnaires-etat",
+      "page": 80
+     },
+     {
+      "doc_id": "cc-retraites-fonctionnaires-etat",
+      "page": 84
+     },
+     {
+      "doc_id": "cc-retraites-fonctionnaires-etat",
+      "page": 96
+     }
+    ],
+    [
+     {
+      "doc_id": "cc-finances-locales-2026",
+      "page": 128
+     }
+    ]
+   ],
+   "source_quote": "cc-retraites : « les employeurs de fonctionnaires civils doivent s'acquitter d'une contribution de 78,28 % » ; cc-finances-locales : « la CNRACL à 34,65 % en 2025 »",
+   "corpus_version": 1
+  },
+  {
+   "qid": "val1-039",
+   "question": "Combien gagne en moyenne chaque mois, net, un enseignant fonctionnaire payé par l'État en 2023 ?",
+   "lang": "fr",
+   "type": "texte",
+   "difficulty": "difficile",
+   "answerable": true,
+   "answer": "En 2023, les fonctionnaires de la FPE exerçant une profession d'enseignant perçoivent en moyenne 3 138 euros nets par mois, un salaire en hausse de 0,5 % sur un an en euros constants.",
+   "key_values": [
+    "3 138 euros"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "insee-ip2065",
+      "page": 2
+     }
+    ]
+   ],
+   "source_quote": "d’enseignant et perçoit en moyenne 3 138 euros nets par mois en 2023",
+   "corpus_version": 1
+  },
+  {
+   "qid": "val1-040",
+   "question": "Selon la Cour des comptes, combien de fermes bretonnes ont touché des aides agroenvironnementales et climatiques pour la campagne PAC 2023, et combien d'exploitations situées dans les baies touchées par les marées vertes avaient souscrit un tel engagement fin 2024 ?",
+   "lang": "fr",
+   "type": "multi-doc",
+   "difficulty": "difficile",
+   "answerable": true,
+   "answer": "Selon le rapport sur la PAC, la Bretagne comptait 3 363 bénéficiaires de MAEC pour la campagne 2023 (32,80 M€) ; selon le rapport sur les algues vertes, 326 exploitations des baies algues vertes (14,8 % d'entre elles) étaient engagées dans une MAEC au 31 décembre 2024.",
+   "key_values": [
+    "3 363",
+    "326",
+    "14,8 %"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "cc-pac",
+      "page": 86
+     }
+    ],
+    [
+     {
+      "doc_id": "cc-algues-vertes",
+      "page": 49
+     },
+     {
+      "doc_id": "cc-algues-vertes",
+      "page": 9
+     },
+     {
+      "doc_id": "cc-algues-vertes-synthese",
+      "page": 12
+     }
+    ]
+   ],
+   "source_quote": "cc-pac (tableau 11, campagne 2023) : « Bretagne 32,80 3 363 » ; cc-algues-vertes : « les différentes MAEC concernaient 326 exploitations (14,8 % [...]) »",
+   "corpus_version": 1
+  },
+  {
+   "qid": "val1-041",
+   "question": "Où trouve-t-on le plus de logements beaucoup trop grands pour leurs occupants en 2022 : au cœur des petites aires urbaines ou des grandes ? Quelle tranche de taille de ville-centre arrive en tête ?",
+   "lang": "fr",
+   "type": "graphique",
+   "difficulty": "moyen",
+   "answerable": true,
+   "answer": "Ce sont les pôles des aires d'attraction de moins de 50 000 habitants, avec un taux d'environ 26 %, nettement au-dessus des pôles des aires plus grandes (11 % environ pour 700 000 habitants ou plus).",
+   "key_values": [],
+   "evidence": [
+    [
+     {
+      "doc_id": "insee-ip2064",
+      "page": 3
+     }
+    ]
+   ],
+   "source_quote": "Figure 4, barres « Pôles » : la plus longue est celle des aires de moins de 50 000 hab. (vers 26 %)",
+   "corpus_version": 1
+  },
+  {
+   "qid": "val1-042",
+   "question": "En 2024, combien d'argent public est dépensé par les collectivités et autres organismes locaux, d'après la répartition de la dépense publique par grande mission ?",
+   "lang": "fr",
+   "type": "graphique",
+   "difficulty": "moyen",
+   "answerable": true,
+   "answer": "En 2024, les administrations publiques locales sont à l'origine de 322 milliards d'euros de dépenses publiques (contre 591 Md€ pour l'administration centrale et 759 Md€ pour la sécurité sociale).",
+   "key_values": [
+    "322"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "insee-ip2093",
+      "page": 2
+     }
+    ]
+   ],
+   "source_quote": "Figure 2b « Par provenance de dépenses » : bloc « Administrations locales » étiqueté 322 (en Md€), « Administration centrale » 591, « Sécurité sociale » 759.",
+   "corpus_version": 1
+  },
+  {
+   "qid": "val1-043",
+   "question": "Entre l'année de livraison 2024 et 2025, de combien la prime par mégawatt retenu dans les appels d'offres effacement a-t-elle diminué ?",
+   "lang": "fr",
+   "type": "tableau",
+   "difficulty": "difficile",
+   "answerable": true,
+   "answer": "La prime unitaire est passée de 60 850 €/MW lauréat pour l'année de livraison 2024 à 40 575 €/MW en 2025, soit une baisse de 20 275 €/MW (environ -33 %).",
+   "key_values": [
+    "20 275"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "cc-effacements-electricite",
+      "page": 56
+     }
+    ]
+   ],
+   "source_quote": "Tableau n° 3, ligne « Prime unitaire (€/MW lauréat) » : 14 450 10 530 8 930 11 885 35 215 -115 60 850 40 575",
+   "corpus_version": 1
+  },
+  {
+   "qid": "val1-044",
+   "question": "En 2024, combien d'immigrés nés dans un pays de l'Union autre que l'Espagne, l'Italie ou le Portugal sont venus s'installer en France ?",
+   "lang": "fr",
+   "type": "tableau",
+   "difficulty": "moyen",
+   "answerable": true,
+   "answer": "En 2024, 32 000 immigrés nés dans les autres pays de l'UE27 sont entrés en France, soit 8 % de moins qu'en 2023.",
+   "key_values": [
+    "32 000"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "insee-ip2107",
+      "page": 3
+     }
+    ]
+   ],
+   "source_quote": "Figure 3, ligne Autres pays de l'UE27 : 32 (milliers) ; -8 ; 20 ; 29 ; 46 ; 54",
+   "corpus_version": 1
+  },
+  {
+   "qid": "val1-045",
+   "question": "En 2022, quelle branche des services marchands non financiers a apporté la plus forte contribution à la hausse en volume de leur valeur ajoutée ?",
+   "lang": "fr",
+   "type": "graphique",
+   "difficulty": "moyen",
+   "answerable": true,
+   "answer": "En 2022, l'hébergement-restauration est le premier contributeur à la croissance de la valeur ajoutée des services marchands, pour environ 3 points sur une hausse d'environ 7,5 %.",
+   "key_values": [],
+   "evidence": [
+    [
+     {
+      "doc_id": "insee-ip2059",
+      "page": 2
+     },
+     {
+      "doc_id": "insee-ip2112",
+      "page": 2
+     }
+    ]
+   ],
+   "source_quote": "Figure 2 : dans la barre 2022, le segment rouge « Hébergement-restauration » (≈3 points) est le plus grand ; le losange « Services marchands » est à ≈7,5 %.",
+   "corpus_version": 1
+  },
+  {
+   "qid": "val1-046",
+   "question": "Depuis 2023, combien de sanctions financières administratives ont été infligées dans la métropole d'Aix-Marseille-Provence pour non-respect de l'encadrement des loyers ?",
+   "lang": "fr",
+   "type": "piege",
+   "difficulty": "moyen",
+   "answerable": false,
+   "answer": "INTROUVABLE",
+   "key_values": [],
+   "evidence": [],
+   "source_quote": "",
+   "corpus_version": 1,
+   "false_premise": false
+  },
+  {
+   "qid": "val1-047",
+   "question": "En 2024, parmi les labos sous tutelle du CNRS, combien avaient une gestion entièrement confiée à un seul établissement, et dans combien de cas ce gestionnaire unique était le CNRS plutôt qu'une université ou un autre tuteur ?",
+   "lang": "fr",
+   "type": "texte",
+   "difficulty": "difficile",
+   "answerable": true,
+   "answer": "Sur 837 UMR auxquelles participait le CNRS en 2024, 41 étaient en DGG : 22 avec une DGG confiée au CNRS et 19 confiée à des partenaires, notamment universitaires.",
+   "key_values": [
+    "41",
+    "22",
+    "19"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "cc-umr",
+      "page": 44
+     },
+     {
+      "doc_id": "cc-umr",
+      "page": 70
+     }
+    ]
+   ],
+   "source_quote": "Sur les 837 UMR auxquelles participait le CNRS en 2024, 41 étaient en DGG, dont 22 en DGG confiée au CNRS et 19 en DGG confiée à des partenaires",
+   "corpus_version": 1
+  },
+  {
+   "qid": "val1-048",
+   "question": "Pour quelles raisons la Cour des comptes suggère-t-elle de supprimer le SGPE, le secrétariat général chargé de la planification écologique ?",
+   "lang": "fr",
+   "type": "piege",
+   "difficulty": "facile",
+   "answerable": false,
+   "answer": "INTROUVABLE",
+   "key_values": [],
+   "evidence": [],
+   "source_quote": "",
+   "corpus_version": 1,
+   "false_premise": true,
+   "premise_correction": "La prémisse est fausse : la Cour ne propose pas de supprimer le SGPE, elle recommande au contraire de renforcer son rôle dans la préparation des arbitrages interministériels (recommandation n° 1).",
+   "correction_evidence": [
+    [
+     {
+      "doc_id": "cc-transition-ecologique",
+      "page": 29
+     },
+     {
+      "doc_id": "cc-transition-ecologique",
+      "page": 86
+     },
+     {
+      "doc_id": "cc-transition-ecologique-synthese",
+      "page": 35
+     }
+    ]
+   ]
+  },
+  {
+   "qid": "val1-049",
+   "question": "À quelle échéance la Cour demande-t-elle au secrétariat général pour l'investissement de nouer des alliances industrielles ciblées au niveau européen dans le domaine quantique ?",
+   "lang": "fr",
+   "type": "texte",
+   "difficulty": "facile",
+   "answerable": true,
+   "answer": "La Cour recommande de construire d'ici 2028 des partenariats industriels ciblés à l'échelle européenne, le cas échéant avec une spécialisation par pays sur des technologies complémentaires (recommandation n° 6, SGPI).",
+   "key_values": [
+    "2028"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "cc-informatique-quantique-synthese",
+      "page": 14
+     },
+     {
+      "doc_id": "cc-informatique-quantique",
+      "page": 13
+     },
+     {
+      "doc_id": "cc-informatique-quantique",
+      "page": 95
+     }
+    ]
+   ],
+   "source_quote": "6. Construire d’ici 2028 des partenariats industriels ciblés à l’échelle européenne, le cas échéant avec une spécialisation par pays, par exemple sur des technologies complémentaires (SGPI, 2028).",
+   "corpus_version": 1
+  },
+  {
+   "qid": "val1-050",
+   "question": "En 2024, mis à part les outils du marché achetés clés en main, comment les sociétés françaises qui se servent de l'intelligence artificielle se procurent-elles le plus souvent ces solutions ?",
+   "lang": "fr",
+   "type": "graphique",
+   "difficulty": "moyen",
+   "answerable": true,
+   "answer": "C'est le contrat passé avec un prestataire externe (près de 30 % des entreprises utilisatrices), devant le logiciel libre modifié en interne et le développement en interne.",
+   "key_values": [],
+   "evidence": [
+    [
+     {
+      "doc_id": "insee-ip2061",
+      "page": 3
+     }
+    ]
+   ],
+   "source_quote": "Figure 5 : après « Achat du commerce prêt à l'emploi » (≈69 %), la barre la plus longue est « Contrat passé avec un prestataire externe » (≈29 %), devant logiciel libre modifié (≈24 %) et développement interne (≈23 %).",
+   "corpus_version": 1
+  },
+  {
+   "qid": "val1-051",
+   "question": "En 2024, combien de millions d'hectolitres de vin ont été produits en France ?",
+   "lang": "fr",
+   "type": "piege",
+   "difficulty": "moyen",
+   "answerable": false,
+   "answer": "INTROUVABLE",
+   "key_values": [],
+   "evidence": [],
+   "source_quote": "",
+   "corpus_version": 1,
+   "false_premise": false
+  },
+  {
+   "qid": "val1-052",
+   "question": "Entre 2017 et 2025, quelle part du montant des achats d'actions soumis à déclaration au titre de la TTF a été dispensée de taxe ?",
+   "lang": "fr",
+   "type": "texte",
+   "difficulty": "moyen",
+   "answerable": true,
+   "answer": "Entre 2017 et 2025, 95 490 Md€ des 100 788 Md€ de transactions déclarées ont été exonérés, soit 95 % du total.",
+   "key_values": [
+    "95 %"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "cc-taxe-transactions-financieres",
+      "page": 8
+     },
+     {
+      "doc_id": "cc-taxe-transactions-financieres",
+      "page": 19
+     },
+     {
+      "doc_id": "cc-taxe-transactions-financieres",
+      "page": 37
+     },
+     {
+      "doc_id": "cc-taxe-transactions-financieres-synthese",
+      "page": 8
+     }
+    ]
+   ],
+   "source_quote": "entre 2017 et 2025, sur les 100 788 Md€ de transactions déclarées, 95 490 Md€ ont fait l’objet d’une exonération, soit 95 % d’entre elles.",
+   "corpus_version": 1
+  },
+  {
+   "qid": "val1-053",
+   "question": "Si l'ANR ne s'engageait plus qu'à hauteur de 1 Md€ par an (scénario « économies » de la Cour), quelle proportion de candidatures aboutirait et combien de projets seraient soutenus chaque année ?",
+   "lang": "fr",
+   "type": "texte",
+   "difficulty": "difficile",
+   "answerable": true,
+   "answer": "Le taux de succès serait de 18,8 %, entre ceux de 2019 (18,5 %) et 2020 (19,2 %), ce qui permettrait de financer environ 1 800 projets par an, tous dispositifs confondus.",
+   "key_values": [
+    "18,8 %",
+    "1 800"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "cc-anr",
+      "page": 77
+     }
+    ]
+   ],
+   "source_quote": "le taux de succès serait en effet de 18,8 %, un niveau compris entre ceux de 2019 (18,5 %) et 2020 (19,2 %), permettant de financer environ 1 800 projets par an",
+   "corpus_version": 1
+  },
+  {
+   "qid": "val1-054",
+   "question": "En 2022, combien de personnes fiscalement domiciliées en France (hors Mayotte) détiennent au moins dix logements, et quelle fraction des propriétaires cela fait ?",
+   "lang": "fr",
+   "type": "tableau",
+   "difficulty": "moyen",
+   "answerable": true,
+   "answer": "En 2022, 246 600 personnes possèdent dix logements ou plus, soit 0,9 % des propriétaires (et 2,6 % des multipropriétaires).",
+   "key_values": [
+    "246 600",
+    "0,9 %"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "insee-ip2046",
+      "page": 1
+     }
+    ]
+   ],
+   "source_quote": "Tableau 1 : « 10 ou plus 246 600 0,9 2,6 7,4 »",
+   "corpus_version": 1
+  },
+  {
+   "qid": "val1-055",
+   "question": "De 2012 à 2023, en quelle année la paie nette moyenne des agents publics hospitaliers, corrigée de l'inflation et à temps plein, a-t-elle le plus augmenté d'une année sur l'autre ?",
+   "lang": "fr",
+   "type": "graphique",
+   "difficulty": "moyen",
+   "answerable": true,
+   "answer": "La plus forte hausse annuelle est celle de 2020, d'environ +5,5 % en euros constants, liée notamment aux mesures du Ségur de la santé ; 2021 suit avec environ +2,8 %.",
+   "key_values": [
+    "2020"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "insee-ip2067",
+      "page": 2
+     },
+     {
+      "doc_id": "insee-ip2102",
+      "page": 2
+     }
+    ]
+   ],
+   "source_quote": "Figure 2 : la barre verte « Évolution annuelle » de 2020 (≈5,5 %) est de loin la plus haute de la série 2012-2023.",
+   "corpus_version": 1
+  },
+  {
+   "qid": "val1-056",
+   "question": "En 2024, parmi les immigrés nés dans un pays d'Europe extérieur à l'Union et installés en France, quelle part a pris la nationalité française ?",
+   "lang": "fr",
+   "type": "tableau",
+   "difficulty": "moyen",
+   "answerable": true,
+   "answer": "En 2024, 24,3 % des immigrés nés dans les autres pays d'Europe (hors UE27) résidant en France ont acquis la nationalité française, contre 33,5 % pour l'ensemble des immigrés.",
+   "key_values": [
+    "24,3 %"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "insee-ip2076",
+      "page": 3
+     }
+    ]
+   ],
+   "source_quote": "Tableau 4 : « Autres pays d'Europe 24,3 » ; « Ensemble 33,5 » (part de naturalisés parmi les immigrés, en %)",
+   "corpus_version": 1
+  },
+  {
+   "qid": "val1-057",
+   "question": "Au 31 décembre 2024, combien d'agents publics étaient en poste à Mayotte ?",
+   "lang": "fr",
+   "type": "piege",
+   "difficulty": "moyen",
+   "answerable": false,
+   "answer": "INTROUVABLE",
+   "key_values": [],
+   "evidence": [],
+   "source_quote": "",
+   "corpus_version": 1,
+   "false_premise": false
+  },
+  {
+   "qid": "val1-058",
+   "question": "D'après la Cour des comptes, au-delà de quel montant l'avantage fiscal accordé aux entreprises pour leurs dépenses de recherche devrait-il passer en 2025, et quelle enveloppe globale d'investissement a été attribuée au plan national 2021-2025 pour les technologies quantiques ?",
+   "lang": "fr",
+   "type": "multi-doc",
+   "difficulty": "moyen",
+   "answerable": true,
+   "answer": "Le CIR devrait dépasser 8 Md€ en 2025, tandis que la stratégie nationale quantique a été dotée de 1,8 Md€ d'investissements, dont 1,5 Md€ de fonds publics.",
+   "key_values": [
+    "8 Md€",
+    "1,8 Md€"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "cc-recherche-entreprises-synthese",
+      "page": 5
+     },
+     {
+      "doc_id": "cc-recherche-entreprises",
+      "page": 7
+     }
+    ],
+    [
+     {
+      "doc_id": "cc-informatique-quantique-synthese",
+      "page": 8
+     },
+     {
+      "doc_id": "cc-informatique-quantique",
+      "page": 10
+     },
+     {
+      "doc_id": "cc-informatique-quantique",
+      "page": 15
+     },
+     {
+      "doc_id": "cc-informatique-quantique",
+      "page": 17
+     }
+    ]
+   ],
+   "source_quote": "cc-recherche-entreprises : « (CIR) dont le montant devrait dépasser 8 Md€ en 2025 » ; cc-quantique : « dotée d'1,8 Md€ d'investissements, dont 1,5 Md€ de fonds publics »",
+   "corpus_version": 1
+  },
+  {
+   "qid": "val1-059",
+   "question": "Quels secteurs sont responsables de la hausse en 2025 des gaz à effet de serre émis par les unités résidentes françaises ?",
+   "lang": "fr",
+   "type": "piege",
+   "difficulty": "moyen",
+   "answerable": false,
+   "answer": "INTROUVABLE",
+   "key_values": [],
+   "evidence": [],
+   "source_quote": "",
+   "corpus_version": 1,
+   "false_premise": true,
+   "premise_correction": "La prémisse est fausse : les émissions de gaz à effet de serre des unités résidentes françaises n'augmentent pas en 2025, elles reculent de 1,7 % (398 Mt CO2 éq), après -1,5 % en 2024.",
+   "correction_evidence": [
+    [
+     {
+      "doc_id": "insee-ip2130",
+      "page": 1
+     },
+     {
+      "doc_id": "insee-ip2130",
+      "page": 2
+     },
+     {
+      "doc_id": "insee-ip2130",
+      "page": 4
+     }
+    ]
+   ]
+  },
+  {
+   "qid": "val1-060",
+   "question": "En 2025, quelle forme d'atteinte a été la plus fréquente parmi les ingérences visant les entreprises de l'industrie de défense, et dans quelle proportion ?",
+   "lang": "fr",
+   "type": "graphique",
+   "difficulty": "moyen",
+   "answerable": true,
+   "answer": "Les atteintes humaines arrivent en tête avec 28 % des ingérences constatées en 2025, devant les atteintes physiques (24 %).",
+   "key_values": [
+    "28 %"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "cc-informatique-quantique",
+      "page": 88
+     }
+    ]
+   ],
+   "source_quote": "Graphique n° 20 (répartition par type d’ingérence, BITD 2025, d’après la DRSD) : secteur « Atteintes humaines » étiqueté 28 %, « Atteintes physiques » 24 %.",
+   "corpus_version": 1
+  },
+  {
+   "qid": "val1-061",
+   "question": "Si l'on ajoute ce que les organismes de recherche publics paient de leur poche sans compensation, combien coûte au total à l'État, en 2024, la recherche menée en collaboration avec les entreprises selon la Cour ?",
+   "lang": "fr",
+   "type": "texte",
+   "difficulty": "moyen",
+   "answerable": true,
+   "answer": "Le coût total serait de l'ordre de 3,3 Md€ en 2024 : plus de 3 Md€ de financements directs de l'État et un coût net non pris en charge par les opérateurs estimé à 230 M€.",
+   "key_values": [
+    "3,3 Md€"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "cc-recherche-entreprises",
+      "page": 26
+     }
+    ]
+   ],
+   "source_quote": "Au total, le coût de la recherche partenariale pour l’État serait donc de l’ordre de 3,3 Md€ en 2024.",
+   "corpus_version": 1
+  },
+  {
+   "qid": "val1-062",
+   "question": "Entre 2021 et 2023, quand les sociétés de 50 personnes ou plus ont transféré des activités hors de France, laquelle des principales fonctions concernées a été la moins souvent déplacée ?",
+   "lang": "fr",
+   "type": "graphique",
+   "difficulty": "facile",
+   "answerable": true,
+   "answer": "La recherche et développement (R&D) est la moins fréquemment délocalisée des six principales activités (environ 8 % des entreprises ayant délocalisé), derrière l'ingénierie et les services techniques (environ 10 %).",
+   "key_values": [],
+   "evidence": [
+    [
+     {
+      "doc_id": "insee-ip2115",
+      "page": 2
+     }
+    ]
+   ],
+   "source_quote": "Figure 2, dernière barre « R&D », la plus courte (un peu moins de 10 %)",
+   "corpus_version": 1
+  },
+  {
+   "qid": "val1-063",
+   "question": "En 2024, quelle proportion des terres agricoles des secteurs touchés par les marées vertes a fait l'objet de ventes à déclarer à l'organisme qui régule le marché foncier rural ?",
+   "lang": "fr",
+   "type": "texte",
+   "difficulty": "difficile",
+   "answerable": true,
+   "answer": "Ces projets de cession n'ont représenté que 2 % de la SAU des bassins versants algues vertes, soit 2 119 hectares.",
+   "key_values": [
+    "2 %",
+    "2 119 hectares"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "cc-algues-vertes",
+      "page": 77
+     }
+    ]
+   ],
+   "source_quote": "En 2024, les projets de cession de terres agricoles qui sont soumis à une obligation d’information de la SAFER n’ont représenté que 2 % de la SAU (2 119 hectares) des BVAV.",
+   "corpus_version": 1
+  },
+  {
+   "qid": "val1-064",
+   "question": "Combien la grande bibliothèque nationale estime-t-elle devoir investir, et sur combien d'années, pour remettre à niveau ses systèmes informatiques avant d'y déployer de l'IA ?",
+   "lang": "fr",
+   "type": "texte",
+   "difficulty": "difficile",
+   "answerable": true,
+   "answer": "La BnF estime à 22 M€ sur six ans l'effort nécessaire pour moderniser son système d'information (SI métier, applications administratives, infrastructures de stockage).",
+   "key_values": [
+    "22 M€"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "cc-ia-ministere-culture",
+      "page": 26
+     }
+    ]
+   ],
+   "source_quote": "la BnF estime à 22 M€ sur six ans l'effort nécessaire pour moderniser son système d'information",
+   "corpus_version": 1
+  },
+  {
+   "qid": "val1-065",
+   "question": "Dans la feuille de route française de la politique agricole européenne pour 2023-2027, quelle fraction de l'enveloppe va au soutien de base au revenu des agriculteurs, d'après la Cour ?",
+   "lang": "fr",
+   "type": "scan",
+   "difficulty": "difficile",
+   "answerable": true,
+   "answer": "L'aide de base représente 36 % de la programmation pluriannuelle 2023-2027 du PSN de la France.",
+   "key_values": [
+    "36 %"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "cc-pac-synthese",
+      "page": 7
+     },
+     {
+      "doc_id": "cc-pac",
+      "page": 21
+     }
+    ]
+   ],
+   "source_quote": "Graphique « Classification des mesures du PSN de la France selon leur degré de subsidiarité » : secteur « Aide de base » étiqueté 36 %.",
+   "corpus_version": 1
+  },
+  {
+   "qid": "val1-066",
+   "question": "En 2025, à combien s'élevait en moyenne un étalement de dettes fiscales et sociales accordé par les commissions départementales des chefs de services financiers ?",
+   "lang": "fr",
+   "type": "tableau",
+   "difficulty": "difficile",
+   "answerable": true,
+   "answer": "En 2025, le montant moyen des 3 786 nouveaux plans octroyés par les CCSF était de 492 637 euros.",
+   "key_values": [
+    "492 637"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "cc-difficultes-entreprises",
+      "page": 61
+     }
+    ]
+   ],
+   "source_quote": "2025 3 786 492 637 1 848 865 319 74 842 359",
+   "corpus_version": 1
+  },
+  {
+   "qid": "val1-067",
+   "question": "D'après le compte prévisionnel de l'agriculture établi en novembre 2025, combien vaudrait la production viticole en 2025 ?",
+   "lang": "fr",
+   "type": "tableau",
+   "difficulty": "difficile",
+   "answerable": true,
+   "answer": "Selon le compte prévisionnel, la production de vin atteindrait 11,3 milliards d'euros en 2025, en hausse de 4,2 % en valeur (+7,7 % en volume, -3,3 % en prix).",
+   "key_values": [
+    "11,3"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "insee-ip2086",
+      "page": 2
+     }
+    ]
+   ],
+   "source_quote": "Vin 11,3 7,7 -3,3 4,2",
+   "corpus_version": 1
+  },
+  {
+   "qid": "val1-068",
+   "question": "Sur quels leviers la Cour des comptes estime-t-elle que l'action publique contre les marées vertes bretonnes doit encore être renforcée ?",
+   "lang": "fr",
+   "type": "synthese",
+   "difficulty": "difficile",
+   "answerable": true,
+   "answer": "Dans son chapitre « Des leviers d'action à renforcer », la Cour estime qu'il faut étendre la politique de lutte aux secteurs vasiers ; fixer des objectifs permettant de réduire significativement le phénomène dans les baies algues vertes ; rendre enfin disponibles les bases de données porcs et volailles pour cibler les contrôles et pérenniser les moyens de contrôle ; renforcer l'action en matière de foncier agricole ; mobiliser les acteurs économiques des filières.",
+   "key_values": [],
+   "evidence": [
+    [
+     {
+      "doc_id": "cc-algues-vertes",
+      "page": 4
+     },
+     {
+      "doc_id": "cc-algues-vertes",
+      "page": 61
+     },
+     {
+      "doc_id": "cc-algues-vertes",
+      "page": 67
+     },
+     {
+      "doc_id": "cc-algues-vertes",
+      "page": 72
+     },
+     {
+      "doc_id": "cc-algues-vertes",
+      "page": 74
+     },
+     {
+      "doc_id": "cc-algues-vertes",
+      "page": 82
+     },
+     {
+      "doc_id": "cc-algues-vertes-synthese",
+      "page": 14
+     },
+     {
+      "doc_id": "cc-algues-vertes-synthese",
+      "page": 15
+     }
+    ]
+   ],
+   "source_quote": "CHAPITRE III DES LEVIERS D’ACTION À RENFORCER ... I - UNE POLITIQUE DE LUTTE À ÉTENDRE DANS LES SECTEURS VASIERS",
+   "corpus_version": 1,
+   "key_points": [
+    "Étendre la lutte aux secteurs vasiers",
+    "Fixer des objectifs de réduction dans les baies algues vertes",
+    "Bases de données porcs et volailles pour cibler les contrôles",
+    "Renforcer l'action sur le foncier agricole",
+    "Mobiliser les acteurs économiques (filières agroalimentaires)"
+   ],
+   "min_points": 3
+  },
+  {
+   "qid": "val1-069",
+   "question": "Pour quelles raisons la Cour des comptes préconise-t-elle, dans l'aide publique aux entreprises de l'informatique quantique, de diminuer la part des avances remboursables au bénéfice des subventions ?",
+   "lang": "fr",
+   "type": "piege",
+   "difficulty": "moyen",
+   "answerable": false,
+   "answer": "INTROUVABLE",
+   "key_values": [],
+   "evidence": [],
+   "source_quote": "",
+   "corpus_version": 1,
+   "false_premise": true,
+   "premise_correction": "La prémisse est fausse : la Cour recommande l'inverse, augmenter le poids des avances remboursables par rapport aux subventions (aujourd'hui 95 % de subventions et 5 % d'avances) et recourir davantage à la commande publique via PROQCIMA (recommandation n° 2).",
+   "correction_evidence": [
+    [
+     {
+      "doc_id": "cc-informatique-quantique",
+      "page": 13
+     },
+     {
+      "doc_id": "cc-informatique-quantique",
+      "page": 53
+     },
+     {
+      "doc_id": "cc-informatique-quantique-synthese",
+      "page": 14
+     }
+    ]
+   ]
+  },
+  {
+   "qid": "val1-070",
+   "question": "D'après la Cour, quel pays déposait le plus de brevets quantiques par million d'habitants en 2024, parmi la Chine, les États-Unis, le Japon, la Corée du Sud, l'Australie, l'Inde, le Canada et Taïwan ?",
+   "lang": "fr",
+   "type": "tableau",
+   "difficulty": "moyen",
+   "answerable": true,
+   "answer": "C'est la Corée du Sud, avec 12 brevets par million d'habitants en 2024, devant l'Australie (9,1) et Taïwan (8,7) ; la Chine n'en compte que 5,2.",
+   "key_values": [
+    "12"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "cc-informatique-quantique",
+      "page": 78
+     }
+    ]
+   ],
+   "source_quote": "Tableau n° 4 : nombre de brevets déposés en 2024 dans les technologies quantiques par million d’habitants : Corée du Sud 12 ; Australie 9,1 ; Taiwan 8,7 ; Chine 5,2.",
+   "corpus_version": 1
+  },
+  {
+   "qid": "val1-071",
+   "question": "En 2010, combien y avait-il d'entreprises d'imprimerie en activité en France ?",
+   "lang": "fr",
+   "type": "piege",
+   "difficulty": "difficile",
+   "answerable": false,
+   "answer": "INTROUVABLE",
+   "key_values": [],
+   "evidence": [],
+   "source_quote": "",
+   "corpus_version": 1,
+   "false_premise": false
+  },
+  {
+   "qid": "val1-072",
+   "question": "En 2023, quels employeurs publics locaux paient le mieux leurs agents en moyenne, en net mensuel à temps plein, et combien ?",
+   "lang": "fr",
+   "type": "texte",
+   "difficulty": "moyen",
+   "answerable": true,
+   "answer": "Ce sont les services départementaux d'incendie et de secours (SDIS), avec 3 030 euros nets par mois en moyenne en EQTP en 2023, en raison des primes spécifiques dont bénéficient leurs agents.",
+   "key_values": [
+    "3 030 euros"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "insee-ip2066",
+      "page": 2
+     },
+     {
+      "doc_id": "insee-ip2066",
+      "page": 3
+     }
+    ]
+   ],
+   "source_quote": "Le salaire net mensuel moyen varie de 2 121 euros pour les agents des communes à 3 030 euros pour les agents des services départementaux d’incendie et de secours (SDIS)",
+   "corpus_version": 1
+  },
+  {
+   "qid": "val1-073",
+   "question": "Quel était le salaire annuel brut moyen d'un doctorant employé par une entreprise dans le cadre d'une thèse industrielle en 2024, et en 2013 ?",
+   "lang": "fr",
+   "type": "texte",
+   "difficulty": "moyen",
+   "answerable": true,
+   "answer": "Le salaire brut moyen des doctorants CIFRE est passé de 28 600 € en 2013 à 33 391 € en 2024, sensiblement au-dessus du minimum brut contractuel instauré par la LPR (24 529 €).",
+   "key_values": [
+    "33 391 €",
+    "28 600 €"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "cc-recherche-entreprises",
+      "page": 41
+     },
+     {
+      "doc_id": "cc-recherche-entreprises",
+      "page": 210
+     }
+    ]
+   ],
+   "source_quote": "son montant moyen est passé de 28 600 € en 2013 à 33 391 € en 2024, soit un montant sensiblement supérieur au minimum brut contractuel instauré par la LPR (24 529 €)",
+   "corpus_version": 1
+  },
+  {
+   "qid": "val1-074",
+   "question": "Quels facteurs liés au bébé ou à sa maman sont associés à un risque plus élevé de le perdre durant sa première année, d'après l'Insee sur la période 2004-2022 ?",
+   "lang": "fr",
+   "type": "synthese",
+   "difficulty": "moyen",
+   "answerable": true,
+   "answer": "Le risque est plus élevé pour les garçons (1,2 fois celui des filles) et surtout pour les enfants issus d'un accouchement multiple, comme les jumeaux (5 fois plus). Il est aussi plus élevé quand la mère est très jeune (21 ans ou moins) ou très âgée (44 ans ou plus), quand elle est employée, ouvrière ou inactive, quand elle réside dans les DOM (taux deux fois plus élevé qu'en métropole) et quand elle est née en Afrique, en particulier hors Maghreb.",
+   "key_values": [],
+   "evidence": [
+    [
+     {
+      "doc_id": "insee-ip2048",
+      "page": 1
+     },
+     {
+      "doc_id": "insee-ip2048",
+      "page": 2
+     },
+     {
+      "doc_id": "insee-ip2048",
+      "page": 3
+     }
+    ]
+   ],
+   "source_quote": "Les garçons risquent 1,2 fois plus que les filles de mourir avant l'âge d'un an et les enfants issus d'un accouchement multiple (comme des jumeaux ou triplés) 5 fois plus que les autres enfants.",
+   "corpus_version": 1,
+   "key_points": [
+    "Garçons plus exposés que les filles",
+    "Enfants nés d'un accouchement multiple (jumeaux)",
+    "Mères très jeunes ou très âgées",
+    "Mères employées, ouvrières ou inactives",
+    "Mères résidant dans les DOM",
+    "Mères nées en Afrique, surtout hors Maghreb"
+   ],
+   "min_points": 4
+  },
+  {
+   "qid": "val1-075",
+   "question": "Pour les élèves entrés en sixième en 2007 dont le diplôme le plus élevé visé est une licence, le taux d'emploi en 2023 est-il supérieur chez les diplômés ou chez ceux qui ont arrêté en dernière année ?",
+   "lang": "fr",
+   "type": "tableau",
+   "difficulty": "difficile",
+   "answerable": true,
+   "answer": "Il est plus élevé chez ceux qui ont abandonné en année terminale : 91 %, contre 89 % pour les diplômés de licence (écart non significatif).",
+   "key_values": [
+    "91 %",
+    "89 %"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "insee-ip2109",
+      "page": 3
+     }
+    ]
+   ],
+   "source_quote": "Figure 2, ligne « Licence » : taux d'emploi des diplômés 89, des jeunes ayant abandonné en année terminale 91, effet ns.",
+   "corpus_version": 1
+  },
+  {
+   "qid": "val1-076",
+   "question": "En 2021, dans les territoires ruraux hors couronnes périurbaines, quelle proportion des ménages avec automobile a payé en carburant plus d'un douzième de son revenu de l'année ?",
+   "lang": "fr",
+   "type": "texte",
+   "difficulty": "moyen",
+   "answerable": true,
+   "answer": "En 2021, 16,7 % des ménages avec voiture des intercommunalités rurales non périurbaines sont dans ce cas, contre 13,5 % dans l'ensemble des intercommunalités rurales et 9,0 % dans les intercommunalités urbaines.",
+   "key_values": [
+    "16,7 %"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "insee-ip2125",
+      "page": 2
+     }
+    ]
+   ],
+   "source_quote": "contre 13,5 % dans celles rurales et même 16,7 % dans celles qui sont éloignées de l’influence des agglomérations",
+   "corpus_version": 1
+  },
+  {
+   "qid": "val1-077",
+   "question": "Combien d'établissements composent en 2021 le maillon construction de la filière bois ?",
+   "lang": "fr",
+   "type": "graphique",
+   "difficulty": "moyen",
+   "answerable": true,
+   "answer": "Le segment de la construction en bois regroupe 14 250 établissements, qui emploient 28 600 salariés en ETP.",
+   "key_values": [
+    "14 250"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "insee-ip2035",
+      "page": 1
+     }
+    ]
+   ],
+   "source_quote": "Figure 1 (schéma des segments de la filière bois), case « Construction en bois » : 14 250 établissements, 28 600 ETP salariés.",
+   "corpus_version": 1
+  },
+  {
+   "qid": "val1-078",
+   "question": "Combien de prénoms distincts portent les enfants nés en France en 2025, contre combien pour la génération née en 1946 ?",
+   "lang": "fr",
+   "type": "scan",
+   "difficulty": "facile",
+   "answerable": true,
+   "answer": "Les bébés nés en 2025 portent 65 940 prénoms différents, contre 8 007 pour ceux nés en 1946, soit environ huit fois plus.",
+   "key_values": [
+    "65 940",
+    "8 007"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "insee-ip2127",
+      "page": 1
+     },
+     {
+      "doc_id": "insee-ip2127",
+      "page": 2
+     }
+    ]
+   ],
+   "source_quote": "De 8 007 prénoms différents donnés aux enfants nés en 1946 à 65 940 pour ceux nés en 2025",
+   "corpus_version": 1
+  },
+  {
+   "qid": "val1-079",
+   "question": "Salles de musculation, terrains de foot, piscines : l'offre et le temps pour s'y rendre sont-ils les mêmes en ville et à la campagne, d'après le recensement de 2023 ?",
+   "lang": "fr",
+   "type": "synthese",
+   "difficulty": "moyen",
+   "answerable": true,
+   "answer": "L'offre est plus diversifiée en zone urbaine, où les salles de sport, gymnases et petits terrains extérieurs sont, rapportés à la population, les plus représentés ; en milieu rural dominent les grands terrains extérieurs (football, rugby) et les complexes de tennis. Plus on s'éloigne des centres urbains, plus le temps d'accès aux équipements courants s'allonge (jusqu'à plus de trois fois plus pour les bassins de natation ou les salles de remise en forme). Les habitants les plus éloignés vivent surtout en zones montagneuses et le long de la diagonale à faible densité, des Vosges aux Pyrénées.",
+   "key_values": [],
+   "evidence": [
+    [
+     {
+      "doc_id": "insee-ip2041",
+      "page": 1
+     },
+     {
+      "doc_id": "insee-ip2041",
+      "page": 2
+     },
+     {
+      "doc_id": "insee-ip2041",
+      "page": 3
+     }
+    ]
+   ],
+   "source_quote": "En milieu urbain, les salles de sport, gymnases et petits terrains extérieurs sont, proportionnellement à la population, les plus représentés. À l'inverse, les grands terrains extérieurs",
+   "corpus_version": 1,
+   "key_points": [
+    "Offre plus variée en ville : salles, gymnases, petits terrains extérieurs",
+    "Rural : grands terrains extérieurs et complexes de tennis dominent",
+    "Temps d'accès qui s'allonge en s'éloignant des villes (x3 natation)",
+    "Populations éloignées : montagnes et diagonale à faible densité"
+   ],
+   "min_points": 3
+  },
+  {
+   "qid": "val1-080",
+   "question": "L'argent de la taxe sur les achats d'actions transite par un intermédiaire avant d'arriver dans les caisses de l'État : pendant combien de jours génère-t-il des intérêts, et à quel taux ?",
+   "lang": "fr",
+   "type": "texte",
+   "difficulty": "difficile",
+   "answerable": true,
+   "answer": "Virées sur le compte d'Euroclear France auprès de l'Agence France Trésor, les sommes produisent des intérêts pendant 20 jours au taux de 0,35 %, fixé par une décision ministérielle du 30 octobre 2012 jamais révisée.",
+   "key_values": [
+    "20 jours",
+    "0,35 %"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "cc-taxe-transactions-financieres",
+      "page": 74
+     }
+    ]
+   ],
+   "source_quote": "Pendant 20 jours, ces sommes produisent des intérêts au taux de 0,35 %, fixé par une décision ministérielle du 30 octobre 2012 qui n’a jamais été révisée",
+   "corpus_version": 1
+  },
+  {
+   "qid": "val1-081",
+   "question": "Pasqal, la start-up française du quantique : quel chiffre d'affaires a-t-elle réalisé en 2025 ?",
+   "lang": "fr",
+   "type": "piege",
+   "difficulty": "difficile",
+   "answerable": false,
+   "answer": "INTROUVABLE",
+   "key_values": [],
+   "evidence": [],
+   "source_quote": "",
+   "corpus_version": 1,
+   "false_premise": false
+  },
+  {
+   "qid": "val1-082",
+   "question": "Depuis 2019, parmi les projets financés par l'appel du ministère baptisé « Services numériques innovants », combien intégraient de l'intelligence artificielle, et pour quelle somme au total ?",
+   "lang": "fr",
+   "type": "texte",
+   "difficulty": "moyen",
+   "answerable": true,
+   "answer": "Sur 60 projets soutenus depuis 2019 pour 1,7 M€, seuls cinq comportaient un volet IA, pour un total de 144 315 €.",
+   "key_values": [
+    "cinq projets",
+    "144 315 €"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "cc-ia-ministere-culture",
+      "page": 7
+     },
+     {
+      "doc_id": "cc-ia-ministere-culture",
+      "page": 28
+     }
+    ]
+   ],
+   "source_quote": "Depuis 2019, ce dispositif a soutenu 60 projets pour un total d'1,7 M€, dont cinq seulement ont comporté un volet IA, pour un total de 144 315 €",
+   "corpus_version": 1
+  },
+  {
+   "qid": "val1-083",
+   "question": "En 2023, quel salaire net mensuel sépare en deux moitiés les femmes qui travaillent pour l'État (ministères et établissements publics nationaux), en équivalent temps plein ?",
+   "lang": "fr",
+   "type": "tableau",
+   "difficulty": "moyen",
+   "answerable": true,
+   "answer": "En 2023, le salaire net médian en EQTP des femmes de la FPE est de 2 591 euros par mois (contre 2 867 euros pour les hommes et 2 682 euros pour l'ensemble).",
+   "key_values": [
+    "2 591 euros"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "insee-ip2065",
+      "page": 3
+     }
+    ]
+   ],
+   "source_quote": "Médiane 2 591 0,1 2 867 -1,2 2 682 -0,3",
+   "corpus_version": 1
+  },
+  {
+   "qid": "val1-084",
+   "question": "Pour les piscines, de combien (en %) l'aide moyenne par projet de l'ANS a-t-elle baissé entre le plan « aisance aquatique » et le plan « 5 000 équipements », et quels étaient les deux montants moyens ?",
+   "lang": "fr",
+   "type": "texte",
+   "difficulty": "difficile",
+   "answerable": true,
+   "answer": "Le financement moyen par projet est passé de 520 000 € sous le plan « aisance aquatique » à 330 000 € sous le plan « 5 000 équipements », soit une baisse de près de 37 %.",
+   "key_values": [
+    "37 %",
+    "520 000 €",
+    "330 000 €"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "cc-equipements-sportifs-ans",
+      "page": 40
+     }
+    ]
+   ],
+   "source_quote": "passant de 520 000 € sous le plan « aisance aquatique » à 330 000 € sous le plan « 5 000 équipements », soit une contraction de près de 37 %",
+   "corpus_version": 1
+  },
+  {
+   "qid": "val1-085",
+   "question": "Combien d'exploitations agricoles françaises ont fait l'objet de sanctions en 2024 au titre de la conditionnalité sociale de la PAC, liée au respect du droit du travail ?",
+   "lang": "fr",
+   "type": "piege",
+   "difficulty": "difficile",
+   "answerable": false,
+   "answer": "INTROUVABLE",
+   "key_values": [],
+   "evidence": [],
+   "source_quote": "",
+   "corpus_version": 1,
+   "false_premise": false
+  },
+  {
+   "qid": "val1-086",
+   "question": "Quels sont le prénom de fille et le prénom de garçon arrivés en sixième position des prénoms les plus attribués en 2025 ?",
+   "lang": "fr",
+   "type": "scan",
+   "difficulty": "moyen",
+   "answerable": true,
+   "answer": "En 2025, Rose est le sixième prénom féminin le plus donné et Jules le sixième prénom masculin.",
+   "key_values": [],
+   "evidence": [
+    [
+     {
+      "doc_id": "insee-ip2127",
+      "page": 1
+     }
+    ]
+   ],
+   "source_quote": "Figure 1 (top 10 trié) : après Louise, Jade, Ambre, Alma, Alba vient Rose (filles) ; après Gabriel, Noah, Léo, Raphaël, Louis vient Jules (garçons).",
+   "corpus_version": 1
+  },
+  {
+   "qid": "val1-087",
+   "question": "En 2019, quel pourcentage des foyers guadeloupéens faisait appel aux services à la personne ?",
+   "lang": "fr",
+   "type": "piege",
+   "difficulty": "moyen",
+   "answerable": false,
+   "answer": "INTROUVABLE",
+   "key_values": [],
+   "evidence": [],
+   "source_quote": "",
+   "corpus_version": 1,
+   "false_premise": false
+  },
+  {
+   "qid": "val1-088",
+   "question": "En France métropolitaine, en 2022, combien de logements habités à l'année avaient le mazout comme mode de chauffage principal, et quelle fraction du total cela fait ?",
+   "lang": "fr",
+   "type": "scan",
+   "difficulty": "facile",
+   "answerable": true,
+   "answer": "En 2022, 2,6 millions de résidences principales sont chauffées au fioul, soit 8,5 % d'entre elles.",
+   "key_values": [
+    "2,6 millions",
+    "8,5 %"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "insee-ip2088",
+      "page": 1
+     },
+     {
+      "doc_id": "insee-ip2088",
+      "page": 3
+     }
+    ]
+   ],
+   "source_quote": "En 2022, en France métropolitaine, le fioul domestique est la source principale de chauffage de 8,5 % des résidences principales, soit 2,6 millions.",
+   "corpus_version": 1
+  },
+  {
+   "qid": "val1-089",
+   "question": "Pour 2026, quel solde des administrations locales en comptabilité nationale le rapport annuel d'avancement du plan budgétaire et structurel de moyen terme d'avril 2026 anticipe-t-il, et que prévoyait la loi de finances pour 2026 ?",
+   "lang": "fr",
+   "type": "texte",
+   "difficulty": "difficile",
+   "answerable": true,
+   "answer": "Le rapport d'avancement du PSMT d'avril 2026 prévoit un déficit de 4,4 Md€ en 2026, prévision plus optimiste que celle de la loi de finances pour 2026, qui tablait sur un déficit de 6,1 Md€.",
+   "key_values": [
+    "4,4 Md€",
+    "6,1 Md€"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "cc-finances-locales-2026-synthese",
+      "page": 5
+     },
+     {
+      "doc_id": "cc-finances-locales-2026",
+      "page": 10
+     },
+     {
+      "doc_id": "cc-finances-locales-2026",
+      "page": 127
+     },
+     {
+      "doc_id": "cc-finances-locales-2026",
+      "page": 160
+     }
+    ]
+   ],
+   "source_quote": "le solde déficitaire des collectivités se réduirait de plus de moitié en 2026, pour ne plus atteindre que 4,4 Md€ [...] celle de la loi de finances pour 2026, qui prévoyait un déficit de 6,1 Md€.",
+   "corpus_version": 1
+  },
+  {
+   "qid": "val1-090",
+   "question": "Plein d'essence, cigarettes, restaurants : comment les familles vivant près des frontières dépensaient-elles chez nos voisins en 2024 ?",
+   "lang": "fr",
+   "type": "synthese",
+   "difficulty": "difficile",
+   "answerable": true,
+   "answer": "Par rapport à leurs achats en France, ces ménages achètent davantage dans les stations-services et magasins de tabac, notamment pour des prix plus attractifs, mais aussi dans les hôtels et restaurants. Les achats sont le fait de consommateurs très réguliers en Suisse, au Luxembourg et à Monaco, et plutôt occasionnels en Italie et en Andorre. Ils sont plus saisonniers (juillet-août) et plus souvent faits le week-end en Espagne, en Italie et en Andorre. Par rapport à 2023, les dépenses augmentent en Italie (+6 %) et baissent en Belgique (-5 %), notamment du fait du tabac.",
+   "key_values": [],
+   "evidence": [
+    [
+     {
+      "doc_id": "insee-ip2075",
+      "page": 1
+     },
+     {
+      "doc_id": "insee-ip2075",
+      "page": 2
+     },
+     {
+      "doc_id": "insee-ip2075",
+      "page": 3
+     }
+    ]
+   ],
+   "source_quote": "les achats dans les pays voisins sont davantage effectués en stations-services et magasins de tabac, notamment du fait de prix plus attractifs, mais aussi en hôtels et restaurants",
+   "corpus_version": 1,
+   "key_points": [
+    "Surtout stations-services et tabac (prix attractifs), hôtels et restaurants",
+    "Clients très réguliers en Suisse, au Luxembourg et à Monaco",
+    "Achats occasionnels en Italie et en Andorre",
+    "Plus saisonniers et le week-end en Espagne, Italie, Andorre",
+    "Hausse en Italie, baisse en Belgique par rapport à 2023"
+   ],
+   "min_points": 3
+  },
+  {
+   "qid": "val1-091",
+   "question": "De combien de points de PIB le taux d'endettement public de la France a-t-il baissé en 2025 grâce à la réduction du déficit ?",
+   "lang": "fr",
+   "type": "piege",
+   "difficulty": "moyen",
+   "answerable": false,
+   "answer": "INTROUVABLE",
+   "key_values": [],
+   "evidence": [],
+   "source_quote": "",
+   "corpus_version": 1,
+   "false_premise": true,
+   "premise_correction": "La prémisse est fausse : le ratio de dette publique n'a pas reculé en 2025, il augmente de 3,1 points, à 115,7 % du PIB après 112,6 % en 2024, un niveau record.",
+   "correction_evidence": [
+    [
+     {
+      "doc_id": "insee-ip2106",
+      "page": 1
+     },
+     {
+      "doc_id": "insee-ip2106",
+      "page": 4
+     },
+     {
+      "doc_id": "cc-rspfp-2026",
+      "page": 16
+     },
+     {
+      "doc_id": "cc-rspfp-2026",
+      "page": 26
+     },
+     {
+      "doc_id": "cc-rspfp-2026",
+      "page": 46
+     },
+     {
+      "doc_id": "cc-rspfp-2026-synthese",
+      "page": 10
+     }
+    ]
+   ]
+  },
+  {
+   "qid": "val1-092",
+   "question": "En 2012, combien les départements ont-ils encaissé de droits de mutation à titre onéreux (DMTO) ?",
+   "lang": "fr",
+   "type": "piege",
+   "difficulty": "moyen",
+   "answerable": false,
+   "answer": "INTROUVABLE",
+   "key_values": [],
+   "evidence": [],
+   "source_quote": "",
+   "corpus_version": 1,
+   "false_premise": false
+  },
+  {
+   "qid": "val1-093",
+   "question": "En 2025, de combien de points les entreprises installées en France ayant recours à au moins une technologie d'IA sont-elles plus nombreuses, en proportion, que la moyenne de l'Union européenne ?",
+   "lang": "fr",
+   "type": "piege",
+   "difficulty": "moyen",
+   "answerable": false,
+   "answer": "INTROUVABLE",
+   "key_values": [],
+   "evidence": [],
+   "source_quote": "",
+   "corpus_version": 1,
+   "false_premise": true,
+   "premise_correction": "La prémisse est fausse : en 2025, la part des entreprises en France utilisant l'IA (18 %) ne dépasse pas la moyenne de l'Union européenne (20 %), elle lui reste inférieure.",
+   "correction_evidence": [
+    [
+     {
+      "doc_id": "insee-ip2120",
+      "page": 1
+     },
+     {
+      "doc_id": "insee-ip2120",
+      "page": 2
+     }
+    ]
+   ]
+  },
+  {
+   "qid": "val1-094",
+   "question": "Les 35-59 ans interrogés en 2023-2024 : combien avaient une mère qui, lorsqu'elle avait un emploi, était salariée à un poste subalterne peu qualifié ?",
+   "lang": "fr",
+   "type": "tableau",
+   "difficulty": "moyen",
+   "answerable": true,
+   "answer": "31,5 % des mères de ces personnes exerçaient un emploi salarié d'exécution peu qualifié (contre 14,2 % des pères).",
+   "key_values": [
+    "31,5"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "insee-ip2068",
+      "page": 1
+     }
+    ]
+   ],
+   "source_quote": "Figure 1, ligne Emploi salarié d’exécution peu qualifié : 23,1 ; 14,1 ; 18,7 ; 31,5 (mères) ; 14,2 (pères)",
+   "corpus_version": 1
+  },
+  {
+   "qid": "val1-095",
+   "question": "En 2025, combien l'Élysée a-t-il dépensé pour couvrir la défense juridique de ses collaborateurs mis en cause dans l'exercice de leurs fonctions, et combien en 2024 ?",
+   "lang": "fr",
+   "type": "texte",
+   "difficulty": "moyen",
+   "answerable": true,
+   "answer": "Elles ont atteint 243 460 € en 2025, contre 12 000 € en 2024.",
+   "key_values": [
+    "243 460 €",
+    "12 000 €"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "cc-presidence-republique-2025",
+      "page": 9
+     },
+     {
+      "doc_id": "cc-presidence-republique-2025",
+      "page": 42
+     }
+    ]
+   ],
+   "source_quote": "Les dépenses de protection juridique fonctionnelle effectivement acquittées se sont élevées à 243 460 € contre 12 000 € en 2024",
+   "corpus_version": 1
+  },
+  {
+   "qid": "val1-096",
+   "question": "Selon le rapport du comité sur l'IA co-présidé par Philippe Aghion et Anne Bouverot (mars 2024), combien fallait-il investir pour former à l'IA les métiers de la création ?",
+   "lang": "fr",
+   "type": "texte",
+   "difficulty": "moyen",
+   "answerable": true,
+   "answer": "Le rapport « IA, Notre ambition pour la France » estimait à 20 M€ l'investissement nécessaire à la formation des professions créatives à l'IA (l'une de ses trois propositions sur 25 consacrées à la culture).",
+   "key_values": [
+    "20 M€"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "cc-ia-ministere-culture",
+      "page": 16
+     }
+    ]
+   ],
+   "source_quote": "contenait trois propositions sur 25 sur la culture : - formation des professions créatives à l'IA (investissement estimé à 20 M€)",
+   "corpus_version": 1
+  },
+  {
+   "qid": "val1-097",
+   "question": "Les crédits des Sages de la rue de Montpensier ont-ils beaucoup augmenté ? De combien en pourcentage au total entre 2020 et 2025, d'après le comparatif des budgets des pouvoirs publics du rapport de la Cour sur l'Élysée ?",
+   "lang": "fr",
+   "type": "tableau",
+   "difficulty": "difficile",
+   "answerable": true,
+   "answer": "La dotation du Conseil constitutionnel est passée de 12,5 M€ en 2020 à 17,9 M€ en 2025, soit une évolution globale de +43,4 % (contre +16,4 % pour la Présidence de la République).",
+   "key_values": [
+    "43,4 %"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "cc-presidence-republique-2025",
+      "page": 19
+     }
+    ]
+   ],
+   "source_quote": "Tableau n° 2 : Conseil constitutionnel 12,5 ... 17,9 ; évolution globale sur la durée 43,4%",
+   "corpus_version": 1
+  },
+  {
+   "qid": "val1-098",
+   "question": "De 2000 à 2023, de combien de points de PIB les dépenses de recherche réalisées par les entreprises ont-elles grimpé en France, contre combien en moyenne dans les pays de l'OCDE ?",
+   "lang": "fr",
+   "type": "texte",
+   "difficulty": "difficile",
+   "answerable": true,
+   "answer": "La DIRDE française n'a augmenté que de 0,13 point de PIB entre 2000 et 2023, soit quatre fois moins que dans l'OCDE (+ 0,51 point).",
+   "key_values": [
+    "0,13 point",
+    "0,51 point"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "cc-recherche-entreprises",
+      "page": 145
+     }
+    ]
+   ],
+   "source_quote": "En France, la DIRDE a augmenté de 0,13 point de PIB entre 2000 et 2023, soit quatre fois moins que dans l’OCDE (+ 0,51 point)",
+   "corpus_version": 1
+  },
+  {
+   "qid": "val1-099",
+   "question": "Dans le recensement des moyens consacrés à l'IA par les opérateurs culturels, combien d'heures de formation l'institut chargé des archives de la radio et de la télévision a-t-il dispensées en 2025, et combien en prévoit-il pour 2026 ?",
+   "lang": "fr",
+   "type": "tableau",
+   "difficulty": "moyen",
+   "answerable": true,
+   "answer": "L'INA a réalisé 2 450 heures de formation en 2025 et en prévoit 2 800 en 2026.",
+   "key_values": [
+    "2 450 heures",
+    "2 800 heures"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "cc-ia-ministere-culture",
+      "page": 34
+     }
+    ]
+   ],
+   "source_quote": "INA ... 2 450 heures en 2025 ; 2 800 heures prévues en 2026.",
+   "corpus_version": 1
+  },
+  {
+   "qid": "val1-100",
+   "question": "En 2024, combien de patients différents un généraliste libéral médecin traitant voit-il dans l'année, en valeur médiane ?",
+   "lang": "fr",
+   "type": "tableau",
+   "difficulty": "difficile",
+   "answerable": true,
+   "answer": "La file active médiane des médecins généralistes libéraux médecins traitants était de 1 514 patients en 2024 (moyenne de 1 649).",
+   "key_values": [
+    "1 514"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "cc-medecin-traitant",
+      "page": 129
+     },
+     {
+      "doc_id": "cc-medecin-traitant",
+      "page": 132
+     }
+    ]
+   ],
+   "source_quote": "Tableau n° 16 : File active des médecins traitants « 1649 ; 1514 [1166–1941] » (moyenne ; médiane [Q1–Q3])",
+   "corpus_version": 1
+  }
+ ]
+}
