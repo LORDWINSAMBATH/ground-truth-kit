@@ -83,6 +83,9 @@ class OfficialGenerator:
                 device_map={"": 0} if torch.cuda.is_available() else None,
             )
             self.model = self.model.to(dtype).eval()
+            # La config du modèle fixe un max_length ; on borne la génération avec max_new_tokens seulement
+            # (sinon transformers avertit « Both max_new_tokens and max_length » à chaque appel).
+            self.model.generation_config.max_length = None
             self._torch = torch
         elif backend == "openai":
             from openai import OpenAI
