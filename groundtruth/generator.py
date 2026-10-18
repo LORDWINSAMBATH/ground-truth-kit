@@ -152,3 +152,22 @@ class OfficialGenerator:
             f.write(json.dumps({"qid": self.qid, "call": self.calls, "n_in": n_in, "n_out": n_out,
                                 "seconds": round(time.time() - t0, 2), "backend": self.backend}) + "\n")
         return text.strip()
+
+
+if __name__ == "__main__":
+    import argparse
+
+    ap = argparse.ArgumentParser(description="Test rapide du générateur officiel, à lancer dans son propre "
+                                             "processus (python -m groundtruth.generator).")
+    ap.add_argument("--backend", default="hf", choices=["hf", "openai", "echo"])
+    args = ap.parse_args()
+
+    gen = OfficialGenerator(args.backend, log_path="runs/selftest_log.jsonl")
+    gen.start_question("test")
+    msgs = [{"role": "system", "content": "Réponds en une phrase, en français."},
+            {"role": "user", "content": "Quelle est la capitale de la France ?"}]
+    print(gen.count_tokens(msgs), "tokens en entrée")
+    t0 = time.time()
+    reponse = gen.chat(msgs, max_new_tokens=50)
+    print("Réponse :", reponse)
+    print(f"Durée de la réponse : {time.time() - t0:.1f} s")

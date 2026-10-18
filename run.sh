@@ -5,7 +5,7 @@
 #   bash setup.sh                                           # réseau autorisé : dépendances + poids
 #   bash run.sh index  <dossier_pdf_v1> <dossier_index>     # corpus v1 (110 docs) : 2 h max
 #   bash run.sh update <dossier_index> <dossier_pdf_v2>     # ajout des 20 docs v2 : 20 min max
-#   bash run.sh answer <dossier_index> <questions.json> <sortie.json>   # 20 s par question en moyenne
+#   bash run.sh answer <dossier_index> <questions.json> <sortie.json>   # 30 s par question en moyenne
 #
 # Remplace le corps des trois commandes par ton pipeline. Ici : la baseline officielle.
 set -euo pipefail

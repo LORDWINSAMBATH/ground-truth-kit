@@ -207,6 +207,17 @@ Un dépassement lève `BudgetExceeded`. Chaque appel est journalisé dans `runs/
   utilisent `hf`.
 - Tout le reste (OCR, embeddings, reranking, description de graphiques à l'indexation) est libre, avec
   des modèles open weights qui tiennent sur le T4.
+- **Test rapide** : `python -m groundtruth.generator` charge le générateur dans son propre processus,
+  pose une question et affiche le nombre de tokens d'entrée, la réponse et la durée (`--backend echo`
+  pour tester sans GPU).
+- **Piège mémoire JAX / bm25s** : `bm25s` importe JAX (préinstallé sur Colab), et JAX réserve 75 % de la
+  VRAM dès l'import, ce qui provoque ensuite « CUDA out of memory » au chargement du générateur. Les
+  paquets `groundtruth` et `baseline` règlent `JAX_PLATFORMS=cpu` à leur import. Si ton code importe
+  `bm25s` ou JAX **avant** `groundtruth`, exporte toi-même `JAX_PLATFORMS=cpu` (dans le shell, ou
+  `os.environ["JAX_PLATFORMS"] = "cpu"` tout en haut de ton script).
+- **Ne charge pas le générateur deux fois sur un T4 de 15 Go** (~7,7 Go chacun) : par exemple dans un
+  notebook et dans un script lancé en parallèle. Lance tes tests dans un processus séparé qui se termine
+  (c'est ce que fait le notebook), car `del` + `torch.cuda.empty_cache()` ne libèrent pas tout.
 
 ## Palier 1 : RAG from scratch
 
