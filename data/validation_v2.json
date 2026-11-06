@@ -1,0 +1,1185 @@
+{
+ "version": "1.0",
+ "split": "validation_v2",
+ "corpus": "v2 (130 documents, corpus/pdf + corpus/pdf_v2)",
+ "pages": "index physique dans le PDF, à partir de 1",
+ "questions": [
+  {
+   "qid": "val2-001",
+   "question": "Supermarchés, hypers, épiceries, surgelés : de combien les quantités vendues aux particuliers par les magasins d'alimentation ont-elles augmenté en 2024, selon le chiffre le plus à jour ?",
+   "lang": "fr",
+   "type": "temporel",
+   "difficulty": "moyen",
+   "answerable": true,
+   "answer": "Selon l'estimation révisée (compte du commerce 2025), les ventes au détail du commerce alimentaire en magasin ont progressé de 0,8 % en volume en 2024.",
+   "key_values": [
+    "0,8 %"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "insee-ip2111",
+      "page": 2
+     }
+    ]
+   ],
+   "source_quote": "les ventes au détail du commerce alimentaire en magasin accélèrent (+1,8 % en volume, après +0,8 %)",
+   "corpus_version": 2
+  },
+  {
+   "qid": "val2-002",
+   "question": "Sur la décennie allant jusqu'au début de 2024, de combien a augmenté l'impôt sur les propriétés bâties acquitté par les ménages qui occupent leur propre bien ?",
+   "lang": "fr",
+   "type": "texte",
+   "difficulty": "facile",
+   "answerable": true,
+   "answer": "La taxe foncière payée par les propriétaires occupants a augmenté de 50 % en dix ans, entre début 2014 et début 2024, beaucoup plus vite que les revenus (+25 %).",
+   "key_values": [
+    "50 %"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "insee-ip2128",
+      "page": 1
+     }
+    ]
+   ],
+   "source_quote": "La taxe foncière, payée par les propriétaires occupants, fait exception, avec une croissance de 50 % en dix ans.",
+   "corpus_version": 2
+  },
+  {
+   "qid": "val2-003",
+   "question": "D'après l'Insee, combien gagnaient en moyenne chaque mois les indépendants hors micro-entreprise en 2023, puis en 2024, et de combien d'euros ce revenu a-t-il augmenté d'une année sur l'autre ?",
+   "lang": "fr",
+   "type": "multi-doc",
+   "difficulty": "moyen",
+   "answerable": true,
+   "answer": "Les non-salariés classiques perçoivent en moyenne 4 040 euros par mois en 2023 et 4 150 euros par mois en 2024, soit 110 euros de plus.",
+   "key_values": [
+    "4 040 euros",
+    "4 150 euros",
+    "110"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "insee-ip2060",
+      "page": 1
+     },
+     {
+      "doc_id": "insee-ip2060",
+      "page": 2
+     }
+    ],
+    [
+     {
+      "doc_id": "insee-ip2114",
+      "page": 1
+     },
+     {
+      "doc_id": "insee-ip2114",
+      "page": 2
+     }
+    ]
+   ],
+   "source_quote": "ip2060 : « En 2023, les non-salariés classiques perçoivent en moyenne un revenu d'activité de 4 040 euros par mois » ; ip2114 : « [...] de 4 150 euros par mois »",
+   "corpus_version": 2
+  },
+  {
+   "qid": "val2-004",
+   "question": "In current euros, by how much did the annual median standard of living (niveau de vie) of people living in ordinary households in metropolitan France rise between 2023 and 2024, according to Insee's \"Niveau de vie et pauvreté\" studies for each of those two years?",
+   "lang": "en",
+   "type": "multi-doc",
+   "difficulty": "difficile",
+   "answerable": true,
+   "answer": "Le niveau de vie médian s'élève à 25 760 euros par unité de consommation en 2023 et à 26 740 euros en 2024, soit 980 euros de plus en euros courants.",
+   "key_values": [
+    "25 760 euros",
+    "26 740 euros",
+    "980"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "insee-ip2063",
+      "page": 1
+     },
+     {
+      "doc_id": "insee-ip2063",
+      "page": 3
+     },
+     {
+      "doc_id": "insee-ip2063",
+      "page": 4
+     }
+    ],
+    [
+     {
+      "doc_id": "insee-ip2117",
+      "page": 1
+     },
+     {
+      "doc_id": "insee-ip2117",
+      "page": 3
+     }
+    ]
+   ],
+   "source_quote": "ip2063 : « le niveau de vie annuel médian [...] est de 25 760 euros par unité de consommation » ; ip2117 : « un niveau de vie annuel inférieur à 26 740 euros »",
+   "corpus_version": 2,
+   "question_fr": "En euros courants, de combien le niveau de vie médian annuel des personnes en logement ordinaire en France métropolitaine a-t-il progressé entre 2023 et 2024, d'après les études Insee « Niveau de vie et pauvreté » de chacune de ces deux années ?"
+  },
+  {
+   "qid": "val2-005",
+   "question": "Trace the successive estimates of France's 2023 economic growth in Insee's annual national accounts: by how much was the figure revised upward with each new release?",
+   "lang": "en",
+   "type": "temporel",
+   "difficulty": "difficile",
+   "answerable": true,
+   "answer": "La croissance du PIB de 2023 a été relevée deux fois : à +1,4 % en mai 2025 (+0,5 point par rapport à l'estimation de mai 2024, qui était donc d'environ 0,9 %), puis à +1,6 % en mai 2026 (+0,2 point).",
+   "key_values": [
+    "1,4 %",
+    "1,6 %",
+    "0,5 point",
+    "0,2 point"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "insee-ip2053",
+      "page": 4
+     },
+     {
+      "doc_id": "insee-ip2053",
+      "page": 1
+     },
+     {
+      "doc_id": "insee-ip2077",
+      "page": 2
+     }
+    ],
+    [
+     {
+      "doc_id": "insee-ip2105",
+      "page": 4
+     },
+     {
+      "doc_id": "insee-ip2105",
+      "page": 1
+     },
+     {
+      "doc_id": "insee-ip2112",
+      "page": 1
+     }
+    ]
+   ],
+   "source_quote": "La croissance du PIB en 2023 est révisée à +1,6 % (+0,2 point)",
+   "corpus_version": 2,
+   "question_fr": "Retracez les estimations successives de la croissance économique française de 2023 dans les comptes annuels de l'Insee : de combien a-t-elle été relevée à chaque nouvelle publication ?"
+  },
+  {
+   "qid": "val2-006",
+   "question": "Selon le compte provisoire de l'agriculture établi par l'Insee, combien les exploitants devraient-ils percevoir en 2025 de subventions d'exploitation, et selon la Cour des comptes, combien la politique agricole européenne verse-t-elle chaque année en France sur 2023-2027 ?",
+   "lang": "fr",
+   "type": "multi-doc",
+   "difficulty": "moyen",
+   "answerable": true,
+   "answer": "D'après le compte provisoire de l'agriculture, les subventions d'exploitation atteindraient 8,0 milliards d'euros en 2025 ; selon la Cour, la PAC déploie plus de 9 Md€ de financements européens par an de 2023 à 2027 (près de 56 % des subventions publiques à l'agriculture).",
+   "key_values": [
+    "8,0 milliards d'euros",
+    "9 Md€"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "insee-ip2116",
+      "page": 4
+     },
+     {
+      "doc_id": "insee-ip2116",
+      "page": 2
+     }
+    ],
+    [
+     {
+      "doc_id": "cc-pac",
+      "page": 9
+     },
+     {
+      "doc_id": "cc-pac",
+      "page": 14
+     },
+     {
+      "doc_id": "cc-pac-synthese",
+      "page": 3
+     },
+     {
+      "doc_id": "cc-pac-synthese",
+      "page": 5
+     },
+     {
+      "doc_id": "cc-pac-synthese",
+      "page": 6
+     }
+    ]
+   ],
+   "source_quote": "ip2116 : « En 2025, les subventions d'exploitation atteindraient 8,0 milliards d'euros » ; cc-pac : « sont déployés plus de 9 Md€ de financements européens par an de 2023 à 2027 »",
+   "corpus_version": 2
+  },
+  {
+   "qid": "val2-007",
+   "question": "Pour les ménages qui louent auprès d'un bailleur privé, quelle fraction laisse plus des deux cinquièmes de ses ressources dans son logement, d'après l'enquête nationale sur le logement de 2023-2024 ?",
+   "lang": "fr",
+   "type": "texte",
+   "difficulty": "moyen",
+   "answerable": true,
+   "answer": "Début 2024, 22 % des locataires du parc privé ont un taux d'effort supérieur à 40 %, contre 18 % des locataires du parc social et 11 % des propriétaires accédants.",
+   "key_values": [
+    "22 %"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "insee-ip2128",
+      "page": 4
+     }
+    ]
+   ],
+   "source_quote": "Les locataires du parc privé ont les taux d'effort les plus élevés, avec un taux d'effort supérieur à 40 % pour 22 % d'entre eux.",
+   "corpus_version": 2
+  },
+  {
+   "qid": "val2-008",
+   "question": "Dans les plus gros sites industriels, quelle proportion compte au moins une personne travaillant à plein temps sur les questions écologiques, d'après la dernière enquête sur les dépenses antipollution ?",
+   "lang": "fr",
+   "type": "temporel",
+   "difficulty": "moyen",
+   "answerable": true,
+   "answer": "En 2024, 69 % des grands établissements industriels disposent d'au moins un spécialiste entièrement dédié à l'environnement, soit 5 points de plus qu'en 2023.",
+   "key_values": [
+    "69 %"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "insee-ip2124",
+      "page": 4
+     }
+    ]
+   ],
+   "source_quote": "69 % disposent d’au moins un spécialiste entièrement dédié, soit 5 points de plus qu’en 2023.",
+   "corpus_version": 2
+  },
+  {
+   "qid": "val2-009",
+   "question": "Entre 2024 et 2025, l'IA a-t-elle percé dans les entreprises françaises ? Quels constats des deux enquêtes annuelles de l'Insee restent les mêmes d'une année à l'autre ?",
+   "lang": "fr",
+   "type": "synthese",
+   "difficulty": "difficile",
+   "answerable": true,
+   "answer": "La part des entreprises de 10 salariés ou plus utilisant au moins une technologie d'IA passe de 10 % en 2024 à 18 % en 2025. Plusieurs constats se maintiennent : la France reste un peu en retrait de la moyenne de l'Union européenne (13 % puis 20 %) ; l'adoption dépend fortement de la taille (33 % puis 58 % des entreprises de 250 salariés ou plus) ; le secteur de l'information-communication reste de loin le plus utilisateur (42 % puis 59 %) ; et l'IA est surtout acquise sous forme de logiciels ou systèmes du commerce prêts à l'emploi (sept entreprises utilisatrices sur dix, puis 80 %).",
+   "key_values": [],
+   "evidence": [
+    [
+     {
+      "doc_id": "insee-ip2061",
+      "page": 1
+     },
+     {
+      "doc_id": "insee-ip2061",
+      "page": 2
+     },
+     {
+      "doc_id": "insee-ip2061",
+      "page": 4
+     }
+    ],
+    [
+     {
+      "doc_id": "insee-ip2120",
+      "page": 1
+     },
+     {
+      "doc_id": "insee-ip2120",
+      "page": 2
+     },
+     {
+      "doc_id": "insee-ip2120",
+      "page": 3
+     }
+    ]
+   ],
+   "source_quote": "L'adoption de l'IA est moins fréquente en France que dans le reste de l'UE (ip2061 p.2) / L'adoption de l'IA reste un peu moins fréquente en France que dans le reste de l'Union européenne (ip2120 p.2)",
+   "corpus_version": 2,
+   "key_points": [
+    "Usage en forte hausse : de 10 % à 18 % des entreprises",
+    "France toujours en retrait de la moyenne de l'UE",
+    "Adoption très liée à la taille de l'entreprise",
+    "Information-communication, secteur le plus utilisateur",
+    "Acquisition surtout par achat de logiciels prêts à l'emploi"
+   ],
+   "min_points": 3
+  },
+  {
+   "qid": "val2-010",
+   "question": "De combien les prix de l'électricité, du gaz et des autres combustibles payés par les ménages ont-ils augmenté en 2024 ? Le chiffre a-t-il été modifié entre les bilans de la consommation publiés en 2025 et en 2026 ?",
+   "lang": "fr",
+   "type": "temporel",
+   "difficulty": "moyen",
+   "answerable": true,
+   "answer": "Oui : le bilan publié en 2025 indiquait une hausse de 11,5 % de ces prix en 2024 ; celui de 2026 retient +12,4 % pour 2024, avant une baisse de 3,0 % en 2025.",
+   "key_values": [
+    "11,5 %",
+    "12,4 %"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "insee-ip2056",
+      "page": 1
+     },
+     {
+      "doc_id": "insee-ip2056",
+      "page": 2
+     }
+    ],
+    [
+     {
+      "doc_id": "insee-ip2110",
+      "page": 1
+     },
+     {
+      "doc_id": "insee-ip2110",
+      "page": 2
+     }
+    ]
+   ],
+   "source_quote": "les prix de l’électricité et du gaz en particulier baissent de 3,0 % après une forte hausse en 2024 (+12,4 %).",
+   "corpus_version": 2
+  },
+  {
+   "qid": "val2-011",
+   "question": "En 2024, en métropole, quelle valeur atteint l'indicateur synthétique qui mesure les inégalités de niveau de vie entre 0 et 1 ?",
+   "lang": "fr",
+   "type": "texte",
+   "difficulty": "facile",
+   "answerable": true,
+   "answer": "En 2024, l'indice de Gini atteint 0,302 (+0,005 point), son niveau maximum depuis le début de la série en 1996.",
+   "key_values": [
+    "0,302"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "insee-ip2117",
+      "page": 2
+     }
+    ]
+   ],
+   "source_quote": "L’indice de Gini augmente pour la deuxième année consécutive à 0,302 (+0,005 point) et atteint en 2024 un maximum depuis 1996",
+   "corpus_version": 2
+  },
+  {
+   "qid": "val2-012",
+   "question": "Pour 2025, de combien de points l'Insee a-t-il revu à la hausse la croissance de la valeur de la production agricole (hors subventions) entre son compte prévisionnel et son compte provisoire ?",
+   "lang": "fr",
+   "type": "multi-doc",
+   "difficulty": "moyen",
+   "answerable": true,
+   "answer": "Le compte prévisionnel tablait sur une hausse de 3,7 % en euros courants de la production agricole en 2025 ; le compte provisoire l'établit à +4,7 %, soit un relèvement de 1 point.",
+   "key_values": [
+    "3,7 %",
+    "4,7 %",
+    "1 point"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "insee-ip2086",
+      "page": 1
+     },
+     {
+      "doc_id": "insee-ip2086",
+      "page": 2
+     }
+    ],
+    [
+     {
+      "doc_id": "insee-ip2116",
+      "page": 1
+     },
+     {
+      "doc_id": "insee-ip2116",
+      "page": 2
+     }
+    ]
+   ],
+   "source_quote": "ip2086 : « la production agricole augmenterait de 3,7 % en euros courants » ; ip2116 : « la production agricole augmente de 4,7 % en euros courants »",
+   "corpus_version": 2
+  },
+  {
+   "qid": "val2-013",
+   "question": "D'après les chiffres les plus récents de l'Insee, combien un fonctionnaire de catégorie C employé par l'État touche-t-il en moyenne chaque mois en net (équivalent temps plein), et sa rémunération a-t-elle progressé en pouvoir d'achat ?",
+   "lang": "fr",
+   "type": "temporel",
+   "difficulty": "moyen",
+   "answerable": true,
+   "answer": "Dans la dernière édition (données 2024), le salaire net moyen des fonctionnaires de catégorie C de la FPE est de 2 266 euros par mois, en baisse de 2,6 % en euros constants, notamment du fait du passage des surveillants pénitentiaires en catégorie B et de la non-reconduction de la PPAE.",
+   "key_values": [
+    "2 266 euros",
+    "2,6 %"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "insee-ip2100",
+      "page": 3
+     }
+    ]
+   ],
+   "source_quote": "le salaire net moyen des fonctionnaires de catégorie C diminue (2 266 euros par mois, soit -2,6 % en euros constants).",
+   "corpus_version": 2
+  },
+  {
+   "qid": "val2-014",
+   "question": "Selon les comptes nationaux 2025, à combien se monte le déficit commercial de la France en 2025 ?",
+   "lang": "fr",
+   "type": "texte",
+   "difficulty": "moyen",
+   "answerable": true,
+   "answer": "En 2025, la balance commerciale de la France est déficitaire de 14,4 milliards d'euros, une dégradation de 3,7 Md€ après -10,7 Md€ en 2024.",
+   "key_values": [
+    "14,4 Md€"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "insee-ip2105",
+      "page": 3
+     }
+    ]
+   ],
+   "source_quote": "Elle s’établit à -14,4 Md€ en 2025, après le redressement de 2024 à -10,7 Md€, qui correspondait au niveau le moins dégradé depuis 2016.",
+   "corpus_version": 2
+  },
+  {
+   "qid": "val2-015",
+   "question": "En 2024, hors énergies renouvelables et économies d'énergie, sur quel enjeu environnemental les usines ont-elles mis le plus d'argent en équipements antipollution ?",
+   "lang": "fr",
+   "type": "graphique",
+   "difficulty": "difficile",
+   "answerable": true,
+   "answer": "Hors énergies renouvelables et économies d'énergie, c'est la protection de l'air et du climat qui arrive en tête des investissements antipollution de l'industrie en 2024, avec environ 330 millions d'euros, devant les eaux usées (environ 295 millions).",
+   "key_values": [],
+   "evidence": [
+    [
+     {
+      "doc_id": "insee-ip2124",
+      "page": 2
+     }
+    ]
+   ],
+   "source_quote": "Figure 3a (investissements) : après « Énergies renouvelables » et « Économie d'énergie », la barre 2024 la plus longue est « Protection de l'air et du climat » (~330 M€), devant « Eaux usées » (~290 M€).",
+   "corpus_version": 2
+  },
+  {
+   "qid": "val2-016",
+   "question": "Au total, combien les usines d'au moins 20 salariés ont-elles déboursé pour limiter leurs nuisances environnementales (équipements et études compris), d'après la dernière enquête ?",
+   "lang": "fr",
+   "type": "temporel",
+   "difficulty": "facile",
+   "answerable": true,
+   "answer": "En 2024, ces dépenses atteignent 3,5 milliards d'euros (3 529 millions), en hausse de 15 %, dont 3,1 milliards d'euros d'investissements.",
+   "key_values": [
+    "3,5 milliards"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "insee-ip2124",
+      "page": 1
+     },
+     {
+      "doc_id": "insee-ip2124",
+      "page": 2
+     },
+     {
+      "doc_id": "insee-ip2124",
+      "page": 4
+     }
+    ]
+   ],
+   "source_quote": "En 2024, 54 % des établissements industriels de 20 salariés ou plus ont réalisé des dépenses pour réduire l’impact environnemental de leur activité, pour un montant total de 3,5 milliards d’euros.",
+   "corpus_version": 2
+  },
+  {
+   "qid": "val2-017",
+   "question": "Selon le rapport 2026 de la Cour des comptes sur la transition écologique, en quoi la gouvernance de la planification écologique reste-t-elle à consolider, du pilotage national par le SGPE et le plan France Nation Verte jusqu'à sa déclinaison dans les territoires ?",
+   "lang": "fr",
+   "type": "synthese",
+   "difficulty": "difficile",
+   "answerable": true,
+   "answer": "La Cour juge la gouvernance à consolider : la mise en œuvre du plan France Nation Verte par le SGPE reste insuffisamment assurée ; la transparence envers les citoyens et les instances démocratiques est à améliorer ; l'exemplarité de l'État est en deçà des objectifs, avec des résultats décevants, mal mesurés et des objectifs sans trajectoire financière crédible ; dans les territoires, les outils de planification et de contractualisation foisonnent et la territorialisation de France Nation Verte est une démarche redondante aux apports limités.",
+   "key_values": [],
+   "evidence": [
+    [
+     {
+      "doc_id": "cc-transition-ecologique",
+      "page": 3
+     },
+     {
+      "doc_id": "cc-transition-ecologique",
+      "page": 63
+     },
+     {
+      "doc_id": "cc-transition-ecologique",
+      "page": 67
+     },
+     {
+      "doc_id": "cc-transition-ecologique",
+      "page": 70
+     },
+     {
+      "doc_id": "cc-transition-ecologique",
+      "page": 71
+     },
+     {
+      "doc_id": "cc-transition-ecologique",
+      "page": 74
+     },
+     {
+      "doc_id": "cc-transition-ecologique",
+      "page": 76
+     },
+     {
+      "doc_id": "cc-transition-ecologique",
+      "page": 12
+     },
+     {
+      "doc_id": "cc-transition-ecologique",
+      "page": 14
+     }
+    ]
+   ],
+   "source_quote": "II - Une exemplarité de l’État en deçà des objectifs. A - Des ambitions fortes, des résultats décevants et insuffisamment mesurés",
+   "corpus_version": 2,
+   "key_points": [
+    "Mise en œuvre de France Nation Verte insuffisamment assurée",
+    "Transparence insuffisante envers citoyens et instances démocratiques",
+    "Exemplarité de l'État décevante, sans trajectoire financière crédible",
+    "Foisonnement des outils territoriaux, territorialisation redondante"
+   ],
+   "min_points": 3
+  },
+  {
+   "qid": "val2-018",
+   "question": "Écart de revenus entre indépendantes et indépendants hors micro-entreprise en 2024 : combien touchent-elles et touchent-ils chaque mois en moyenne, et quel écart en pourcentage ?",
+   "lang": "fr",
+   "type": "texte",
+   "difficulty": "moyen",
+   "answerable": true,
+   "answer": "En 2024, les femmes non salariées classiques perçoivent en moyenne 3 620 euros par mois contre 4 470 euros pour les hommes, soit 19 % de moins.",
+   "key_values": [
+    "3 620",
+    "4 470",
+    "19 %"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "insee-ip2114",
+      "page": 4
+     }
+    ]
+   ],
+   "source_quote": "Les femmes non salariées classiques perçoivent en moyenne 19 % de moins que leurs confrères (3 620 euros par mois, contre 4 470 euros).",
+   "corpus_version": 2
+  },
+  {
+   "qid": "val2-019",
+   "question": "Pour se doter d'outils d'IA, les sociétés préfèrent-elles acheter des solutions toutes faites ? Dans quelle proportion, selon la dernière édition de l'enquête de l'Insee ?",
+   "lang": "fr",
+   "type": "temporel",
+   "difficulty": "moyen",
+   "answerable": true,
+   "answer": "Principalement par l'achat de logiciels ou systèmes du commerce prêts à l'emploi : c'est le cas de 80 % des entreprises utilisant l'IA en 2025.",
+   "key_values": [
+    "80 %"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "insee-ip2120",
+      "page": 3
+     }
+    ]
+   ],
+   "source_quote": "L’acquisition des technologies d’IA repose sur l’achat de logiciels ou systèmes du commerce prêts à l’emploi pour 80 % des entreprises utilisant l’IA.",
+   "corpus_version": 2
+  },
+  {
+   "qid": "val2-020",
+   "question": "Les chômeurs sont-ils plus exposés à la pauvreté qui s'installe ? Quelle fraction des personnes de 16 ans ou plus au chômage début 2022 a eu un niveau de vie sous le seuil de pauvreté chaque année de 2021 à 2024 ?",
+   "lang": "fr",
+   "type": "texte",
+   "difficulty": "difficile",
+   "answerable": true,
+   "answer": "22,4 % des personnes au chômage début 2022 ont vécu sous le seuil de pauvreté de manière continue de 2021 à 2024, contre 3,0 % des personnes en emploi et 5,7 % des retraités.",
+   "key_values": [
+    "22,4 %"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "insee-ip2129",
+      "page": 3
+     }
+    ]
+   ],
+   "source_quote": "parmi les personnes de 16 ans ou plus, 22,4 % des personnes au chômage début 2022 vivent sous le seuil de pauvreté monétaire de manière continue de 2021 à 2024",
+   "corpus_version": 2
+  },
+  {
+   "qid": "val2-021",
+   "question": "Je prépare un article sur le plafonnement des prix à la location dans la capitale : selon l'atelier d'urbanisme parisien, de combien ces prix ont-ils grimpé de juillet 2019 à juin 2025, et quelle hausse aurait-on eue sans cette mesure ?",
+   "lang": "fr",
+   "type": "texte",
+   "difficulty": "moyen",
+   "answerable": true,
+   "answer": "Les loyers parisiens encadrés ont augmenté de 11,4 % en cumul entre juillet 2019 et juin 2025, au lieu de 17,2 % estimés en l'absence d'encadrement, soit une modération d'environ 5 %.",
+   "key_values": [
+    "11,4 %",
+    "17,2 %"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "cc-encadrement-loyers",
+      "page": 84
+     }
+    ]
+   ],
+   "source_quote": "les loyers parisiens encadrés ont augmenté de 11,4 % en cumul entre juillet 2019 et juin 2025, au lieu de 17,2 % en l'absence d'encadrement selon l'étude",
+   "corpus_version": 2
+  },
+  {
+   "qid": "val2-022",
+   "question": "En 2025, parmi les huit technologies d'IA étudiées par l'enquête TIC, laquelle touche la plus petite part des salariés des entreprises ?",
+   "lang": "fr",
+   "type": "graphique",
+   "difficulty": "moyen",
+   "answerable": true,
+   "answer": "En 2025, la technologie de mouvement de machine basé sur l'observation des environs (robotique autonome) est celle qui concerne la plus faible part des effectifs, environ 17 %.",
+   "key_values": [],
+   "evidence": [
+    [
+     {
+      "doc_id": "insee-ip2120",
+      "page": 2
+     }
+    ]
+   ],
+   "source_quote": "Figure 2, barre 2025 de « Mouvement de machine basé sur l’observation des environs », la plus courte (vers 17 %)",
+   "corpus_version": 2
+  },
+  {
+   "qid": "val2-023",
+   "question": "Combien coûtent, charges comprises, les internes et docteurs juniors en 2024 d'après la Cour des comptes, et quel poids cela représente-t-il dans la dépense publique de santé des hôpitaux publics mesurée par l'Insee ?",
+   "lang": "fr",
+   "type": "multi-doc",
+   "difficulty": "difficile",
+   "answerable": true,
+   "answer": "La rémunération chargée des internes et docteurs juniors atteint 2 153,3 M€ en 2024 selon la Cour, et les dépenses de santé dans les services hospitaliers publics 109 Md€ selon l'Insee, soit environ 2 %.",
+   "key_values": [
+    "2 153,3 M€",
+    "109 Md€",
+    "2 %"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "cc-3e-cycle-medecine",
+      "page": 82
+     },
+     {
+      "doc_id": "cc-3e-cycle-medecine",
+      "page": 89
+     },
+     {
+      "doc_id": "cc-3e-cycle-medecine",
+      "page": 138
+     }
+    ],
+    [
+     {
+      "doc_id": "insee-ip2093",
+      "page": 3
+     }
+    ]
+   ],
+   "source_quote": "cc (tableau) : « Rémunération chargée des internes et docteurs juniors 1 384,3 M€ 2 153,3 M€ » ; ip2093 : « augmentent de 6 Md€ pour atteindre 109 Md€ en 2024 »",
+   "corpus_version": 2
+  },
+  {
+   "qid": "val2-024",
+   "question": "Selon le compte des administrations publiques 2025 de l'Insee, combien les collectivités et organismes publics locaux ont-ils encaissé au total en 2025, et quelle progression sur un an ?",
+   "lang": "fr",
+   "type": "tableau",
+   "difficulty": "moyen",
+   "answerable": true,
+   "answer": "En 2025, les recettes des administrations publiques locales s'élèvent à 319,9 milliards d'euros, en hausse de 2,3 % par rapport à 2024.",
+   "key_values": [
+    "319,9",
+    "2,3 %"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "insee-ip2106",
+      "page": 3
+     }
+    ]
+   ],
+   "source_quote": "Figure 4, ligne « Total des recettes » : APUC 550,8 (+6,2) ; APUL 319,9 (+2,3) ; ASSO 796,6 (+2,3) ; Ensemble 1 561,7 (+3,9).",
+   "corpus_version": 2
+  },
+  {
+   "qid": "val2-025",
+   "question": "Si l'on retranche de l'endettement public les liquidités, prêts et titres détenus par le secteur public, quel poids dans la richesse nationale obtient-on d'après le dernier bilan de l'Insee sur les finances publiques ?",
+   "lang": "fr",
+   "type": "temporel",
+   "difficulty": "moyen",
+   "answerable": true,
+   "answer": "D'après le dernier compte (2025), la dette publique nette atteint 108,5 % du PIB fin 2025, après 104,5 % fin 2024.",
+   "key_values": [
+    "108,5 %"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "insee-ip2106",
+      "page": 1
+     },
+     {
+      "doc_id": "insee-ip2106",
+      "page": 4
+     }
+    ]
+   ],
+   "source_quote": "La dette publique nette s’accroît plus fortement (+177,8 Md €) et représente 108,5 % du PIB après 104,5 % fin 2024.",
+   "corpus_version": 2
+  },
+  {
+   "qid": "val2-026",
+   "question": "Quel poste a pris la tête des dépenses d'équipement vertes des usines françaises dans la dernière enquête Antipol, et quelle somme y a été consacrée ?",
+   "lang": "fr",
+   "type": "temporel",
+   "difficulty": "moyen",
+   "answerable": true,
+   "answer": "Les énergies renouvelables, devenues en 2024 le premier poste d'investissement antipollution avec 812 millions d'euros (+43 %), devant les économies d'énergie (721 millions d'euros).",
+   "key_values": [
+    "812 millions"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "insee-ip2124",
+      "page": 2
+     }
+    ]
+   ],
+   "source_quote": "812 millions d’euros sont investis dans des installations de production d’énergie renouvelable, en hausse de 43 % sur un an après +25 % en 2023. Ce domaine devient le premier poste",
+   "corpus_version": 2
+  },
+  {
+   "qid": "val2-027",
+   "question": "En 2025, chez les entreprises d'au moins 250 personnes qui ne se servent d'aucun outil d'IA, quelle proportion cite la question des données comme frein ?",
+   "lang": "fr",
+   "type": "tableau",
+   "difficulty": "difficile",
+   "answerable": true,
+   "answer": "En 2025, 49 % des entreprises de 250 salariés ou plus n'utilisant pas l'IA évoquent des difficultés liées aux données nécessaires (contre 29 % pour l'ensemble des entreprises).",
+   "key_values": [
+    "49"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "insee-ip2120",
+      "page": 4
+     }
+    ]
+   ],
+   "source_quote": "Figure 4, ligne Difficultés liées aux données nécessaires : 28 ; 32 ; 49 (250 salariés ou plus) ; 29 (ensemble)",
+   "corpus_version": 2
+  },
+  {
+   "qid": "val2-028",
+   "question": "Si l'expérimentation du plafonnement des loyers est prolongée, quels chantiers de réforme la Cour des comptes juge-t-elle nécessaires pour améliorer et simplifier le dispositif ?",
+   "lang": "fr",
+   "type": "synthese",
+   "difficulty": "difficile",
+   "answerable": true,
+   "answer": "Dans son scénario de prorogation, la Cour demande une réforme structurelle comportant : la fiabilisation des données servant au calcul des loyers de référence ; la précision et la cohérence des catégories réglementaires de logement (surface, zonage, époque de construction) ; davantage de transparence et d'homogénéité dans les méthodes d'élaboration des loyers de référence ; la clarification du cadre juridique (compléments de loyer, catégories de baux, colocations) ; la simplification et l'harmonisation des voies de recours des locataires.",
+   "key_values": [],
+   "evidence": [
+    [
+     {
+      "doc_id": "cc-encadrement-loyers",
+      "page": 12
+     },
+     {
+      "doc_id": "cc-encadrement-loyers",
+      "page": 15
+     },
+     {
+      "doc_id": "cc-encadrement-loyers",
+      "page": 96
+     }
+    ]
+   ],
+   "source_quote": "Procéder à une réforme structurelle d’amélioration et de simplification du dispositif dans le cadre de la prolongation de l’expérimentation, supposant notamment : - la fiabilisation des données",
+   "corpus_version": 2,
+   "key_points": [
+    "Fiabiliser les données de calcul des loyers de référence",
+    "Préciser et rendre cohérentes les catégories réglementaires de logement",
+    "Transparence et homogénéité des méthodes appliquées",
+    "Clarifier le cadre juridique (compléments de loyer, baux, colocations)",
+    "Simplifier et harmoniser les voies de recours des locataires"
+   ],
+   "min_points": 3
+  },
+  {
+   "qid": "val2-029",
+   "question": "Dans sa communication à la commission des affaires sociales du Sénat sur l'internat de médecine, que préconise la Cour au sujet du nombre de stages proposés aux internes, et à partir de quelle campagne ?",
+   "lang": "fr",
+   "type": "texte",
+   "difficulty": "moyen",
+   "answerable": true,
+   "answer": "La Cour recommande de modifier la procédure de répartition des stages pour y intégrer les besoins de santé des territoires et d'offrir un nombre de stages strictement égal au nombre d'internes, à partir de la campagne d'ouverture des stages de novembre 2027.",
+   "key_values": [
+    "2027"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "cc-3e-cycle-medecine",
+      "page": 12
+     },
+     {
+      "doc_id": "cc-3e-cycle-medecine",
+      "page": 117
+     }
+    ]
+   ],
+   "source_quote": "offrir un nombre de stages strictement égal au nombre d'internes (à partir de la campagne d'ouverture des stages de novembre 2027",
+   "corpus_version": 2
+  },
+  {
+   "qid": "val2-030",
+   "question": "D'une édition à l'autre de son compte provisoire de l'agriculture (celui de 2024 puis celui de 2025), l'Insee a-t-il corrigé l'ampleur du recul en valeur de la production agricole de 2024, hors subventions sur les produits ?",
+   "lang": "fr",
+   "type": "multi-doc",
+   "difficulty": "difficile",
+   "answerable": true,
+   "answer": "Oui : le compte provisoire 2024 estimait la baisse de la production agricole en valeur à 8,8 % en 2024, tandis que le compte provisoire 2025 retient une baisse de 8,4 % pour 2024.",
+   "key_values": [
+    "8,8 %",
+    "8,4 %"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "insee-ip2062",
+      "page": 1
+     }
+    ],
+    [
+     {
+      "doc_id": "insee-ip2116",
+      "page": 1
+     }
+    ]
+   ],
+   "source_quote": "ip2062 : « En 2024, la production de la branche agricole hors subventions sur les produits baisse de 8,8 % en valeur » ; ip2116 : « rebondit fortement à la fois en valeur (+4,7 % après -8,4 %) »",
+   "corpus_version": 2
+  },
+  {
+   "qid": "val2-031",
+   "question": "En 2024, combien touchent en moyenne par mois, net et en équivalent temps plein, les agents de l'État âgés de 60 ans et plus ?",
+   "lang": "fr",
+   "type": "tableau",
+   "difficulty": "moyen",
+   "answerable": true,
+   "answer": "En 2024, les agents de 60 ans ou plus de la FPE perçoivent en moyenne 3 657 euros nets par mois en EQTP, en hausse de 0,9 % en euros constants.",
+   "key_values": [
+    "3 657 euros"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "insee-ip2100",
+      "page": 3
+     }
+    ]
+   ],
+   "source_quote": "Figure 4, ligne « 60 ans ou plus » : structure 10 %, salaire net moyen 3 657 euros, évolution 0,9 %.",
+   "corpus_version": 2
+  },
+  {
+   "qid": "val2-032",
+   "question": "Les commerçants français sont-ils en retard sur l'IA par rapport aux européens ? Quel taux d'adoption observe-t-on en 2025 dans ce secteur, en France et dans l'UE ?",
+   "lang": "fr",
+   "type": "tableau",
+   "difficulty": "difficile",
+   "answerable": true,
+   "answer": "En 2025, 19 % des entreprises du commerce de l'Union européenne utilisent au moins une technologie d'IA, contre 13 % en France.",
+   "key_values": [
+    "19 %",
+    "13 %"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "insee-ip2120",
+      "page": 1
+     }
+    ]
+   ],
+   "source_quote": "Figure 1, ligne « Commerce » : France 4 / 10 / 13 ; Union européenne 7 / 12 / 19 (2023 / 2024 / 2025).",
+   "corpus_version": 2
+  },
+  {
+   "qid": "val2-033",
+   "question": "Parmi les entreprises aidées par l'agence de la transition écologique, quelle proportion est sérieusement menacée par les sols argileux qui gonflent et se rétractent avec la sécheresse ?",
+   "lang": "fr",
+   "type": "graphique",
+   "difficulty": "difficile",
+   "answerable": true,
+   "answer": "Environ 4 % des bénéficiaires des aides de l'ADEME sont exposés à un risque significatif de RGA, aussi bien à l'horizon 2010-2020 qu'à l'horizon 2025-2035, soit moins que l'ensemble de l'économie (9 % puis 12 %).",
+   "key_values": [
+    "4 %"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "cc-transition-ecologique",
+      "page": 181
+     }
+    ]
+   ],
+   "source_quote": "Graphique n° 30 : part des entreprises à risque significatif de RGA, barres « Aides ADEME » étiquetées 4 % (horizon 2010-2020) et 4 % (horizon 2025-2035)",
+   "corpus_version": 2
+  },
+  {
+   "qid": "val2-034",
+   "question": "According to the latest Insee data, what is the average monthly net full-time-equivalent salary of doctors, pharmacists and dentists employed by public hospitals, and has their purchasing power gone up?",
+   "lang": "en",
+   "type": "temporel",
+   "difficulty": "facile",
+   "answerable": true,
+   "answer": "En 2024, le salaire net moyen des personnels médicaux de la fonction publique hospitalière est de 6 926 euros par mois en EQTP, en baisse de 0,3 % en euros constants (effet de noria lié au renouvellement des praticiens).",
+   "key_values": [
+    "6 926 euros",
+    "0,3 %"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "insee-ip2102",
+      "page": 1
+     },
+     {
+      "doc_id": "insee-ip2102",
+      "page": 2
+     },
+     {
+      "doc_id": "insee-ip2102",
+      "page": 3
+     }
+    ]
+   ],
+   "source_quote": "leur salaire net moyen en EQTP demeurant plus du double de la moyenne des agents du versant (6 926 euros contre 2 896 euros).",
+   "corpus_version": 2,
+   "question_fr": "Selon les données les plus récentes de l'Insee, combien gagnent en moyenne par mois, en net et en équivalent temps plein, les médecins, pharmaciens et odontologistes salariés des hôpitaux publics, et leur pouvoir d'achat a-t-il progressé ?"
+  },
+  {
+   "qid": "val2-035",
+   "question": "Depuis le Covid, les rejets de gaz à effet de serre des entreprises en France sont-ils repartis à la hausse une seule fois ? Quelle année, sur la période 2020-2025 ?",
+   "lang": "fr",
+   "type": "graphique",
+   "difficulty": "moyen",
+   "answerable": true,
+   "answer": "C'est en 2021 : les émissions des activités économiques rebondissent d'environ 5,7 % par rapport à 2020, en même temps qu'un fort rebond du PIB ; elles baissent toutes les autres années.",
+   "key_values": [],
+   "evidence": [
+    [
+     {
+      "doc_id": "insee-ip2130",
+      "page": 2
+     }
+    ]
+   ],
+   "source_quote": "Figure 2 : la seule barre bleue (émissions des activités économiques) positive est celle de 2021/2020 (environ +5,7 %) ; les barres 2020/2019, 2022/2021, 2023/2022, 2024/2023 et 2025/2024 sont négatives.",
+   "corpus_version": 2
+  },
+  {
+   "qid": "val2-036",
+   "question": "In the 2023-2024 academic year, what share of medical students who reached their ninth year of study had to repeat that year?",
+   "lang": "en",
+   "type": "tableau",
+   "difficulty": "difficile",
+   "answerable": true,
+   "answer": "Le taux de redoublement en 9e année était de 19 % en 2023/2024 (contre 20,7 % en 2022/2023).",
+   "key_values": [
+    "19"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "cc-3e-cycle-medecine",
+      "page": 46
+     }
+    ]
+   ],
+   "source_quote": "Tableau n° 6 : taux de redoublement par année de formation en médecine ... 9ème année 18,8 20,7 19",
+   "corpus_version": 2,
+   "question_fr": "En 2023-2024, quelle proportion des étudiants en médecine arrivés en 9e année a dû recommencer cette année ?"
+  },
+  {
+   "qid": "val2-037",
+   "question": "Quel taux d'épargne des ménages pour 2024 l'Insee annonçait-il dans les comptes de la Nation 2024, et quel taux retient-il pour cette même année dans ceux de 2025 ?",
+   "lang": "fr",
+   "type": "multi-doc",
+   "difficulty": "moyen",
+   "answerable": true,
+   "answer": "Les comptes 2024 publiaient un taux d'épargne de 18,2 % pour 2024 ; les comptes 2025 le révisent à 18,5 %, soit 0,3 point de plus.",
+   "key_values": [
+    "18,2 %",
+    "18,5 %"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "insee-ip2053",
+      "page": 3
+     },
+     {
+      "doc_id": "insee-ip2053",
+      "page": 4
+     },
+     {
+      "doc_id": "insee-ip2056",
+      "page": 1
+     },
+     {
+      "doc_id": "insee-ip2056",
+      "page": 4
+     }
+    ],
+    [
+     {
+      "doc_id": "insee-ip2105",
+      "page": 3
+     },
+     {
+      "doc_id": "insee-ip2105",
+      "page": 4
+     },
+     {
+      "doc_id": "insee-ip2110",
+      "page": 4
+     }
+    ]
+   ],
+   "source_quote": "ip2053 : « le taux d'épargne des ménages augmente à 18,2 %, après 17,0 % » ; ip2105 : « Le taux d'épargne des ménages diminue à 17,9 % après 18,5 % en 2024 »",
+   "corpus_version": 2
+  },
+  {
+   "qid": "val2-038",
+   "question": "Sur les trois dernières années couvertes par l'Insee, comment le pouvoir d'achat du salaire net moyen des agents territoriaux a-t-il évolué année après année ?",
+   "lang": "fr",
+   "type": "temporel",
+   "difficulty": "moyen",
+   "answerable": true,
+   "answer": "En euros constants, le salaire net moyen dans la fonction publique territoriale a baissé de 1,1 % en 2022 et de 0,9 % en 2023, puis a rebondi de 1,3 % en 2024 avec le reflux de l'inflation.",
+   "key_values": [
+    "1,1 %",
+    "0,9 %",
+    "1,3 %"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "insee-ip2101",
+      "page": 1
+     },
+     {
+      "doc_id": "insee-ip2101",
+      "page": 2
+     }
+    ]
+   ],
+   "source_quote": "le salaire net moyen dans la FPT rebondit : +1,3 % en 2024 après deux baisses consécutives (‑0,9 % en 2023 et ‑1,1 % en 2022)",
+   "corpus_version": 2
+  },
+  {
+   "qid": "val2-039",
+   "question": "Are retirees more or less likely to live below the poverty line than before? Give the poverty rate among retirees for each of the three most recent years available (metropolitan France).",
+   "lang": "en",
+   "type": "temporel",
+   "difficulty": "difficile",
+   "answerable": true,
+   "answer": "Le taux de pauvreté des retraités est passé de 10,8 % en 2022 à 11,1 % en 2023 (+0,3 point), puis a reculé à 10,4 % en 2024 (-0,7 point), rejoignant le niveau des actifs.",
+   "key_values": [
+    "10,8",
+    "11,1 %",
+    "10,4 %"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "insee-ip2063",
+      "page": 3
+     }
+    ],
+    [
+     {
+      "doc_id": "insee-ip2117",
+      "page": 3
+     },
+     {
+      "doc_id": "insee-ip2117",
+      "page": 1
+     }
+    ]
+   ],
+   "source_quote": "Ainsi en 2024, le taux de pauvreté des retraités baisse de 0,7 point pour s’établir à 10,4 %.",
+   "corpus_version": 2,
+   "question_fr": "Les personnes parties à la retraite vivent-elles plus ou moins souvent sous le seuil de pauvreté qu'avant ? Donnez la proportion concernée pour chacune des trois dernières années disponibles (France métropolitaine)."
+  },
+  {
+   "qid": "val2-040",
+   "question": "In 2024, what was the average monthly income of self-employed professionals working in architecture practices or technical engineering consultancies, excluding micro-entrepreneurs?",
+   "lang": "en",
+   "type": "tableau",
+   "difficulty": "moyen",
+   "answerable": true,
+   "answer": "En 2024, les non-salariés classiques de l'architecture et de l'ingénierie perçoivent en moyenne 4 070 euros par mois (déficits mis à 0), en baisse de 1,0 % en euros constants.",
+   "key_values": [
+    "4 070"
+   ],
+   "evidence": [
+    [
+     {
+      "doc_id": "insee-ip2114",
+      "page": 2
+     }
+    ]
+   ],
+   "source_quote": "Figure 1, ligne « Architecture, ingénierie » : 48 ; 1,2 ; 4 070 ; -1,0 ; -9,8 ; 10,0.",
+   "corpus_version": 2,
+   "question_fr": "En 2024, combien gagne par mois, en moyenne, un professionnel non salarié d'un cabinet d'architecture ou d'un bureau d'études techniques (hors micro-entrepreneurs) ?"
+  }
+ ]
+}

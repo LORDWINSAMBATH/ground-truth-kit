@@ -1,0 +1,12 @@
+# Kit Ground Truth : dépendances minimales (Python >= 3.10)
+pymupdf>=1.24
+pillow>=10.0
+numpy>=1.26
+bm25s>=0.2          # baseline uniquement (le bloc 1 doit être codé sans)
+# Générateur officiel et juge (GPU conseillé)
+torch>=2.3
+transformers>=5.0
+mistral-common>=1.8.6
+accelerate>=1.0
+# Optionnel : backend "openai" (serveur vLLM / llama.cpp / Ollama local)
+openai>=1.40

@@ -1,0 +1,4706 @@
+{
+ "run_name": "mon-bm25-maison",
+ "commit": "",
+ "predictions": [
+  {
+   "qid": "val1-001",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "insee-ip2098",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2060",
+     "page": 1
+    },
+    {
+     "doc_id": "cc-algues-vertes",
+     "page": 40
+    },
+    {
+     "doc_id": "cc-pac",
+     "page": 47
+    },
+    {
+     "doc_id": "insee-ip2050",
+     "page": 3
+    },
+    {
+     "doc_id": "cc-retraites-fonctionnaires-etat",
+     "page": 47
+    },
+    {
+     "doc_id": "insee-ip2060",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2063",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2044",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2060",
+     "page": 4
+    }
+   ]
+  },
+  {
+   "qid": "val1-002",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "cc-pac",
+     "page": 91
+    },
+    {
+     "doc_id": "cc-pac",
+     "page": 74
+    },
+    {
+     "doc_id": "cc-pac",
+     "page": 140
+    },
+    {
+     "doc_id": "cc-pac",
+     "page": 92
+    },
+    {
+     "doc_id": "cc-pac",
+     "page": 95
+    },
+    {
+     "doc_id": "cc-vaccination",
+     "page": 38
+    },
+    {
+     "doc_id": "cc-pac",
+     "page": 83
+    },
+    {
+     "doc_id": "cc-pac",
+     "page": 32
+    },
+    {
+     "doc_id": "cc-algues-vertes",
+     "page": 77
+    },
+    {
+     "doc_id": "cc-algues-vertes",
+     "page": 83
+    }
+   ]
+  },
+  {
+   "qid": "val1-003",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "insee-ip2038",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2095",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2096",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2058",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2096",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2062",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2044",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2062",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2044",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2095",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "qid": "val1-004",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "cc-rspfp-2026",
+     "page": 104
+    },
+    {
+     "doc_id": "cc-rspfp-2026",
+     "page": 20
+    },
+    {
+     "doc_id": "cc-rspfp-2026",
+     "page": 101
+    },
+    {
+     "doc_id": "cc-rspfp-2026-synthese",
+     "page": 19
+    },
+    {
+     "doc_id": "cc-rspfp-2026",
+     "page": 24
+    },
+    {
+     "doc_id": "cc-rspfp-2026",
+     "page": 95
+    },
+    {
+     "doc_id": "cc-rspfp-2026",
+     "page": 48
+    },
+    {
+     "doc_id": "cc-rspfp-2026-synthese",
+     "page": 10
+    },
+    {
+     "doc_id": "cc-rspfp-2026",
+     "page": 115
+    },
+    {
+     "doc_id": "cc-rspfp-2026",
+     "page": 82
+    }
+   ]
+  },
+  {
+   "qid": "val1-005",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "insee-ip2070",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2083",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2045",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2078",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2115",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2083",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2115",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2089",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2123",
+     "page": 2
+    },
+    {
+     "doc_id": "cc-recherche-entreprises",
+     "page": 109
+    }
+   ]
+  },
+  {
+   "qid": "val1-006",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "cc-effacements-electricite",
+     "page": 38
+    },
+    {
+     "doc_id": "cc-effacements-electricite",
+     "page": 64
+    },
+    {
+     "doc_id": "cc-rspfp-2026",
+     "page": 80
+    },
+    {
+     "doc_id": "cc-effacements-electricite",
+     "page": 75
+    },
+    {
+     "doc_id": "cc-anr",
+     "page": 51
+    },
+    {
+     "doc_id": "cc-finances-locales-2026",
+     "page": 36
+    },
+    {
+     "doc_id": "cc-effacements-electricite",
+     "page": 67
+    },
+    {
+     "doc_id": "cc-effacements-electricite",
+     "page": 87
+    },
+    {
+     "doc_id": "cc-recherche-entreprises",
+     "page": 8
+    },
+    {
+     "doc_id": "cc-pac",
+     "page": 40
+    }
+   ]
+  },
+  {
+   "qid": "val1-007",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "insee-ip2063",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2098",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2063",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2063",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2125",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2063",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2048",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2048",
+     "page": 4
+    },
+    {
+     "doc_id": "cc-pac",
+     "page": 57
+    },
+    {
+     "doc_id": "insee-ip2053",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "qid": "val1-008",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "insee-ip2051",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2107",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2050",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2107",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2051",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2051",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2050",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2051",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2107",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2050",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "qid": "val1-009",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "cc-informatique-quantique",
+     "page": 56
+    },
+    {
+     "doc_id": "cc-recherche-entreprises",
+     "page": 67
+    },
+    {
+     "doc_id": "cc-anr",
+     "page": 18
+    },
+    {
+     "doc_id": "cc-anr",
+     "page": 83
+    },
+    {
+     "doc_id": "cc-anr",
+     "page": 22
+    },
+    {
+     "doc_id": "cc-recherche-entreprises",
+     "page": 33
+    },
+    {
+     "doc_id": "cc-recherche-entreprises",
+     "page": 51
+    },
+    {
+     "doc_id": "cc-informatique-quantique",
+     "page": 37
+    },
+    {
+     "doc_id": "cc-recherche-entreprises",
+     "page": 50
+    },
+    {
+     "doc_id": "cc-anr",
+     "page": 17
+    }
+   ]
+  },
+  {
+   "qid": "val1-010",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "insee-ip2113",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2113",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2085",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2064",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2113",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2080",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2113",
+     "page": 3
+    },
+    {
+     "doc_id": "cc-finances-locales-2026",
+     "page": 66
+    },
+    {
+     "doc_id": "insee-ip2079",
+     "page": 3
+    },
+    {
+     "doc_id": "cc-pac",
+     "page": 139
+    }
+   ]
+  },
+  {
+   "qid": "val1-011",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "insee-ip2062",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2062",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2062",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2062",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2057",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2057",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2086",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2086",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2086",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2098",
+     "page": 4
+    }
+   ]
+  },
+  {
+   "qid": "val1-012",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "insee-ip2082",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2082",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2082",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2082",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2125",
+     "page": 4
+    },
+    {
+     "doc_id": "cc-presidence-republique-2025",
+     "page": 29
+    },
+    {
+     "doc_id": "cc-vaccination",
+     "page": 147
+    },
+    {
+     "doc_id": "insee-ip2039",
+     "page": 1
+    },
+    {
+     "doc_id": "cc-effacements-electricite",
+     "page": 22
+    },
+    {
+     "doc_id": "cc-vaccination",
+     "page": 150
+    }
+   ]
+  },
+  {
+   "qid": "val1-013",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "insee-ip2084",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2084",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2035",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2122",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2123",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2123",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2113",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2122",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2122",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2070",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "qid": "val1-014",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "cc-retraites-fonctionnaires-etat",
+     "page": 18
+    },
+    {
+     "doc_id": "cc-retraites-fonctionnaires-etat",
+     "page": 39
+    },
+    {
+     "doc_id": "cc-retraites-fonctionnaires-etat",
+     "page": 42
+    },
+    {
+     "doc_id": "cc-retraites-fonctionnaires-etat",
+     "page": 33
+    },
+    {
+     "doc_id": "cc-retraites-fonctionnaires-etat",
+     "page": 65
+    },
+    {
+     "doc_id": "cc-retraites-fonctionnaires-etat",
+     "page": 8
+    },
+    {
+     "doc_id": "cc-retraites-fonctionnaires-etat",
+     "page": 34
+    },
+    {
+     "doc_id": "cc-retraites-fonctionnaires-etat",
+     "page": 112
+    },
+    {
+     "doc_id": "cc-retraites-fonctionnaires-etat",
+     "page": 61
+    },
+    {
+     "doc_id": "cc-retraites-fonctionnaires-etat",
+     "page": 17
+    }
+   ]
+  },
+  {
+   "qid": "val1-015",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "insee-ip2082",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2049",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2082",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2049",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2064",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2090",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2126",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2039",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2121",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2039",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "qid": "val1-016",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "cc-vaccination",
+     "page": 18
+    },
+    {
+     "doc_id": "insee-ip2093",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2087",
+     "page": 4
+    },
+    {
+     "doc_id": "cc-vaccination",
+     "page": 149
+    },
+    {
+     "doc_id": "cc-retraites-fonctionnaires-etat",
+     "page": 96
+    },
+    {
+     "doc_id": "cc-rspfp-2026",
+     "page": 152
+    },
+    {
+     "doc_id": "insee-ip2033",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2084",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2093",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2048",
+     "page": 4
+    }
+   ]
+  },
+  {
+   "qid": "val1-017",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "cc-ia-ministere-culture",
+     "page": 36
+    },
+    {
+     "doc_id": "cc-ia-ministere-culture",
+     "page": 39
+    },
+    {
+     "doc_id": "cc-ia-ministere-culture",
+     "page": 1
+    },
+    {
+     "doc_id": "cc-ia-ministere-culture",
+     "page": 14
+    },
+    {
+     "doc_id": "cc-ia-ministere-culture",
+     "page": 8
+    },
+    {
+     "doc_id": "cc-ia-ministere-culture",
+     "page": 38
+    },
+    {
+     "doc_id": "cc-ia-ministere-culture",
+     "page": 23
+    },
+    {
+     "doc_id": "cc-ia-ministere-culture",
+     "page": 11
+    },
+    {
+     "doc_id": "cc-ia-ministere-culture",
+     "page": 30
+    },
+    {
+     "doc_id": "cc-ia-ministere-culture",
+     "page": 34
+    }
+   ]
+  },
+  {
+   "qid": "val1-018",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "insee-ip2082",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2082",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2125",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2121",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2123",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2037",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2126",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2039",
+     "page": 3
+    },
+    {
+     "doc_id": "cc-pac",
+     "page": 9
+    },
+    {
+     "doc_id": "insee-ip2039",
+     "page": 4
+    }
+   ]
+  },
+  {
+   "qid": "val1-019",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "cc-finances-locales-2026",
+     "page": 177
+    },
+    {
+     "doc_id": "cc-finances-locales-2026",
+     "page": 149
+    },
+    {
+     "doc_id": "cc-finances-locales-2026",
+     "page": 147
+    },
+    {
+     "doc_id": "cc-finances-locales-2026",
+     "page": 148
+    },
+    {
+     "doc_id": "cc-finances-locales-2026-synthese",
+     "page": 11
+    },
+    {
+     "doc_id": "cc-finances-locales-2026",
+     "page": 25
+    },
+    {
+     "doc_id": "cc-finances-locales-2026",
+     "page": 133
+    },
+    {
+     "doc_id": "cc-finances-locales-2026",
+     "page": 16
+    },
+    {
+     "doc_id": "cc-finances-locales-2026",
+     "page": 14
+    },
+    {
+     "doc_id": "cc-finances-locales-2026",
+     "page": 134
+    }
+   ]
+  },
+  {
+   "qid": "val1-020",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "insee-ip2048",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2033",
+     "page": 4
+    },
+    {
+     "doc_id": "cc-vaccination",
+     "page": 67
+    },
+    {
+     "doc_id": "insee-ip2048",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2087",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2121",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2087",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2121",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2048",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2033",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "qid": "val1-021",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "insee-ip2069",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2070",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2118",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2070",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2118",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2069",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2069",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2092",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2070",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2069",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "qid": "val1-022",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "cc-informatique-quantique",
+     "page": 43
+    },
+    {
+     "doc_id": "cc-informatique-quantique",
+     "page": 39
+    },
+    {
+     "doc_id": "cc-informatique-quantique",
+     "page": 41
+    },
+    {
+     "doc_id": "cc-anr",
+     "page": 44
+    },
+    {
+     "doc_id": "cc-informatique-quantique-synthese",
+     "page": 14
+    },
+    {
+     "doc_id": "cc-informatique-quantique",
+     "page": 17
+    },
+    {
+     "doc_id": "cc-informatique-quantique",
+     "page": 72
+    },
+    {
+     "doc_id": "cc-informatique-quantique",
+     "page": 70
+    },
+    {
+     "doc_id": "cc-informatique-quantique",
+     "page": 76
+    },
+    {
+     "doc_id": "cc-informatique-quantique",
+     "page": 45
+    }
+   ]
+  },
+  {
+   "qid": "val1-023",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "cc-ia-ministere-culture",
+     "page": 27
+    },
+    {
+     "doc_id": "cc-ia-ministere-culture",
+     "page": 7
+    },
+    {
+     "doc_id": "cc-ia-ministere-culture",
+     "page": 17
+    },
+    {
+     "doc_id": "cc-ia-ministere-culture",
+     "page": 36
+    },
+    {
+     "doc_id": "cc-ia-ministere-culture",
+     "page": 28
+    },
+    {
+     "doc_id": "cc-ia-ministere-culture",
+     "page": 40
+    },
+    {
+     "doc_id": "cc-presidence-republique-2025",
+     "page": 65
+    },
+    {
+     "doc_id": "cc-ia-ministere-culture",
+     "page": 30
+    },
+    {
+     "doc_id": "cc-difficultes-entreprises",
+     "page": 100
+    },
+    {
+     "doc_id": "cc-ia-ministere-culture",
+     "page": 16
+    }
+   ]
+  },
+  {
+   "qid": "val1-024",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "insee-ip2095",
+     "page": 4
+    },
+    {
+     "doc_id": "cc-effacements-electricite",
+     "page": 53
+    },
+    {
+     "doc_id": "insee-ip2125",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2099",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2031",
+     "page": 4
+    },
+    {
+     "doc_id": "cc-recherche-entreprises",
+     "page": 171
+    },
+    {
+     "doc_id": "insee-ip2073",
+     "page": 4
+    },
+    {
+     "doc_id": "cc-pac",
+     "page": 39
+    },
+    {
+     "doc_id": "cc-vaccination",
+     "page": 10
+    },
+    {
+     "doc_id": "cc-vaccination",
+     "page": 22
+    }
+   ]
+  },
+  {
+   "qid": "val1-025",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "cc-finances-locales-2026",
+     "page": 87
+    },
+    {
+     "doc_id": "cc-finances-locales-2026",
+     "page": 68
+    },
+    {
+     "doc_id": "cc-finances-locales-2026",
+     "page": 218
+    },
+    {
+     "doc_id": "cc-finances-locales-2026",
+     "page": 69
+    },
+    {
+     "doc_id": "cc-finances-locales-2026",
+     "page": 223
+    },
+    {
+     "doc_id": "cc-finances-locales-2026",
+     "page": 83
+    },
+    {
+     "doc_id": "cc-finances-locales-2026",
+     "page": 124
+    },
+    {
+     "doc_id": "cc-finances-locales-2026",
+     "page": 217
+    },
+    {
+     "doc_id": "cc-finances-locales-2026",
+     "page": 92
+    },
+    {
+     "doc_id": "cc-finances-locales-2026",
+     "page": 84
+    }
+   ]
+  },
+  {
+   "qid": "val1-026",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "insee-ip2099",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2099",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2099",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2099",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2077",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2077",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2077",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2077",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2091",
+     "page": 4
+    },
+    {
+     "doc_id": "cc-finances-locales-2026",
+     "page": 86
+    }
+   ]
+  },
+  {
+   "qid": "val1-027",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "insee-ip2051",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2045",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2039",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2039",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2104",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2057",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2092",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2062",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2070",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2077",
+     "page": 4
+    }
+   ]
+  },
+  {
+   "qid": "val1-028",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "insee-ip2063",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2063",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2063",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2063",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2047",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2125",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2098",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2098",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2098",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2042",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "qid": "val1-029",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "cc-informatique-quantique",
+     "page": 41
+    },
+    {
+     "doc_id": "cc-informatique-quantique",
+     "page": 62
+    },
+    {
+     "doc_id": "cc-informatique-quantique",
+     "page": 59
+    },
+    {
+     "doc_id": "cc-informatique-quantique",
+     "page": 20
+    },
+    {
+     "doc_id": "cc-informatique-quantique-synthese",
+     "page": 14
+    },
+    {
+     "doc_id": "cc-informatique-quantique",
+     "page": 57
+    },
+    {
+     "doc_id": "cc-informatique-quantique",
+     "page": 64
+    },
+    {
+     "doc_id": "cc-informatique-quantique",
+     "page": 58
+    },
+    {
+     "doc_id": "cc-informatique-quantique",
+     "page": 19
+    },
+    {
+     "doc_id": "cc-informatique-quantique",
+     "page": 32
+    }
+   ]
+  },
+  {
+   "qid": "val1-030",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "cc-vaccination",
+     "page": 47
+    },
+    {
+     "doc_id": "cc-vaccination",
+     "page": 7
+    },
+    {
+     "doc_id": "cc-vaccination",
+     "page": 15
+    },
+    {
+     "doc_id": "cc-vaccination",
+     "page": 41
+    },
+    {
+     "doc_id": "insee-ip2121",
+     "page": 2
+    },
+    {
+     "doc_id": "cc-vaccination",
+     "page": 42
+    },
+    {
+     "doc_id": "cc-vaccination",
+     "page": 17
+    },
+    {
+     "doc_id": "insee-ip2033",
+     "page": 1
+    },
+    {
+     "doc_id": "cc-vaccination",
+     "page": 96
+    },
+    {
+     "doc_id": "cc-recherche-entreprises",
+     "page": 142
+    }
+   ]
+  },
+  {
+   "qid": "val1-031",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "insee-ip2068",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2096",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2044",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2073",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2072",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2070",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2115",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2072",
+     "page": 4
+    },
+    {
+     "doc_id": "cc-effacements-electricite",
+     "page": 18
+    },
+    {
+     "doc_id": "insee-ip2092",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "qid": "val1-032",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "insee-ip2096",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2073",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2096",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2044",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2044",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2126",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2051",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2096",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2044",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2063",
+     "page": 4
+    }
+   ]
+  },
+  {
+   "qid": "val1-033",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "cc-vaccination",
+     "page": 146
+    },
+    {
+     "doc_id": "cc-vaccination",
+     "page": 61
+    },
+    {
+     "doc_id": "cc-vaccination",
+     "page": 145
+    },
+    {
+     "doc_id": "cc-vaccination",
+     "page": 92
+    },
+    {
+     "doc_id": "cc-vaccination",
+     "page": 149
+    },
+    {
+     "doc_id": "cc-vaccination",
+     "page": 56
+    },
+    {
+     "doc_id": "cc-vaccination",
+     "page": 16
+    },
+    {
+     "doc_id": "cc-vaccination",
+     "page": 55
+    },
+    {
+     "doc_id": "cc-vaccination",
+     "page": 52
+    },
+    {
+     "doc_id": "cc-vaccination",
+     "page": 143
+    }
+   ]
+  },
+  {
+   "qid": "val1-034",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "cc-effacements-electricite",
+     "page": 58
+    },
+    {
+     "doc_id": "cc-effacements-electricite",
+     "page": 45
+    },
+    {
+     "doc_id": "cc-effacements-electricite",
+     "page": 60
+    },
+    {
+     "doc_id": "cc-effacements-electricite",
+     "page": 43
+    },
+    {
+     "doc_id": "cc-effacements-electricite",
+     "page": 59
+    },
+    {
+     "doc_id": "cc-effacements-electricite",
+     "page": 46
+    },
+    {
+     "doc_id": "cc-effacements-electricite",
+     "page": 57
+    },
+    {
+     "doc_id": "cc-effacements-electricite",
+     "page": 54
+    },
+    {
+     "doc_id": "cc-effacements-electricite",
+     "page": 50
+    },
+    {
+     "doc_id": "cc-effacements-electricite",
+     "page": 70
+    }
+   ]
+  },
+  {
+   "qid": "val1-035",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "insee-ip2044",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2044",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2096",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2096",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2044",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2096",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2073",
+     "page": 4
+    },
+    {
+     "doc_id": "cc-difficultes-entreprises",
+     "page": 19
+    },
+    {
+     "doc_id": "insee-ip2080",
+     "page": 4
+    },
+    {
+     "doc_id": "cc-pac",
+     "page": 96
+    }
+   ]
+  },
+  {
+   "qid": "val1-036",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "insee-ip2035",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2035",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2035",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2035",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2067",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2079",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2043",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2065",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2079",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2079",
+     "page": 4
+    }
+   ]
+  },
+  {
+   "qid": "val1-037",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "cc-taxe-transactions-financieres",
+     "page": 45
+    },
+    {
+     "doc_id": "cc-taxe-transactions-financieres-synthese",
+     "page": 12
+    },
+    {
+     "doc_id": "cc-finances-locales-2026",
+     "page": 170
+    },
+    {
+     "doc_id": "cc-rspfp-2026",
+     "page": 30
+    },
+    {
+     "doc_id": "cc-taxe-transactions-financieres",
+     "page": 10
+    },
+    {
+     "doc_id": "cc-finances-locales-2026",
+     "page": 167
+    },
+    {
+     "doc_id": "cc-finances-locales-2026",
+     "page": 63
+    },
+    {
+     "doc_id": "cc-finances-locales-2026",
+     "page": 141
+    },
+    {
+     "doc_id": "cc-finances-locales-2026",
+     "page": 60
+    },
+    {
+     "doc_id": "cc-finances-locales-2026",
+     "page": 29
+    }
+   ]
+  },
+  {
+   "qid": "val1-038",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "cc-retraites-fonctionnaires-etat",
+     "page": 71
+    },
+    {
+     "doc_id": "cc-finances-locales-2026",
+     "page": 128
+    },
+    {
+     "doc_id": "cc-retraites-fonctionnaires-etat",
+     "page": 89
+    },
+    {
+     "doc_id": "cc-retraites-fonctionnaires-etat",
+     "page": 78
+    },
+    {
+     "doc_id": "cc-retraites-fonctionnaires-etat",
+     "page": 80
+    },
+    {
+     "doc_id": "cc-retraites-fonctionnaires-etat",
+     "page": 10
+    },
+    {
+     "doc_id": "cc-finances-locales-2026-synthese",
+     "page": 10
+    },
+    {
+     "doc_id": "cc-retraites-fonctionnaires-etat",
+     "page": 88
+    },
+    {
+     "doc_id": "cc-retraites-fonctionnaires-etat",
+     "page": 11
+    },
+    {
+     "doc_id": "cc-finances-locales-2026",
+     "page": 129
+    }
+   ]
+  },
+  {
+   "qid": "val1-039",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "insee-ip2065",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2079",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2066",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2079",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2067",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2065",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2065",
+     "page": 1
+    },
+    {
+     "doc_id": "cc-retraites-fonctionnaires-etat",
+     "page": 52
+    },
+    {
+     "doc_id": "insee-ip2066",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2066",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "qid": "val1-040",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "cc-algues-vertes",
+     "page": 48
+    },
+    {
+     "doc_id": "cc-algues-vertes",
+     "page": 61
+    },
+    {
+     "doc_id": "cc-algues-vertes",
+     "page": 62
+    },
+    {
+     "doc_id": "cc-algues-vertes",
+     "page": 83
+    },
+    {
+     "doc_id": "cc-algues-vertes-synthese",
+     "page": 12
+    },
+    {
+     "doc_id": "cc-algues-vertes",
+     "page": 59
+    },
+    {
+     "doc_id": "cc-algues-vertes",
+     "page": 49
+    },
+    {
+     "doc_id": "cc-algues-vertes",
+     "page": 67
+    },
+    {
+     "doc_id": "cc-algues-vertes",
+     "page": 50
+    },
+    {
+     "doc_id": "cc-algues-vertes",
+     "page": 43
+    }
+   ]
+  },
+  {
+   "qid": "val1-041",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "insee-ip2064",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2064",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2064",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2121",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2090",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2121",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2047",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2047",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2082",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2090",
+     "page": 4
+    }
+   ]
+  },
+  {
+   "qid": "val1-042",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "cc-finances-locales-2026",
+     "page": 73
+    },
+    {
+     "doc_id": "cc-finances-locales-2026",
+     "page": 24
+    },
+    {
+     "doc_id": "cc-finances-locales-2026",
+     "page": 155
+    },
+    {
+     "doc_id": "cc-finances-locales-2026",
+     "page": 156
+    },
+    {
+     "doc_id": "cc-finances-locales-2026-synthese",
+     "page": 11
+    },
+    {
+     "doc_id": "cc-finances-locales-2026",
+     "page": 171
+    },
+    {
+     "doc_id": "cc-finances-locales-2026",
+     "page": 154
+    },
+    {
+     "doc_id": "cc-finances-locales-2026",
+     "page": 152
+    },
+    {
+     "doc_id": "cc-recherche-entreprises",
+     "page": 161
+    },
+    {
+     "doc_id": "cc-finances-locales-2026",
+     "page": 14
+    }
+   ]
+  },
+  {
+   "qid": "val1-043",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "cc-effacements-electricite",
+     "page": 51
+    },
+    {
+     "doc_id": "cc-effacements-electricite",
+     "page": 42
+    },
+    {
+     "doc_id": "cc-effacements-electricite",
+     "page": 65
+    },
+    {
+     "doc_id": "cc-effacements-electricite",
+     "page": 43
+    },
+    {
+     "doc_id": "cc-effacements-electricite",
+     "page": 58
+    },
+    {
+     "doc_id": "cc-effacements-electricite",
+     "page": 57
+    },
+    {
+     "doc_id": "cc-effacements-electricite",
+     "page": 40
+    },
+    {
+     "doc_id": "cc-effacements-electricite",
+     "page": 55
+    },
+    {
+     "doc_id": "cc-effacements-electricite",
+     "page": 84
+    },
+    {
+     "doc_id": "cc-effacements-electricite",
+     "page": 67
+    }
+   ]
+  },
+  {
+   "qid": "val1-044",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "insee-ip2051",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2076",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2050",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2107",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2076",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2076",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2107",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2126",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2051",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2076",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "qid": "val1-045",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "insee-ip2059",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2059",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2059",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2062",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2086",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2059",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2086",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2084",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2057",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2086",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "qid": "val1-046",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "cc-finances-locales-2026",
+     "page": 72
+    },
+    {
+     "doc_id": "cc-algues-vertes",
+     "page": 41
+    },
+    {
+     "doc_id": "cc-recherche-entreprises",
+     "page": 202
+    },
+    {
+     "doc_id": "cc-umr",
+     "page": 17
+    },
+    {
+     "doc_id": "insee-ip2121",
+     "page": 3
+    },
+    {
+     "doc_id": "cc-algues-vertes",
+     "page": 45
+    },
+    {
+     "doc_id": "cc-umr",
+     "page": 22
+    },
+    {
+     "doc_id": "cc-recherche-entreprises",
+     "page": 35
+    },
+    {
+     "doc_id": "cc-recherche-entreprises",
+     "page": 240
+    },
+    {
+     "doc_id": "cc-pac",
+     "page": 77
+    }
+   ]
+  },
+  {
+   "qid": "val1-047",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "cc-umr",
+     "page": 44
+    },
+    {
+     "doc_id": "cc-anr",
+     "page": 29
+    },
+    {
+     "doc_id": "cc-umr",
+     "page": 47
+    },
+    {
+     "doc_id": "cc-umr",
+     "page": 46
+    },
+    {
+     "doc_id": "cc-umr",
+     "page": 55
+    },
+    {
+     "doc_id": "cc-recherche-entreprises",
+     "page": 182
+    },
+    {
+     "doc_id": "cc-recherche-entreprises",
+     "page": 107
+    },
+    {
+     "doc_id": "cc-umr",
+     "page": 16
+    },
+    {
+     "doc_id": "cc-anr",
+     "page": 42
+    },
+    {
+     "doc_id": "cc-umr",
+     "page": 9
+    }
+   ]
+  },
+  {
+   "qid": "val1-048",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "cc-pac",
+     "page": 13
+    },
+    {
+     "doc_id": "cc-pac",
+     "page": 6
+    },
+    {
+     "doc_id": "cc-pac",
+     "page": 73
+    },
+    {
+     "doc_id": "cc-recherche-entreprises",
+     "page": 130
+    },
+    {
+     "doc_id": "cc-pac",
+     "page": 88
+    },
+    {
+     "doc_id": "cc-pac",
+     "page": 106
+    },
+    {
+     "doc_id": "cc-recherche-entreprises",
+     "page": 127
+    },
+    {
+     "doc_id": "cc-informatique-quantique",
+     "page": 33
+    },
+    {
+     "doc_id": "cc-pac",
+     "page": 92
+    },
+    {
+     "doc_id": "cc-pac",
+     "page": 70
+    }
+   ]
+  },
+  {
+   "qid": "val1-049",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "cc-informatique-quantique",
+     "page": 80
+    },
+    {
+     "doc_id": "cc-informatique-quantique",
+     "page": 99
+    },
+    {
+     "doc_id": "cc-informatique-quantique",
+     "page": 102
+    },
+    {
+     "doc_id": "cc-informatique-quantique",
+     "page": 33
+    },
+    {
+     "doc_id": "cc-informatique-quantique",
+     "page": 32
+    },
+    {
+     "doc_id": "cc-informatique-quantique",
+     "page": 29
+    },
+    {
+     "doc_id": "cc-informatique-quantique",
+     "page": 4
+    },
+    {
+     "doc_id": "cc-recherche-entreprises",
+     "page": 127
+    },
+    {
+     "doc_id": "cc-informatique-quantique",
+     "page": 31
+    },
+    {
+     "doc_id": "cc-informatique-quantique",
+     "page": 75
+    }
+   ]
+  },
+  {
+   "qid": "val1-050",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "cc-ia-ministere-culture",
+     "page": 10
+    },
+    {
+     "doc_id": "cc-presidence-republique-2025",
+     "page": 56
+    },
+    {
+     "doc_id": "cc-ia-ministere-culture",
+     "page": 14
+    },
+    {
+     "doc_id": "insee-ip2061",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2083",
+     "page": 3
+    },
+    {
+     "doc_id": "cc-ia-ministere-culture",
+     "page": 40
+    },
+    {
+     "doc_id": "insee-ip2115",
+     "page": 3
+    },
+    {
+     "doc_id": "cc-ia-ministere-culture",
+     "page": 36
+    },
+    {
+     "doc_id": "cc-informatique-quantique",
+     "page": 74
+    },
+    {
+     "doc_id": "cc-ia-ministere-culture",
+     "page": 13
+    }
+   ]
+  },
+  {
+   "qid": "val1-051",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "insee-ip2057",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2057",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2062",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2062",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2062",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2074",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2086",
+     "page": 3
+    },
+    {
+     "doc_id": "cc-pac",
+     "page": 67
+    },
+    {
+     "doc_id": "insee-ip2072",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2074",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "qid": "val1-052",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "cc-taxe-transactions-financieres",
+     "page": 84
+    },
+    {
+     "doc_id": "cc-taxe-transactions-financieres",
+     "page": 25
+    },
+    {
+     "doc_id": "cc-taxe-transactions-financieres",
+     "page": 79
+    },
+    {
+     "doc_id": "cc-taxe-transactions-financieres",
+     "page": 28
+    },
+    {
+     "doc_id": "cc-taxe-transactions-financieres",
+     "page": 12
+    },
+    {
+     "doc_id": "cc-taxe-transactions-financieres",
+     "page": 86
+    },
+    {
+     "doc_id": "cc-taxe-transactions-financieres",
+     "page": 80
+    },
+    {
+     "doc_id": "cc-taxe-transactions-financieres",
+     "page": 56
+    },
+    {
+     "doc_id": "cc-taxe-transactions-financieres",
+     "page": 88
+    },
+    {
+     "doc_id": "cc-taxe-transactions-financieres",
+     "page": 24
+    }
+   ]
+  },
+  {
+   "qid": "val1-053",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "cc-anr",
+     "page": 77
+    },
+    {
+     "doc_id": "cc-anr",
+     "page": 10
+    },
+    {
+     "doc_id": "cc-anr",
+     "page": 73
+    },
+    {
+     "doc_id": "cc-anr",
+     "page": 78
+    },
+    {
+     "doc_id": "cc-anr",
+     "page": 9
+    },
+    {
+     "doc_id": "cc-anr",
+     "page": 79
+    },
+    {
+     "doc_id": "cc-anr",
+     "page": 75
+    },
+    {
+     "doc_id": "cc-anr",
+     "page": 81
+    },
+    {
+     "doc_id": "cc-anr",
+     "page": 74
+    },
+    {
+     "doc_id": "cc-anr",
+     "page": 76
+    }
+   ]
+  },
+  {
+   "qid": "val1-054",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "insee-ip2046",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2046",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2046",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2046",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2064",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2064",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2047",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2090",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2064",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2090",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "qid": "val1-055",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "insee-ip2067",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2067",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2067",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2066",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2065",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2066",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2065",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2094",
+     "page": 4
+    },
+    {
+     "doc_id": "cc-presidence-republique-2025",
+     "page": 29
+    },
+    {
+     "doc_id": "insee-ip2094",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "qid": "val1-056",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "insee-ip2076",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2076",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2076",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2076",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2051",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2050",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2126",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2107",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2051",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2051",
+     "page": 4
+    }
+   ]
+  },
+  {
+   "qid": "val1-057",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "insee-ip2094",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2052",
+     "page": 1
+    },
+    {
+     "doc_id": "cc-presidence-republique-2025",
+     "page": 33
+    },
+    {
+     "doc_id": "insee-ip2052",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2094",
+     "page": 1
+    },
+    {
+     "doc_id": "cc-presidence-republique-2025",
+     "page": 42
+    },
+    {
+     "doc_id": "insee-ip2094",
+     "page": 2
+    },
+    {
+     "doc_id": "cc-presidence-republique-2025",
+     "page": 28
+    },
+    {
+     "doc_id": "insee-ip2052",
+     "page": 2
+    },
+    {
+     "doc_id": "cc-presidence-republique-2025",
+     "page": 64
+    }
+   ]
+  },
+  {
+   "qid": "val1-058",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "cc-informatique-quantique",
+     "page": 11
+    },
+    {
+     "doc_id": "cc-informatique-quantique",
+     "page": 71
+    },
+    {
+     "doc_id": "cc-informatique-quantique",
+     "page": 29
+    },
+    {
+     "doc_id": "cc-informatique-quantique",
+     "page": 79
+    },
+    {
+     "doc_id": "cc-informatique-quantique",
+     "page": 25
+    },
+    {
+     "doc_id": "cc-informatique-quantique",
+     "page": 91
+    },
+    {
+     "doc_id": "cc-rspfp-2026",
+     "page": 121
+    },
+    {
+     "doc_id": "cc-informatique-quantique-synthese",
+     "page": 8
+    },
+    {
+     "doc_id": "cc-informatique-quantique",
+     "page": 126
+    },
+    {
+     "doc_id": "cc-informatique-quantique",
+     "page": 27
+    }
+   ]
+  },
+  {
+   "qid": "val1-059",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "insee-ip2077",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2099",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2077",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2077",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2099",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2081",
+     "page": 4
+    },
+    {
+     "doc_id": "cc-pac",
+     "page": 74
+    },
+    {
+     "doc_id": "insee-ip2077",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2099",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2095",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "qid": "val1-060",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "insee-ip2083",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2092",
+     "page": 4
+    },
+    {
+     "doc_id": "cc-recherche-entreprises",
+     "page": 17
+    },
+    {
+     "doc_id": "cc-recherche-entreprises-synthese",
+     "page": 6
+    },
+    {
+     "doc_id": "cc-recherche-entreprises",
+     "page": 8
+    },
+    {
+     "doc_id": "insee-ip2037",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2069",
+     "page": 2
+    },
+    {
+     "doc_id": "cc-vaccination",
+     "page": 38
+    },
+    {
+     "doc_id": "insee-ip2061",
+     "page": 2
+    },
+    {
+     "doc_id": "cc-recherche-entreprises",
+     "page": 116
+    }
+   ]
+  },
+  {
+   "qid": "val1-061",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "cc-recherche-entreprises",
+     "page": 109
+    },
+    {
+     "doc_id": "cc-recherche-entreprises",
+     "page": 47
+    },
+    {
+     "doc_id": "cc-recherche-entreprises",
+     "page": 20
+    },
+    {
+     "doc_id": "cc-recherche-entreprises",
+     "page": 193
+    },
+    {
+     "doc_id": "cc-recherche-entreprises",
+     "page": 157
+    },
+    {
+     "doc_id": "cc-recherche-entreprises",
+     "page": 31
+    },
+    {
+     "doc_id": "cc-recherche-entreprises",
+     "page": 156
+    },
+    {
+     "doc_id": "cc-recherche-entreprises",
+     "page": 206
+    },
+    {
+     "doc_id": "cc-recherche-entreprises",
+     "page": 215
+    },
+    {
+     "doc_id": "cc-recherche-entreprises",
+     "page": 38
+    }
+   ]
+  },
+  {
+   "qid": "val1-062",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "insee-ip2115",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2070",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2115",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2040",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2115",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2104",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2083",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2064",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2070",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2064",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "qid": "val1-063",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "cc-algues-vertes",
+     "page": 19
+    },
+    {
+     "doc_id": "cc-algues-vertes",
+     "page": 74
+    },
+    {
+     "doc_id": "cc-algues-vertes",
+     "page": 59
+    },
+    {
+     "doc_id": "cc-algues-vertes",
+     "page": 35
+    },
+    {
+     "doc_id": "cc-algues-vertes",
+     "page": 40
+    },
+    {
+     "doc_id": "cc-algues-vertes",
+     "page": 8
+    },
+    {
+     "doc_id": "cc-algues-vertes",
+     "page": 61
+    },
+    {
+     "doc_id": "cc-algues-vertes",
+     "page": 81
+    },
+    {
+     "doc_id": "cc-algues-vertes",
+     "page": 53
+    },
+    {
+     "doc_id": "cc-algues-vertes-synthese",
+     "page": 15
+    }
+   ]
+  },
+  {
+   "qid": "val1-064",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "cc-ia-ministere-culture",
+     "page": 26
+    },
+    {
+     "doc_id": "cc-ia-ministere-culture",
+     "page": 10
+    },
+    {
+     "doc_id": "cc-informatique-quantique-synthese",
+     "page": 12
+    },
+    {
+     "doc_id": "cc-ia-ministere-culture",
+     "page": 20
+    },
+    {
+     "doc_id": "cc-ia-ministere-culture",
+     "page": 19
+    },
+    {
+     "doc_id": "cc-presidence-republique-2025",
+     "page": 72
+    },
+    {
+     "doc_id": "cc-ia-ministere-culture",
+     "page": 25
+    },
+    {
+     "doc_id": "insee-ip2061",
+     "page": 4
+    },
+    {
+     "doc_id": "cc-taxe-transactions-financieres-synthese",
+     "page": 9
+    },
+    {
+     "doc_id": "cc-finances-locales-2026",
+     "page": 63
+    }
+   ]
+  },
+  {
+   "qid": "val1-065",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "cc-pac",
+     "page": 61
+    },
+    {
+     "doc_id": "cc-pac",
+     "page": 25
+    },
+    {
+     "doc_id": "cc-pac",
+     "page": 11
+    },
+    {
+     "doc_id": "cc-pac",
+     "page": 102
+    },
+    {
+     "doc_id": "cc-pac",
+     "page": 9
+    },
+    {
+     "doc_id": "cc-pac",
+     "page": 56
+    },
+    {
+     "doc_id": "cc-pac",
+     "page": 10
+    },
+    {
+     "doc_id": "cc-pac",
+     "page": 14
+    },
+    {
+     "doc_id": "cc-pac",
+     "page": 26
+    },
+    {
+     "doc_id": "cc-pac",
+     "page": 15
+    }
+   ]
+  },
+  {
+   "qid": "val1-066",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "cc-difficultes-entreprises",
+     "page": 54
+    },
+    {
+     "doc_id": "cc-difficultes-entreprises",
+     "page": 45
+    },
+    {
+     "doc_id": "cc-difficultes-entreprises",
+     "page": 60
+    },
+    {
+     "doc_id": "cc-difficultes-entreprises",
+     "page": 71
+    },
+    {
+     "doc_id": "cc-difficultes-entreprises",
+     "page": 55
+    },
+    {
+     "doc_id": "cc-difficultes-entreprises",
+     "page": 66
+    },
+    {
+     "doc_id": "cc-presidence-republique-2025",
+     "page": 80
+    },
+    {
+     "doc_id": "cc-finances-locales-2026",
+     "page": 232
+    },
+    {
+     "doc_id": "cc-difficultes-entreprises",
+     "page": 41
+    },
+    {
+     "doc_id": "cc-difficultes-entreprises",
+     "page": 61
+    }
+   ]
+  },
+  {
+   "qid": "val1-067",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "insee-ip2086",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2062",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2057",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2086",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2057",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2086",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2086",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2057",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2057",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2062",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "qid": "val1-068",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "cc-algues-vertes",
+     "page": 7
+    },
+    {
+     "doc_id": "cc-algues-vertes",
+     "page": 61
+    },
+    {
+     "doc_id": "cc-algues-vertes-synthese",
+     "page": 7
+    },
+    {
+     "doc_id": "cc-algues-vertes",
+     "page": 19
+    },
+    {
+     "doc_id": "cc-algues-vertes",
+     "page": 69
+    },
+    {
+     "doc_id": "cc-algues-vertes",
+     "page": 18
+    },
+    {
+     "doc_id": "cc-algues-vertes",
+     "page": 67
+    },
+    {
+     "doc_id": "cc-algues-vertes",
+     "page": 17
+    },
+    {
+     "doc_id": "cc-algues-vertes",
+     "page": 35
+    },
+    {
+     "doc_id": "cc-algues-vertes",
+     "page": 9
+    }
+   ]
+  },
+  {
+   "qid": "val1-069",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "cc-informatique-quantique",
+     "page": 45
+    },
+    {
+     "doc_id": "cc-informatique-quantique",
+     "page": 53
+    },
+    {
+     "doc_id": "cc-informatique-quantique-synthese",
+     "page": 14
+    },
+    {
+     "doc_id": "cc-informatique-quantique",
+     "page": 13
+    },
+    {
+     "doc_id": "cc-informatique-quantique",
+     "page": 37
+    },
+    {
+     "doc_id": "cc-informatique-quantique",
+     "page": 17
+    },
+    {
+     "doc_id": "cc-informatique-quantique",
+     "page": 3
+    },
+    {
+     "doc_id": "cc-informatique-quantique",
+     "page": 46
+    },
+    {
+     "doc_id": "cc-informatique-quantique",
+     "page": 44
+    },
+    {
+     "doc_id": "cc-informatique-quantique",
+     "page": 65
+    }
+   ]
+  },
+  {
+   "qid": "val1-070",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "cc-informatique-quantique",
+     "page": 78
+    },
+    {
+     "doc_id": "cc-informatique-quantique",
+     "page": 82
+    },
+    {
+     "doc_id": "cc-informatique-quantique",
+     "page": 83
+    },
+    {
+     "doc_id": "cc-recherche-entreprises",
+     "page": 153
+    },
+    {
+     "doc_id": "cc-informatique-quantique",
+     "page": 80
+    },
+    {
+     "doc_id": "cc-informatique-quantique",
+     "page": 87
+    },
+    {
+     "doc_id": "cc-informatique-quantique",
+     "page": 81
+    },
+    {
+     "doc_id": "cc-informatique-quantique-synthese",
+     "page": 9
+    },
+    {
+     "doc_id": "cc-recherche-entreprises",
+     "page": 143
+    },
+    {
+     "doc_id": "cc-recherche-entreprises",
+     "page": 139
+    }
+   ]
+  },
+  {
+   "qid": "val1-071",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "insee-ip2122",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2122",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2122",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2122",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2092",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2060",
+     "page": 1
+    },
+    {
+     "doc_id": "cc-difficultes-entreprises",
+     "page": 28
+    },
+    {
+     "doc_id": "insee-ip2096",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2097",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2084",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "qid": "val1-072",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "insee-ip2067",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2065",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2066",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2066",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2065",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2067",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2065",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2066",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2079",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2066",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "qid": "val1-073",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "cc-recherche-entreprises",
+     "page": 210
+    },
+    {
+     "doc_id": "cc-recherche-entreprises",
+     "page": 40
+    },
+    {
+     "doc_id": "cc-recherche-entreprises",
+     "page": 41
+    },
+    {
+     "doc_id": "cc-recherche-entreprises",
+     "page": 208
+    },
+    {
+     "doc_id": "insee-ip2066",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2079",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2065",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2065",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2067",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2043",
+     "page": 4
+    }
+   ]
+  },
+  {
+   "qid": "val1-074",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "insee-ip2048",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2048",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2048",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2104",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2048",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2045",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2085",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2063",
+     "page": 1
+    },
+    {
+     "doc_id": "cc-rspfp-2026",
+     "page": 140
+    },
+    {
+     "doc_id": "insee-ip2033",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "qid": "val1-075",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "insee-ip2109",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2109",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2109",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2109",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2051",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2031",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2085",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2080",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2050",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2080",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "qid": "val1-076",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "insee-ip2125",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2125",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2125",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2064",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2125",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2098",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2073",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2098",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2078",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2064",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "qid": "val1-077",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "insee-ip2035",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2035",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2035",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2035",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2034",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2083",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2095",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2045",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2083",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2038",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "qid": "val1-078",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "cc-vaccination",
+     "page": 39
+    },
+    {
+     "doc_id": "cc-retraites-fonctionnaires-etat",
+     "page": 42
+    },
+    {
+     "doc_id": "insee-ip2033",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2048",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2048",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2048",
+     "page": 2
+    },
+    {
+     "doc_id": "cc-vaccination",
+     "page": 67
+    },
+    {
+     "doc_id": "insee-ip2087",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2040",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2032",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "qid": "val1-079",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "cc-equipements-sportifs-ans",
+     "page": 39
+    },
+    {
+     "doc_id": "cc-umr",
+     "page": 37
+    },
+    {
+     "doc_id": "cc-equipements-sportifs-ans",
+     "page": 46
+    },
+    {
+     "doc_id": "cc-vaccination",
+     "page": 68
+    },
+    {
+     "doc_id": "cc-medecin-traitant",
+     "page": 72
+    },
+    {
+     "doc_id": "cc-equipements-sportifs-ans",
+     "page": 57
+    },
+    {
+     "doc_id": "cc-equipements-sportifs-ans",
+     "page": 38
+    },
+    {
+     "doc_id": "cc-equipements-sportifs-ans",
+     "page": 17
+    },
+    {
+     "doc_id": "insee-ip2032",
+     "page": 4
+    },
+    {
+     "doc_id": "cc-equipements-sportifs-ans",
+     "page": 59
+    }
+   ]
+  },
+  {
+   "qid": "val1-080",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "cc-taxe-transactions-financieres",
+     "page": 28
+    },
+    {
+     "doc_id": "cc-taxe-transactions-financieres",
+     "page": 74
+    },
+    {
+     "doc_id": "cc-taxe-transactions-financieres",
+     "page": 45
+    },
+    {
+     "doc_id": "cc-taxe-transactions-financieres",
+     "page": 42
+    },
+    {
+     "doc_id": "insee-ip2048",
+     "page": 2
+    },
+    {
+     "doc_id": "cc-taxe-transactions-financieres",
+     "page": 27
+    },
+    {
+     "doc_id": "cc-taxe-transactions-financieres",
+     "page": 73
+    },
+    {
+     "doc_id": "cc-taxe-transactions-financieres",
+     "page": 25
+    },
+    {
+     "doc_id": "cc-taxe-transactions-financieres",
+     "page": 43
+    },
+    {
+     "doc_id": "cc-taxe-transactions-financieres",
+     "page": 81
+    }
+   ]
+  },
+  {
+   "qid": "val1-081",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "cc-informatique-quantique",
+     "page": 26
+    },
+    {
+     "doc_id": "cc-informatique-quantique",
+     "page": 84
+    },
+    {
+     "doc_id": "cc-recherche-entreprises",
+     "page": 98
+    },
+    {
+     "doc_id": "cc-informatique-quantique",
+     "page": 73
+    },
+    {
+     "doc_id": "cc-recherche-entreprises",
+     "page": 173
+    },
+    {
+     "doc_id": "cc-difficultes-entreprises",
+     "page": 79
+    },
+    {
+     "doc_id": "cc-informatique-quantique",
+     "page": 87
+    },
+    {
+     "doc_id": "cc-difficultes-entreprises",
+     "page": 36
+    },
+    {
+     "doc_id": "insee-ip2083",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2069",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "qid": "val1-082",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "cc-ia-ministere-culture",
+     "page": 28
+    },
+    {
+     "doc_id": "cc-ia-ministere-culture",
+     "page": 7
+    },
+    {
+     "doc_id": "cc-ia-ministere-culture",
+     "page": 27
+    },
+    {
+     "doc_id": "cc-recherche-entreprises",
+     "page": 221
+    },
+    {
+     "doc_id": "cc-ia-ministere-culture",
+     "page": 10
+    },
+    {
+     "doc_id": "cc-ia-ministere-culture",
+     "page": 40
+    },
+    {
+     "doc_id": "cc-recherche-entreprises",
+     "page": 59
+    },
+    {
+     "doc_id": "cc-ia-ministere-culture",
+     "page": 38
+    },
+    {
+     "doc_id": "insee-ip2061",
+     "page": 1
+    },
+    {
+     "doc_id": "cc-ia-ministere-culture",
+     "page": 17
+    }
+   ]
+  },
+  {
+   "qid": "val1-083",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "insee-ip2065",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2065",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2065",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2067",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2066",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2067",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2043",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2066",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2065",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2066",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "qid": "val1-084",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "cc-equipements-sportifs-ans",
+     "page": 35
+    },
+    {
+     "doc_id": "cc-equipements-sportifs-ans",
+     "page": 41
+    },
+    {
+     "doc_id": "cc-equipements-sportifs-ans",
+     "page": 40
+    },
+    {
+     "doc_id": "cc-equipements-sportifs-ans",
+     "page": 39
+    },
+    {
+     "doc_id": "cc-equipements-sportifs-ans",
+     "page": 33
+    },
+    {
+     "doc_id": "cc-equipements-sportifs-ans",
+     "page": 36
+    },
+    {
+     "doc_id": "cc-equipements-sportifs-ans",
+     "page": 34
+    },
+    {
+     "doc_id": "cc-equipements-sportifs-ans",
+     "page": 38
+    },
+    {
+     "doc_id": "cc-equipements-sportifs-ans",
+     "page": 16
+    },
+    {
+     "doc_id": "cc-equipements-sportifs-ans",
+     "page": 64
+    }
+   ]
+  },
+  {
+   "qid": "val1-085",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "cc-pac",
+     "page": 77
+    },
+    {
+     "doc_id": "cc-pac",
+     "page": 15
+    },
+    {
+     "doc_id": "cc-algues-vertes",
+     "page": 45
+    },
+    {
+     "doc_id": "cc-pac",
+     "page": 29
+    },
+    {
+     "doc_id": "cc-pac",
+     "page": 78
+    },
+    {
+     "doc_id": "cc-pac",
+     "page": 20
+    },
+    {
+     "doc_id": "cc-pac",
+     "page": 102
+    },
+    {
+     "doc_id": "cc-algues-vertes",
+     "page": 74
+    },
+    {
+     "doc_id": "cc-algues-vertes",
+     "page": 41
+    },
+    {
+     "doc_id": "cc-pac",
+     "page": 96
+    }
+   ]
+  },
+  {
+   "qid": "val1-086",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "cc-vaccination",
+     "page": 56
+    },
+    {
+     "doc_id": "insee-ip2048",
+     "page": 2
+    },
+    {
+     "doc_id": "cc-vaccination",
+     "page": 58
+    },
+    {
+     "doc_id": "insee-ip2051",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2107",
+     "page": 4
+    },
+    {
+     "doc_id": "cc-medecin-traitant",
+     "page": 6
+    },
+    {
+     "doc_id": "insee-ip2107",
+     "page": 3
+    },
+    {
+     "doc_id": "cc-informatique-quantique",
+     "page": 51
+    },
+    {
+     "doc_id": "cc-vaccination",
+     "page": 113
+    },
+    {
+     "doc_id": "cc-rspfp-2026-synthese",
+     "page": 10
+    }
+   ]
+  },
+  {
+   "qid": "val1-087",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "insee-ip2042",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2042",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2042",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2042",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2113",
+     "page": 4
+    },
+    {
+     "doc_id": "cc-effacements-electricite",
+     "page": 50
+    },
+    {
+     "doc_id": "cc-effacements-electricite",
+     "page": 48
+    },
+    {
+     "doc_id": "cc-taxe-transactions-financieres",
+     "page": 28
+    },
+    {
+     "doc_id": "cc-presidence-republique-2025",
+     "page": 32
+    },
+    {
+     "doc_id": "cc-finances-locales-2026",
+     "page": 101
+    }
+   ]
+  },
+  {
+   "qid": "val1-088",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "insee-ip2113",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2047",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2072",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2047",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2046",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2113",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2046",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2090",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2047",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2064",
+     "page": 4
+    }
+   ]
+  },
+  {
+   "qid": "val1-089",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "cc-finances-locales-2026",
+     "page": 23
+    },
+    {
+     "doc_id": "cc-rspfp-2026",
+     "page": 23
+    },
+    {
+     "doc_id": "cc-finances-locales-2026-synthese",
+     "page": 5
+    },
+    {
+     "doc_id": "cc-finances-locales-2026",
+     "page": 10
+    },
+    {
+     "doc_id": "cc-finances-locales-2026",
+     "page": 127
+    },
+    {
+     "doc_id": "cc-finances-locales-2026",
+     "page": 160
+    },
+    {
+     "doc_id": "cc-finances-locales-2026",
+     "page": 15
+    },
+    {
+     "doc_id": "cc-finances-locales-2026-synthese",
+     "page": 12
+    },
+    {
+     "doc_id": "cc-finances-locales-2026",
+     "page": 145
+    },
+    {
+     "doc_id": "cc-rspfp-2026",
+     "page": 146
+    }
+   ]
+  },
+  {
+   "qid": "val1-090",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "insee-ip2090",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2076",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2090",
+     "page": 3
+    },
+    {
+     "doc_id": "cc-medecin-traitant",
+     "page": 57
+    },
+    {
+     "doc_id": "insee-ip2032",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2126",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2090",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2126",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2126",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2090",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "qid": "val1-091",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "cc-rspfp-2026",
+     "page": 50
+    },
+    {
+     "doc_id": "cc-rspfp-2026",
+     "page": 46
+    },
+    {
+     "doc_id": "cc-rspfp-2026",
+     "page": 16
+    },
+    {
+     "doc_id": "cc-rspfp-2026",
+     "page": 32
+    },
+    {
+     "doc_id": "cc-rspfp-2026-synthese",
+     "page": 10
+    },
+    {
+     "doc_id": "cc-rspfp-2026",
+     "page": 42
+    },
+    {
+     "doc_id": "cc-rspfp-2026",
+     "page": 47
+    },
+    {
+     "doc_id": "cc-rspfp-2026",
+     "page": 25
+    },
+    {
+     "doc_id": "cc-rspfp-2026",
+     "page": 17
+    },
+    {
+     "doc_id": "cc-rspfp-2026-synthese",
+     "page": 7
+    }
+   ]
+  },
+  {
+   "qid": "val1-092",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "cc-finances-locales-2026",
+     "page": 32
+    },
+    {
+     "doc_id": "cc-finances-locales-2026-synthese",
+     "page": 4
+    },
+    {
+     "doc_id": "cc-finances-locales-2026",
+     "page": 93
+    },
+    {
+     "doc_id": "cc-finances-locales-2026",
+     "page": 72
+    },
+    {
+     "doc_id": "cc-finances-locales-2026",
+     "page": 162
+    },
+    {
+     "doc_id": "cc-finances-locales-2026",
+     "page": 226
+    },
+    {
+     "doc_id": "cc-finances-locales-2026",
+     "page": 9
+    },
+    {
+     "doc_id": "cc-finances-locales-2026",
+     "page": 110
+    },
+    {
+     "doc_id": "cc-finances-locales-2026",
+     "page": 33
+    },
+    {
+     "doc_id": "cc-rspfp-2026",
+     "page": 145
+    }
+   ]
+  },
+  {
+   "qid": "val1-093",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "insee-ip2061",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2061",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2061",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2115",
+     "page": 3
+    },
+    {
+     "doc_id": "cc-recherche-entreprises",
+     "page": 156
+    },
+    {
+     "doc_id": "cc-informatique-quantique-synthese",
+     "page": 11
+    },
+    {
+     "doc_id": "insee-ip2061",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2115",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2069",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2037",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "qid": "val1-094",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "insee-ip2068",
+     "page": 2
+    },
+    {
+     "doc_id": "insee-ip2068",
+     "page": 1
+    },
+    {
+     "doc_id": "insee-ip2068",
+     "page": 4
+    },
+    {
+     "doc_id": "insee-ip2068",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2080",
+     "page": 3
+    },
+    {
+     "doc_id": "insee-ip2080",
+     "page": 4
+    },
+    {
+     "doc_id": "cc-presidence-republique-2025",
+     "page": 28
+    },
+    {
+     "doc_id": "insee-ip2095",
+     "page": 2
+    },
+    {
+     "doc_id": "cc-retraites-fonctionnaires-etat",
+     "page": 30
+    },
+    {
+     "doc_id": "insee-ip2107",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "qid": "val1-095",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "cc-presidence-republique-2025",
+     "page": 46
+    },
+    {
+     "doc_id": "cc-presidence-republique-2025",
+     "page": 42
+    },
+    {
+     "doc_id": "cc-presidence-republique-2025",
+     "page": 71
+    },
+    {
+     "doc_id": "cc-presidence-republique-2025",
+     "page": 57
+    },
+    {
+     "doc_id": "cc-presidence-republique-2025",
+     "page": 23
+    },
+    {
+     "doc_id": "cc-taxe-transactions-financieres",
+     "page": 85
+    },
+    {
+     "doc_id": "insee-ip2097",
+     "page": 4
+    },
+    {
+     "doc_id": "cc-presidence-republique-2025",
+     "page": 68
+    },
+    {
+     "doc_id": "insee-ip2093",
+     "page": 2
+    },
+    {
+     "doc_id": "cc-rspfp-2026",
+     "page": 113
+    }
+   ]
+  },
+  {
+   "qid": "val1-096",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "cc-ia-ministere-culture",
+     "page": 16
+    },
+    {
+     "doc_id": "cc-ia-ministere-culture",
+     "page": 19
+    },
+    {
+     "doc_id": "cc-ia-ministere-culture",
+     "page": 38
+    },
+    {
+     "doc_id": "cc-ia-ministere-culture",
+     "page": 22
+    },
+    {
+     "doc_id": "cc-ia-ministere-culture",
+     "page": 13
+    },
+    {
+     "doc_id": "cc-ia-ministere-culture",
+     "page": 20
+    },
+    {
+     "doc_id": "cc-ia-ministere-culture",
+     "page": 30
+    },
+    {
+     "doc_id": "cc-ia-ministere-culture",
+     "page": 17
+    },
+    {
+     "doc_id": "insee-ip2061",
+     "page": 4
+    },
+    {
+     "doc_id": "cc-ia-ministere-culture",
+     "page": 34
+    }
+   ]
+  },
+  {
+   "qid": "val1-097",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "cc-finances-locales-2026",
+     "page": 120
+    },
+    {
+     "doc_id": "cc-presidence-republique-2025",
+     "page": 16
+    },
+    {
+     "doc_id": "cc-presidence-republique-2025",
+     "page": 19
+    },
+    {
+     "doc_id": "cc-vaccination",
+     "page": 49
+    },
+    {
+     "doc_id": "cc-presidence-republique-2025",
+     "page": 57
+    },
+    {
+     "doc_id": "cc-presidence-republique-2025",
+     "page": 11
+    },
+    {
+     "doc_id": "cc-finances-locales-2026",
+     "page": 27
+    },
+    {
+     "doc_id": "cc-finances-locales-2026",
+     "page": 219
+    },
+    {
+     "doc_id": "cc-finances-locales-2026",
+     "page": 45
+    },
+    {
+     "doc_id": "insee-ip2062",
+     "page": 4
+    }
+   ]
+  },
+  {
+   "qid": "val1-098",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "cc-recherche-entreprises",
+     "page": 145
+    },
+    {
+     "doc_id": "cc-rspfp-2026",
+     "page": 130
+    },
+    {
+     "doc_id": "cc-recherche-entreprises",
+     "page": 143
+    },
+    {
+     "doc_id": "cc-recherche-entreprises",
+     "page": 144
+    },
+    {
+     "doc_id": "cc-recherche-entreprises",
+     "page": 146
+    },
+    {
+     "doc_id": "cc-recherche-entreprises",
+     "page": 184
+    },
+    {
+     "doc_id": "cc-rspfp-2026",
+     "page": 133
+    },
+    {
+     "doc_id": "cc-umr",
+     "page": 25
+    },
+    {
+     "doc_id": "cc-recherche-entreprises",
+     "page": 142
+    },
+    {
+     "doc_id": "cc-rspfp-2026",
+     "page": 131
+    }
+   ]
+  },
+  {
+   "qid": "val1-099",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "cc-ia-ministere-culture",
+     "page": 27
+    },
+    {
+     "doc_id": "cc-ia-ministere-culture",
+     "page": 34
+    },
+    {
+     "doc_id": "cc-ia-ministere-culture",
+     "page": 24
+    },
+    {
+     "doc_id": "cc-ia-ministere-culture",
+     "page": 28
+    },
+    {
+     "doc_id": "cc-ia-ministere-culture",
+     "page": 19
+    },
+    {
+     "doc_id": "cc-ia-ministere-culture",
+     "page": 18
+    },
+    {
+     "doc_id": "cc-ia-ministere-culture",
+     "page": 21
+    },
+    {
+     "doc_id": "cc-ia-ministere-culture",
+     "page": 40
+    },
+    {
+     "doc_id": "cc-ia-ministere-culture",
+     "page": 17
+    },
+    {
+     "doc_id": "cc-ia-ministere-culture",
+     "page": 16
+    }
+   ]
+  },
+  {
+   "qid": "val1-100",
+   "answer": "INTROUVABLE",
+   "citations": [],
+   "retrieved": [
+    {
+     "doc_id": "cc-medecin-traitant",
+     "page": 163
+    },
+    {
+     "doc_id": "cc-medecin-traitant",
+     "page": 162
+    },
+    {
+     "doc_id": "cc-medecin-traitant",
+     "page": 164
+    },
+    {
+     "doc_id": "cc-medecin-traitant",
+     "page": 18
+    },
+    {
+     "doc_id": "cc-medecin-traitant",
+     "page": 160
+    },
+    {
+     "doc_id": "cc-medecin-traitant",
+     "page": 161
+    },
+    {
+     "doc_id": "cc-medecin-traitant",
+     "page": 29
+    },
+    {
+     "doc_id": "cc-medecin-traitant",
+     "page": 106
+    },
+    {
+     "doc_id": "cc-medecin-traitant",
+     "page": 143
+    },
+    {
+     "doc_id": "cc-medecin-traitant",
+     "page": 45
+    }
+   ]
+  }
+ ]
+}
