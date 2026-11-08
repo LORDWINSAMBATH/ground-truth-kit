@@ -27,7 +27,7 @@ def _tokenize(text: str) -> list[str]:
     return re.findall(r"[a-z0-9]+", text)
 
 def _read_pages(pdf_dir: str) -> list[dict]:
-    """Lecture et parsing multi-formats des PDF (texte brut, rapports institutionnels, INSEE, finances et tableaux structurés)."""
+    """Lecture rapide et ultra-robuste des PDF (texte brut)."""
     import pymupdf
 
     pages = []
@@ -39,31 +39,16 @@ def _read_pages(pdf_dir: str) -> list[dict]:
     for pdf in sorted(pdf_path.glob("*.pdf")):
         with pymupdf.open(pdf) as doc:
             for i, page in enumerate(doc, 1):
-                # 1. Extraction sécurisée du texte de la page (compatible toutes versions PyMuPDF)
+                # Extraction propre et directe du texte de la page (sans surcharge IA)
                 try:
                     page_text = page.get_text("text")
-                except TypeError:
-                    page_text = page.get_text()
-                
-                # 2. Détection et extraction propre des tableaux (essentiel pour les rapports budgétaires et INSEE)
-                tables_content = []
-                try:
-                    tabs = page.find_tables()
-                    if tabs.tables:
-                        for tab in tabs.tables:
-                            df_extracted = tab.extract()
-                            table_str = "\n".join([" | ".join([str(cell) if cell else "" for cell in row]) for row in df_extracted])
-                            tables_content.append(f"\n--- TABLEAU STRUCTURÉ ---\n{table_str}\n------------------------\n")
                 except Exception:
-                    pass
-                
-                # 3. Combinaison du texte et des tableaux structurés pour couvrir tous les types de documents
-                full_page_content = page_text + "\n" + "\n".join(tables_content)
+                    page_text = page.get_text()
                 
                 pages.append({
                     "doc_id": pdf.stem, 
                     "page": i, 
-                    "text": full_page_content
+                    "text": page_text
                 })
     return pages
 
@@ -131,7 +116,6 @@ def answer_questions(index_dir: str, questions_path: str, out_path: str, backend
         )
         
         # 2. Calibration de l'abstention et filtrage des faux positifs (Évite les hallucinations / pénalités -1 pt)
-        # Seuil minimal de confiance : si aucun chunk ne dépasse ce score, on déclare l'information introuvable.
         CONFIDENCE_THRESHOLD = 0.12
         valid_results = [res for res in search_results if res.get("score", 0.0) >= CONFIDENCE_THRESHOLD]
         
