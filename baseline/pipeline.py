@@ -116,7 +116,7 @@ def answer_questions(index_dir: str, questions_path: str, out_path: str, backend
         )
         
         # 2. Calibration de l'abstention et filtrage des faux positifs (Évite les hallucinations / pénalités -1 pt)
-        CONFIDENCE_THRESHOLD = 0.05
+        CONFIDENCE_THRESHOLD = 0.03
         valid_results = [res for res in search_results if res.get("score", 0.0) >= CONFIDENCE_THRESHOLD]
         
         if not valid_results:
