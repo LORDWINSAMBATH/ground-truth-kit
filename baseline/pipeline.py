@@ -112,11 +112,11 @@ def answer_questions(index_dir: str, questions_path: str, out_path: str, backend
             retriever=retriever,
             corpus_chunks=[p["text"] for p in pages],
             top_k=10,
-            alpha=0.4  # Équilibre optimal pour privilégier la précision lexicale et sémantique
+            alpha=0.2  # Équilibre optimal pour privilégier la précision lexicale et sémantique
         )
         
         # 2. Calibration de l'abstention et filtrage des faux positifs (Évite les hallucinations / pénalités -1 pt)
-        CONFIDENCE_THRESHOLD = 0.12
+        CONFIDENCE_THRESHOLD = 0.07
         valid_results = [res for res in search_results if res.get("score", 0.0) >= CONFIDENCE_THRESHOLD]
         
         if not valid_results:
