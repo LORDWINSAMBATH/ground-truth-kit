@@ -128,7 +128,7 @@ def answer_questions(index_dir: str, questions_path: str, out_path: str, backend
             valid_results = search_results[:k]
             hits = [pages[res["doc_id"]] for res in valid_results]
             
-            budget_chars = 2600
+            budget_chars = 4000  # Budget augmenté pour plus de contexte
             chunks = []
             for h in hits[:k]:
                 chunks.append(f"[{h['doc_id']}] p.{h['page']}\n{h['text'][:budget_chars]}")
@@ -138,7 +138,7 @@ def answer_questions(index_dir: str, questions_path: str, out_path: str, backend
                     {"role": "system", "content": PROMPT_SYSTEM},
                     {"role": "user", "content": "Extraits :\n\n" + "\n\n".join(chunks) + f"\n\nQuestion : {q['question']}"}
                 ]
-                if gen.count_tokens(msgs) <= 4096 - 16 or budget_chars < 300:
+                if gen.count_tokens(msgs) <= 4096 - 16 or budget_chars < 500:
                     break
                 budget_chars = int(budget_chars * 0.8)
                 chunks = [c[:budget_chars + 40] for c in chunks]
