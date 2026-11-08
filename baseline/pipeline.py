@@ -119,10 +119,13 @@ def answer_questions(index_dir: str, questions_path: str, out_path: str, backend
         CONFIDENCE_THRESHOLD = 0.07
         valid_results = [res for res in search_results if res.get("score", 0.0) >= CONFIDENCE_THRESHOLD]
         
-        if not valid_results:
+        # Remplacement temporaire pour tester sans filtre de seuil bloquant
+        if not search_results:
             answer, cits = "INTROUVABLE", []
             hits = []
         else:
+            # On prend directement les k meilleurs résultats sans filtrer par score
+            valid_results = search_results[:k]
             hits = [pages[res["doc_id"]] for res in valid_results]
             
             budget_chars = 2600
