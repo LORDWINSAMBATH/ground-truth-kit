@@ -16,9 +16,10 @@ from src.bm25_scratch import BM25FromScratch
 
 
 PROMPT_SYSTEM = (
-    "Tu réponds à des questions sur des rapports publics français, uniquement à partir des extraits fournis.\n"
-    "Chaque extrait est précédé de sa référence [doc_id p.N].\n"
-    "Si la réponse n'est pas dans les extraits, réponds exactement : INTROUVABLE."
+    "Tu es un expert en analyse de rapports publics français. Réponds précisément et complètement à la question posée "
+    "en te basant **uniquement** sur les extraits fournis.\n"
+    "Chaque extrait est précédé de sa référence [doc_id p.N]. Tu dois citer tes sources à la fin de ta réponse.\n"
+    "Si la réponse ne figure absolument pas dans les extraits, réponds exactement et uniquement : INTROUVABLE."
 )
 
 def _tokenize(text: str) -> list[str]:
@@ -119,12 +120,10 @@ def answer_questions(index_dir: str, questions_path: str, out_path: str, backend
         CONFIDENCE_THRESHOLD = 0.07
         valid_results = [res for res in search_results if res.get("score", 0.0) >= CONFIDENCE_THRESHOLD]
         
-        # Remplacement temporaire pour tester sans filtre de seuil bloquant
         if not search_results:
             answer, cits = "INTROUVABLE", []
             hits = []
         else:
-            # On prend directement les k meilleurs résultats sans filtrer par score
             valid_results = search_results[:k]
             hits = [pages[res["doc_id"]] for res in valid_results]
             
@@ -143,7 +142,8 @@ def answer_questions(index_dir: str, questions_path: str, out_path: str, backend
                 budget_chars = int(budget_chars * 0.8)
                 chunks = [c[:budget_chars + 40] for c in chunks]
                 
-            raw = gen.chat(msgs, max_new_tokens=200)
+            # max_new_tokens augmenté à 400 pour garantir des réponses complètes et non coupées
+            raw = gen.chat(msgs, max_new_tokens=400)
             answer, cits = _parse_citations(raw)
             if "INTROUVABLE" in raw.upper():
                 answer, cits = "INTROUVABLE", []
