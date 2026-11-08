@@ -39,8 +39,11 @@ def _read_pages(pdf_dir: str) -> list[dict]:
     for pdf in sorted(pdf_path.glob("*.pdf")):
         with pymupdf.open(pdf) as doc:
             for i, page in enumerate(doc, 1):
-                # 1. Extraction du texte classique de la page
-                page_text = page.get_text("text")
+                # 1. Extraction sécurisée du texte de la page (compatible toutes versions PyMuPDF)
+                try:
+                    page_text = page.get_text("text")
+                except TypeError:
+                    page_text = page.get_text()
                 
                 # 2. Détection et extraction propre des tableaux (essentiel pour les rapports budgétaires et INSEE)
                 tables_content = []
@@ -196,4 +199,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-    
