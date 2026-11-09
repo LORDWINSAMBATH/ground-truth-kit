@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import argparse
 import json
-import re 
+import re
 from pathlib import Path
 import sys
 import os
@@ -15,16 +15,42 @@ from src.bm25_scratch import BM25FromScratch
 
 
 PROMPT_SYSTEM = (
-    "Tu es un expert en analyse de rapports publics français. Réponds précisément et complètement à la question posée "
-    "en te basant **uniquement** sur les extraits fournis.\n"
-    "Chaque extrait est précédé de sa référence [doc_id p.N]. Tu dois citer tes sources à la fin de ta réponse.\n"
-    "Si la réponse ne figure absolument pas dans les extraits, réponds exactement et uniquement : INTROUVABLE."
+    "Tu es un expert en analyse de rapports publics français. Réponds à la question en te basant "
+    "uniquement sur les extraits fournis.\n"
+    "Chaque extrait est précédé de sa référence [doc_id p.N].\n"
+    "Règles :\n"
+    "- Réponds de façon complète : donne les chiffres, dates, noms et listes pertinents, "
+    "en combinant les informations de plusieurs extraits si nécessaire.\n"
+    "- Si les extraits contiennent seulement une partie de la réponse, donne cette partie "
+    "et précise brièvement ce qui manque.\n"
+    "- Cite tes sources dans la réponse, au format [doc_id p.N].\n"
+    "- Réponds exactement INTROUVABLE uniquement si aucun extrait ne traite du sujet de la question."
 )
+
+MAX_NEW_TOKENS = 600
+CONTEXT_TOKENS = 4096
+
 
 def _tokenize(text: str) -> list[str]:
     """Normalisation et tokenisation robuste pour la recherche lexicale."""
     text = unicodedata.normalize("NFKD", text.lower()).encode("ascii", "ignore").decode()
     return re.findall(r"[a-z0-9]+", text)
+
+
+def _best_window(text: str, question: str, size: int) -> str:
+    """Retourne la fenêtre de `size` caractères la plus proche de la question
+    (plus grand nombre de mots de la question présents), au lieu des N premiers caractères."""
+    if len(text) <= size:
+        return text
+    q = set(_tokenize(question))
+    step = max(size // 2, 1)
+    best_start, best_score = 0, -1
+    for start in range(0, len(text) - size + step, step):
+        score = len(q & set(_tokenize(text[start:start + size])))
+        if score > best_score:
+            best_start, best_score = start, score
+    return text[best_start:best_start + size]
+
 
 def _read_pages(pdf_dir: str) -> list[dict]:
     """Lecture rapide et ultra-robuste des PDF (texte brut)."""
@@ -43,29 +69,31 @@ def _read_pages(pdf_dir: str) -> list[dict]:
                     page_text = page.get_text("text")
                 except Exception:
                     page_text = page.get_text()
-                
+
                 pages.append({
-                    "doc_id": pdf.stem, 
-                    "page": i, 
+                    "doc_id": pdf.stem,
+                    "page": i,
                     "text": page_text
                 })
     return pages
 
+
 def build_index(pdf_dir: str, index_dir: str, pages: list[dict] | None = None) -> None:
     pages = _read_pages(pdf_dir) if pages is None else pages
-    
+
     retriever = BM25FromScratch()
     corpus_texts = [p["text"] for p in pages]
     retriever.fit(corpus_texts)
-    
+
     out = Path(index_dir)
     out.mkdir(parents=True, exist_ok=True)
-    
+
     with open(out / "bm25.pkl", "wb") as f:
         pickle.dump(retriever, f)
-        
+
     (out / "pages.json").write_text(json.dumps(pages, ensure_ascii=False), encoding="utf-8")
     print(f"{len(pages)} pages indexées avec succès !")
+
 
 def update_index(index_dir: str, pdf_dir: str) -> None:
     idx = Path(index_dir)
@@ -76,9 +104,10 @@ def update_index(index_dir: str, pdf_dir: str) -> None:
     print(f"{len(new)} nouvelles pages ajoutées.")
     build_index(pdf_dir, index_dir, pages=pages + new)
 
+
 def _parse_citations(text: str) -> tuple[str, list[dict]]:
     cits = [{"doc_id": d, "page": int(p)} for d, p in re.findall(r"\[([\w-]+)\s+p\.(\d+)\]", text)]
-    answer = re.split(r"\n?SOURCES\s*:", text)[0].strip()
+    answer = text.strip()
     seen, uniq = set(), []
     for c in cits:
         k = (c["doc_id"], c["page"])
@@ -87,86 +116,92 @@ def _parse_citations(text: str) -> tuple[str, list[dict]]:
             uniq.append(c)
     return answer, uniq[:5]
 
+
 def answer_questions(index_dir: str, questions_path: str, out_path: str, backend: str, k: int = 12) -> None:
     from groundtruth.generator import OfficialGenerator
     from groundtruth.io import load_questions, write_predictions
     idx = Path(index_dir)
-    
+
     with open(idx / "bm25.pkl", "rb") as f:
         retriever = pickle.load(f)
-        
+
     pages = json.loads((idx / "pages.json").read_text(encoding="utf-8"))
     gen = OfficialGenerator(backend=backend)
     preds = []
-    
+
     for q in load_questions(questions_path):
         gen.start_question(q["qid"])
-        
+
         # 1. Recherche hybride avec alpha=0.5 et top_k ajusté
         search_results = hybrid_search_robust(
             query_text=q["question"],
             retriever=retriever,
             corpus_chunks=[p["text"] for p in pages],
             top_k=k,
-            alpha=0.5  # Équilibre parfait 50/50 entre BM25 et Dense
+            alpha=0.5  # Équilibre 50/50 entre BM25 et Dense
         )
-        
+
         if not search_results:
             answer, cits = "INTROUVABLE", []
             hits = []
         else:
             valid_results = search_results[:k]
             hits = [pages[res["doc_id"]] for res in valid_results]
-            
-            budget_chars = 4000
-            chunks = []
-            for h in hits[:k]:
-                chunks.append(f"[{h['doc_id']}] p.{h['page']}\n{h['text'][:budget_chars]}")
-                
+
+            # 2. Construction du contexte : fenêtre pertinente de chaque page,
+            #    réduite progressivement pour tenir dans le contexte (en réservant la génération)
+            window = 1500
             while True:
+                chunks = [
+                    f"[{h['doc_id']} p.{h['page']}]\n{_best_window(h['text'], q['question'], window)}"
+                    for h in hits
+                ]
                 msgs = [
                     {"role": "system", "content": PROMPT_SYSTEM},
-                    {"role": "user", "content": "Extraits :\n\n" + "\n\n".join(chunks) + f"\n\nQuestion : {q['question']}"}
+                    {"role": "user", "content": "Extraits :\n\n" + "\n\n".join(chunks)
+                                                 + f"\n\nQuestion : {q['question']}"},
                 ]
-                if gen.count_tokens(msgs) <= 4096 - 16 or budget_chars < 500:
+                if gen.count_tokens(msgs) <= CONTEXT_TOKENS - MAX_NEW_TOKENS - 16 or window < 400:
                     break
-                budget_chars = int(budget_chars * 0.8)
-                chunks = [c[:budget_chars + 40] for c in chunks]
-                
-            raw = gen.chat(msgs, max_new_tokens=400)
+                window = int(window * 0.8)
+
+            raw = gen.chat(msgs, max_new_tokens=MAX_NEW_TOKENS)
             answer, cits = _parse_citations(raw)
-            if "INTROUVABLE" in raw.upper():
+
+            # 3. Abstention uniquement si le modèle ne répond que INTROUVABLE
+            if re.sub(r"[^A-Za-z]", "", raw).upper() == "INTROUVABLE":
                 answer, cits = "INTROUVABLE", []
 
         preds.append({
-            "qid": q["qid"], 
-            "answer": answer, 
+            "qid": q["qid"],
+            "answer": answer,
             "citations": cits,
             "retrieved": [{"doc_id": h["doc_id"], "page": h["page"]} for h in hits[:k]]
         })
         print(f"[{q['qid']}] -> {answer[:80]}")
-        
+
     write_predictions(out_path, preds, run_name="moteur-hybride-k12-alpha05")
+
 
 def main() -> None:
     ap = argparse.ArgumentParser()
     sub = ap.add_subparsers(dest="cmd", required=True)
-    
+
     a = sub.add_parser("index")
     a.add_argument("--pdf-dir", required=True)
     a.add_argument("--index-dir", required=True)
-    
+
     u = sub.add_parser("update")
     u.add_argument("--index-dir", required=True)
     u.add_argument("--pdf-dir", required=True)
-    
+
     b = sub.add_parser("answer")
     b.add_argument("--index-dir", required=True)
     b.add_argument("--questions", required=True)
     b.add_argument("--out", required=True)
     b.add_argument("--backend", default="hf", choices=["hf", "openai", "echo"])
     b.add_argument("--k", type=int, default=12)
-    
+
     args = ap.parse_args()
     if args.cmd == "index":
         build_index(args.pdf_dir, args.index_dir)
@@ -174,6 +209,7 @@ def main() -> None:
         update_index(args.index_dir, args.pdf_dir)
     else:
         answer_questions(args.index_dir, args.questions, args.out, args.backend, k=args.k)
+
 
 if __name__ == "__main__":
     main()
