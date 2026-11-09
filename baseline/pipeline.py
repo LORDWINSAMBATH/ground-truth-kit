@@ -10,7 +10,7 @@ import os
 import pickle
 import unicodedata
 
-# Importations propres des modules de ton projet (depuis le dossier src)
+# Importations des modules du projet
 from src.hybrid_retrieved import hybrid_search_robust
 from src.bm25_scratch import BM25FromScratch
 
@@ -40,7 +40,6 @@ def _read_pages(pdf_dir: str) -> list[dict]:
     for pdf in sorted(pdf_path.glob("*.pdf")):
         with pymupdf.open(pdf) as doc:
             for i, page in enumerate(doc, 1):
-                # Extraction propre et directe du texte de la page (sans surcharge IA)
                 try:
                     page_text = page.get_text("text")
                 except Exception:
@@ -56,7 +55,6 @@ def _read_pages(pdf_dir: str) -> list[dict]:
 def build_index(pdf_dir: str, index_dir: str, pages: list[dict] | None = None) -> None:
     pages = _read_pages(pdf_dir) if pages is None else pages
     
-    # Utilisation de ton BM25 fait maison
     retriever = BM25FromScratch()
     corpus_texts = [p["text"] for p in pages]
     retriever.fit(corpus_texts)
@@ -64,7 +62,6 @@ def build_index(pdf_dir: str, index_dir: str, pages: list[dict] | None = None) -
     out = Path(index_dir)
     out.mkdir(parents=True, exist_ok=True)
     
-    # Sauvegarde de l'objet retriever avec pickle
     with open(out / "bm25.pkl", "wb") as f:
         pickle.dump(retriever, f)
         
@@ -91,12 +88,11 @@ def _parse_citations(text: str) -> tuple[str, list[dict]]:
             uniq.append(c)
     return answer, uniq[:5]
 
-def answer_questions(index_dir: str, questions_path: str, out_path: str, backend: str, k: int) -> None:
+def answer_questions(index_dir: str, questions_path: str, out_path: str, backend: str, k: int = 12) -> None:
     from groundtruth.generator import OfficialGenerator
     from groundtruth.io import load_questions, write_predictions
     idx = Path(index_dir)
     
-    # Recharge le BM25 sauvegardé
     with open(idx / "bm25.pkl", "rb") as f:
         retriever = pickle.load(f)
         
@@ -107,18 +103,14 @@ def answer_questions(index_dir: str, questions_path: str, out_path: str, backend
     for q in load_questions(questions_path):
         gen.start_question(q["qid"])
         
-        # 1. Appel direct du moteur hybride robuste (Fusion Score BM25 + Sémantique Dense)
+        # 1. Recherche hybride avec alpha=0.5 et top_k ajusté
         search_results = hybrid_search_robust(
             query_text=q["question"],
             retriever=retriever,
             corpus_chunks=[p["text"] for p in pages],
-            top_k=10,
-            alpha=0.6 # Équilibre optimal pour privilégier la précision lexicale et sémantique
+            top_k=k,
+            alpha=0.5  # Équilibre parfait 50/50 entre BM25 et Dense
         )
-        
-        # 2. Calibration de l'abstention et filtrage des faux positifs (Évite les hallucinations / pénalités -1 pt)
-        CONFIDENCE_THRESHOLD = 0.07
-        valid_results = [res for res in search_results if res.get("score", 0.0) >= CONFIDENCE_THRESHOLD]
         
         if not search_results:
             answer, cits = "INTROUVABLE", []
@@ -127,7 +119,7 @@ def answer_questions(index_dir: str, questions_path: str, out_path: str, backend
             valid_results = search_results[:k]
             hits = [pages[res["doc_id"]] for res in valid_results]
             
-            budget_chars = 4000  # Budget augmenté pour plus de contexte
+            budget_chars = 4000
             chunks = []
             for h in hits[:k]:
                 chunks.append(f"[{h['doc_id']}] p.{h['page']}\n{h['text'][:budget_chars]}")
@@ -142,7 +134,6 @@ def answer_questions(index_dir: str, questions_path: str, out_path: str, backend
                 budget_chars = int(budget_chars * 0.8)
                 chunks = [c[:budget_chars + 40] for c in chunks]
                 
-            # max_new_tokens augmenté à 400 pour garantir des réponses complètes et non coupées
             raw = gen.chat(msgs, max_new_tokens=400)
             answer, cits = _parse_citations(raw)
             if "INTROUVABLE" in raw.upper():
@@ -156,7 +147,7 @@ def answer_questions(index_dir: str, questions_path: str, out_path: str, backend
         })
         print(f"[{q['qid']}] -> {answer[:80]}")
         
-    write_predictions(out_path, preds, run_name="moteur-hybride-robuste-calibre")
+    write_predictions(out_path, preds, run_name="moteur-hybride-k12-alpha05")
 
 def main() -> None:
     ap = argparse.ArgumentParser()
@@ -175,6 +166,7 @@ def main() -> None:
     b.add_argument("--questions", required=True)
     b.add_argument("--out", required=True)
     b.add_argument("--backend", default="hf", choices=["hf", "openai", "echo"])
+    b.add_argument("--k", type=int, default=12)
     
     args = ap.parse_args()
     if args.cmd == "index":
@@ -182,7 +174,7 @@ def main() -> None:
     elif args.cmd == "update":
         update_index(args.index_dir, args.pdf_dir)
     else:
-        answer_questions(args.index_dir, args.questions, args.out, args.backend, k=10)
+        answer_questions(args.index_dir, args.questions, args.out, args.backend, k=args.k)
 
 if __name__ == "__main__":
     main()
