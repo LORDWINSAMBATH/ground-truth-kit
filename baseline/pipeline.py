@@ -27,7 +27,7 @@ PROMPT_SYSTEM = (
     "- Réponds exactement INTROUVABLE uniquement si aucun extrait ne traite du sujet de la question."
 )
 
-MAX_NEW_TOKENS = 600
+MAX_NEW_TOKENS = 512
 CONTEXT_TOKENS = 4096
 
 
