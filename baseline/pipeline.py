@@ -1,5 +1,5 @@
 from __future__ import annotations
-
+ 
 import argparse
 import json
 import re
@@ -8,35 +8,53 @@ import sys
 import os
 import pickle
 import unicodedata
-
+ 
 # Importations des modules du projet
 from src.hybrid_retrieved import hybrid_search_robust
 from src.bm25_scratch import BM25FromScratch
-
-
+ 
+ 
 PROMPT_SYSTEM = (
     "Tu es un expert en analyse de rapports publics français. Réponds à la question en te basant "
     "uniquement sur les extraits fournis.\n"
     "Chaque extrait est précédé de sa référence [doc_id p.N].\n"
-    "Règles :\n"
-    "- Réponds de façon complète : donne les chiffres, dates, noms et listes pertinents, "
-    "en combinant les informations de plusieurs extraits si nécessaire.\n"
-    "- Si les extraits contiennent seulement une partie de la réponse, donne cette partie "
-    "et précise brièvement ce qui manque.\n"
-    "- Cite tes sources dans la réponse, au format [doc_id p.N].\n"
-    "- Réponds exactement INTROUVABLE uniquement si aucun extrait ne traite du sujet de la question."
+    "Règles strictes :\n"
+    "- Une mauvaise réponse est pénalisée, alors qu'un INTROUVABLE ne l'est pas : "
+    "ne réponds que si un extrait contient explicitement l'information demandée.\n"
+    "- Réponds directement, sans introduction (pas de « D'après les extraits... »), "
+    "en 1 à 4 phrases précises : chiffres, dates, noms exacts tels qu'ils figurent dans l'extrait. "
+    "N'invente rien et n'utilise aucune connaissance extérieure.\n"
+    "- Termine par les sources au format [doc_id p.N], uniquement des pages qui contiennent la réponse.\n"
+    "- Si l'information n'est pas explicitement dans les extraits, ou seulement en partie, ou si tu dois "
+    "deviner ou extrapoler, réponds exactement et uniquement : INTROUVABLE.\n"
+    "- N'écris jamais de phrase du type « les extraits ne permettent pas... » ou « aucun document ne mentionne... » : "
+    "dans ce cas, réponds simplement INTROUVABLE."
 )
-
+ 
 MAX_NEW_TOKENS = 512
 CONTEXT_TOKENS = 4096
-
-
+ 
+ 
 def _tokenize(text: str) -> list[str]:
     """Normalisation et tokenisation robuste pour la recherche lexicale."""
     text = unicodedata.normalize("NFKD", text.lower()).encode("ascii", "ignore").decode()
     return re.findall(r"[a-z0-9]+", text)
-
-
+ 
+ 
+_NON_ANSWER = re.compile(
+    r"aucun (document|extrait|passage)|ne (permet|permettent|fournit|fournissent|mentionne|mentionnent|contient|contiennent|précise|précisent) pas"
+    r"|n'(est|sont|apparaît|apparaissent|a|ont) (pas|aucun)|pas (directement )?(mentionn|précis|indiqu|disponible)"
+    r"|impossible de (déterminer|répondre|conclure)|introuvable",
+    re.IGNORECASE,
+)
+ 
+ 
+def _is_non_answer(raw: str) -> bool:
+    """Vrai si la sortie est une abstention, y compris déguisée (« les extraits ne permettent pas... »)."""
+    letters = re.sub(r"[^A-Za-z]", "", raw).upper()
+    return not raw.strip() or letters == "INTROUVABLE" or bool(_NON_ANSWER.search(raw))
+ 
+ 
 def _best_window(text: str, question: str, size: int) -> str:
     """Retourne la fenêtre de `size` caractères la plus proche de la question
     (plus grand nombre de mots de la question présents), au lieu des N premiers caractères."""
@@ -50,18 +68,18 @@ def _best_window(text: str, question: str, size: int) -> str:
         if score > best_score:
             best_start, best_score = start, score
     return text[best_start:best_start + size]
-
-
+ 
+ 
 def _read_pages(pdf_dir: str) -> list[dict]:
     """Lecture rapide et ultra-robuste des PDF (texte brut)."""
     import pymupdf
-
+ 
     pages = []
     pdf_path = Path(pdf_dir)
     if not pdf_path.exists():
         print(f"[Attention] Le dossier {pdf_dir} est introuvable ou vide.")
         return pages
-
+ 
     for pdf in sorted(pdf_path.glob("*.pdf")):
         with pymupdf.open(pdf) as doc:
             for i, page in enumerate(doc, 1):
@@ -69,32 +87,32 @@ def _read_pages(pdf_dir: str) -> list[dict]:
                     page_text = page.get_text("text")
                 except Exception:
                     page_text = page.get_text()
-
+ 
                 pages.append({
                     "doc_id": pdf.stem,
                     "page": i,
                     "text": page_text
                 })
     return pages
-
-
+ 
+ 
 def build_index(pdf_dir: str, index_dir: str, pages: list[dict] | None = None) -> None:
     pages = _read_pages(pdf_dir) if pages is None else pages
-
+ 
     retriever = BM25FromScratch()
     corpus_texts = [p["text"] for p in pages]
     retriever.fit(corpus_texts)
-
+ 
     out = Path(index_dir)
     out.mkdir(parents=True, exist_ok=True)
-
+ 
     with open(out / "bm25.pkl", "wb") as f:
         pickle.dump(retriever, f)
-
+ 
     (out / "pages.json").write_text(json.dumps(pages, ensure_ascii=False), encoding="utf-8")
     print(f"{len(pages)} pages indexées avec succès !")
-
-
+ 
+ 
 def update_index(index_dir: str, pdf_dir: str) -> None:
     idx = Path(index_dir)
     pages = json.loads((idx / "pages.json").read_text(encoding="utf-8"))
@@ -103,10 +121,10 @@ def update_index(index_dir: str, pdf_dir: str) -> None:
     new = [p for p in new_pages if p["doc_id"] not in known]
     print(f"{len(new)} nouvelles pages ajoutées.")
     build_index(pdf_dir, index_dir, pages=pages + new)
-
-
+ 
+ 
 def _parse_citations(text: str) -> tuple[str, list[dict]]:
-    cits = [{"doc_id": d, "page": int(p)} for d, p in re.findall(r"\[([\w-]+)\s+p\.(\d+)\]", text)]
+    cits = [{"doc_id": d, "page": int(p)} for d, p in re.findall(r"\[([^\[\]]+?)\s+p\.(\d+)\]", text)]
     answer = text.strip()
     seen, uniq = set(), []
     for c in cits:
@@ -115,23 +133,23 @@ def _parse_citations(text: str) -> tuple[str, list[dict]]:
             seen.add(k)
             uniq.append(c)
     return answer, uniq[:5]
-
-
+ 
+ 
 def answer_questions(index_dir: str, questions_path: str, out_path: str, backend: str, k: int = 12) -> None:
     from groundtruth.generator import OfficialGenerator
     from groundtruth.io import load_questions, write_predictions
     idx = Path(index_dir)
-
+ 
     with open(idx / "bm25.pkl", "rb") as f:
         retriever = pickle.load(f)
-
+ 
     pages = json.loads((idx / "pages.json").read_text(encoding="utf-8"))
     gen = OfficialGenerator(backend=backend)
     preds = []
-
+ 
     for q in load_questions(questions_path):
         gen.start_question(q["qid"])
-
+ 
         # 1. Recherche hybride avec alpha=0.5 et top_k ajusté
         search_results = hybrid_search_robust(
             query_text=q["question"],
@@ -140,14 +158,14 @@ def answer_questions(index_dir: str, questions_path: str, out_path: str, backend
             top_k=k,
             alpha=0.5  # Équilibre 50/50 entre BM25 et Dense
         )
-
+ 
         if not search_results:
             answer, cits = "INTROUVABLE", []
             hits = []
         else:
             valid_results = search_results[:k]
             hits = [pages[res["doc_id"]] for res in valid_results]
-
+ 
             # 2. Construction du contexte : fenêtre pertinente de chaque page,
             #    réduite progressivement pour tenir dans le contexte (en réservant la génération)
             window = 1500
@@ -164,14 +182,18 @@ def answer_questions(index_dir: str, questions_path: str, out_path: str, backend
                 if gen.count_tokens(msgs) <= CONTEXT_TOKENS - MAX_NEW_TOKENS - 16 or window < 400:
                     break
                 window = int(window * 0.8)
-
+ 
             raw = gen.chat(msgs, max_new_tokens=MAX_NEW_TOKENS)
             answer, cits = _parse_citations(raw)
-
-            # 3. Abstention uniquement si le modèle ne répond que INTROUVABLE
-            if re.sub(r"[^A-Za-z]", "", raw).upper() == "INTROUVABLE":
+ 
+            # 3. Garde-fous anti-hallucination :
+            #    - non-réponse (même déguisée) -> INTROUVABLE
+            #    - aucune citation valide (page réellement récupérée) -> INTROUVABLE
+            retrieved_pages = {(h["doc_id"], h["page"]) for h in hits}
+            cits = [c for c in cits if (c["doc_id"], c["page"]) in retrieved_pages]
+            if _is_non_answer(raw) or not cits:
                 answer, cits = "INTROUVABLE", []
-
+ 
         preds.append({
             "qid": q["qid"],
             "answer": answer,
@@ -179,29 +201,29 @@ def answer_questions(index_dir: str, questions_path: str, out_path: str, backend
             "retrieved": [{"doc_id": h["doc_id"], "page": h["page"]} for h in hits[:k]]
         })
         print(f"[{q['qid']}] -> {answer[:80]}")
-
+ 
     write_predictions(out_path, preds, run_name="moteur-hybride-k12-alpha05")
-
-
+ 
+ 
 def main() -> None:
     ap = argparse.ArgumentParser()
     sub = ap.add_subparsers(dest="cmd", required=True)
-
+ 
     a = sub.add_parser("index")
     a.add_argument("--pdf-dir", required=True)
     a.add_argument("--index-dir", required=True)
-
+ 
     u = sub.add_parser("update")
     u.add_argument("--index-dir", required=True)
     u.add_argument("--pdf-dir", required=True)
-
+ 
     b = sub.add_parser("answer")
     b.add_argument("--index-dir", required=True)
     b.add_argument("--questions", required=True)
     b.add_argument("--out", required=True)
     b.add_argument("--backend", default="hf", choices=["hf", "openai", "echo"])
     b.add_argument("--k", type=int, default=12)
-
+ 
     args = ap.parse_args()
     if args.cmd == "index":
         build_index(args.pdf_dir, args.index_dir)
@@ -209,7 +231,7 @@ def main() -> None:
         update_index(args.index_dir, args.pdf_dir)
     else:
         answer_questions(args.index_dir, args.questions, args.out, args.backend, k=args.k)
-
-
+ 
+ 
 if __name__ == "__main__":
     main()
