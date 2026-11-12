@@ -17,10 +17,13 @@ from src.bm25_scratch import BM25FromScratch
 PROMPT_SYSTEM = (
     "Tu es un expert en analyse de rapports publics français. Réponds à la question en te basant "
     "uniquement sur les extraits fournis.\n"
-    "Chaque extrait est précédé de sa référence [doc_id p.N].\n"
+    "Chaque extrait est précédé de sa référence [doc_id p.N]. Les lignes [TABLEAU] contiennent des "
+    "tableaux au format « colonne: valeur » : lis-les attentivement, la réponse y figure souvent.\n"
     "Règles strictes :\n"
     "- Une mauvaise réponse est pénalisée, alors qu'un INTROUVABLE ne l'est pas : "
     "ne réponds que si un extrait contient explicitement l'information demandée.\n"
+    "- Si un extrait contient l'information, réponds : n'hésite pas à lire les chiffres dans les tableaux "
+    "et à combiner plusieurs extraits.\n"
     "- Réponds directement, sans introduction (pas de « D'après les extraits... »), "
     "en 1 à 4 phrases précises : chiffres, dates, noms exacts tels qu'ils figurent dans l'extrait. "
     "N'invente rien et n'utilise aucune connaissance extérieure.\n"
@@ -33,6 +36,7 @@ PROMPT_SYSTEM = (
  
 MAX_NEW_TOKENS = 512
 CONTEXT_TOKENS = 4096
+REQUIRE_CITATION = True  # True : une réponse sans citation valide devient INTROUVABLE
  
  
 def _tokenize(text: str) -> list[str]:
@@ -41,18 +45,28 @@ def _tokenize(text: str) -> list[str]:
     return re.findall(r"[a-z0-9]+", text)
  
  
-_NON_ANSWER = re.compile(
-    r"aucun (document|extrait|passage)|ne (permet|permettent|fournit|fournissent|mentionne|mentionnent|contient|contiennent|précise|précisent) pas"
-    r"|n'(est|sont|apparaît|apparaissent|a|ont) (pas|aucun)|pas (directement )?(mentionn|précis|indiqu|disponible)"
-    r"|impossible de (déterminer|répondre|conclure)|introuvable",
+# Phrases "méta" typiques d'une non-réponse déguisée (testées uniquement au début de la sortie)
+_META = re.compile(
+    r"aucun (document|extrait|passage)"
+    r"|extraits?( fournis?)? (ne |n')"
+    r"|ne (permet|permettent|fournit|fournissent|mentionne|mentionnent|contient|contiennent) pas"
+    r"|impossible de (déterminer|répondre|conclure)"
+    r"|informations? (n'est|ne sont) pas (disponible|présente|mentionn)",
     re.IGNORECASE,
 )
  
  
-def _is_non_answer(raw: str) -> bool:
-    """Vrai si la sortie est une abstention, y compris déguisée (« les extraits ne permettent pas... »)."""
-    letters = re.sub(r"[^A-Za-z]", "", raw).upper()
-    return not raw.strip() or letters == "INTROUVABLE" or bool(_NON_ANSWER.search(raw))
+def _abstention_reason(raw: str, valid_cits: list[dict]) -> str:
+    """Renvoie la raison de l'abstention, ou '' si la réponse est conservée."""
+    if not raw.strip():
+        return "reponse_vide"
+    if re.sub(r"[^A-Za-z]", "", raw).upper() == "INTROUVABLE" or "INTROUVABLE" in raw:
+        return "modele_a_dit_introuvable"
+    if _META.search(raw[:300]):
+        return "non_reponse_deguisee"
+    if REQUIRE_CITATION and not valid_cits:
+        return "aucune_citation_valide"
+    return ""
  
  
 def _best_window(text: str, question: str, size: int) -> str:
@@ -70,8 +84,39 @@ def _best_window(text: str, question: str, size: int) -> str:
     return text[best_start:best_start + size]
  
  
+def _tables_to_text(page) -> str:
+    """Extrait les tableaux d'une page PyMuPDF et les met sous forme 'colonne: valeur'
+    (une ligne par ligne du tableau), beaucoup plus lisible pour le modèle que le texte brut."""
+    try:
+        tables = page.find_tables().tables
+    except Exception:
+        return ""
+ 
+    blocks = []
+    for t in tables:
+        try:
+            rows = t.extract()
+        except Exception:
+            continue
+        clean = []
+        for r in rows:
+            cells = [re.sub(r"\s+", " ", (c or "")).strip() for c in r]
+            if any(cells):
+                clean.append(cells)
+        if len(clean) < 2:
+            continue
+        header = [h or f"col{i + 1}" for i, h in enumerate(clean[0])]
+        lines = ["[TABLEAU] " + " | ".join(header)]
+        for r in clean[1:]:
+            pairs = [f"{h}: {v}" for h, v in zip(header, r) if v]
+            if pairs:
+                lines.append("; ".join(pairs))
+        blocks.append("\n".join(lines))
+    return "\n\n".join(blocks)
+ 
+ 
 def _read_pages(pdf_dir: str) -> list[dict]:
-    """Lecture rapide et ultra-robuste des PDF (texte brut)."""
+    """Lecture des PDF : texte brut + tableaux structurés."""
     import pymupdf
  
     pages = []
@@ -87,6 +132,10 @@ def _read_pages(pdf_dir: str) -> list[dict]:
                     page_text = page.get_text("text")
                 except Exception:
                     page_text = page.get_text()
+ 
+                tables = _tables_to_text(page)
+                if tables:
+                    page_text = page_text.rstrip() + "\n\n" + tables
  
                 pages.append({
                     "doc_id": pdf.stem,
@@ -124,7 +173,7 @@ def update_index(index_dir: str, pdf_dir: str) -> None:
  
  
 def _parse_citations(text: str) -> tuple[str, list[dict]]:
-    cits = [{"doc_id": d, "page": int(p)} for d, p in re.findall(r"\[([^\[\]]+?)\s+p\.(\d+)\]", text)]
+    cits = [{"doc_id": d.strip(), "page": int(p)} for d, p in re.findall(r"\[([^\[\]]+?)\s+p\.(\d+)\]", text)]
     answer = text.strip()
     seen, uniq = set(), []
     for c in cits:
@@ -145,29 +194,29 @@ def answer_questions(index_dir: str, questions_path: str, out_path: str, backend
  
     pages = json.loads((idx / "pages.json").read_text(encoding="utf-8"))
     gen = OfficialGenerator(backend=backend)
-    preds = []
+    preds, debug = [], []
  
     for q in load_questions(questions_path):
         gen.start_question(q["qid"])
  
-        # 1. Recherche hybride avec alpha=0.5 et top_k ajusté
+        # 1. Recherche hybride
         search_results = hybrid_search_robust(
             query_text=q["question"],
             retriever=retriever,
             corpus_chunks=[p["text"] for p in pages],
             top_k=k,
-            alpha=0.5  # Équilibre 50/50 entre BM25 et Dense
+            alpha=0.5
         )
  
+        raw, reason = "", ""
         if not search_results:
-            answer, cits = "INTROUVABLE", []
-            hits = []
+            answer, cits, hits = "INTROUVABLE", [], []
+            reason = "aucun_resultat_recherche"
         else:
             valid_results = search_results[:k]
             hits = [pages[res["doc_id"]] for res in valid_results]
  
-            # 2. Construction du contexte : fenêtre pertinente de chaque page,
-            #    réduite progressivement pour tenir dans le contexte (en réservant la génération)
+            # 2. Contexte : fenêtre pertinente de chaque page, réduite pour tenir dans le budget
             window = 1500
             while True:
                 chunks = [
@@ -186,23 +235,37 @@ def answer_questions(index_dir: str, questions_path: str, out_path: str, backend
             raw = gen.chat(msgs, max_new_tokens=MAX_NEW_TOKENS)
             answer, cits = _parse_citations(raw)
  
-            # 3. Garde-fous anti-hallucination :
-            #    - non-réponse (même déguisée) -> INTROUVABLE
-            #    - aucune citation valide (page réellement récupérée) -> INTROUVABLE
+            # 3. Garde-fous : on ne garde que les citations de pages réellement récupérées
             retrieved_pages = {(h["doc_id"], h["page"]) for h in hits}
             cits = [c for c in cits if (c["doc_id"], c["page"]) in retrieved_pages]
-            if _is_non_answer(raw) or not cits:
+            reason = _abstention_reason(raw, cits)
+            if reason:
                 answer, cits = "INTROUVABLE", []
  
+        retrieved = [{"doc_id": h["doc_id"], "page": h["page"]} for h in hits[:k]]
         preds.append({
             "qid": q["qid"],
             "answer": answer,
             "citations": cits,
-            "retrieved": [{"doc_id": h["doc_id"], "page": h["page"]} for h in hits[:k]]
+            "retrieved": retrieved
         })
-        print(f"[{q['qid']}] -> {answer[:80]}")
+        debug.append({
+            "qid": q["qid"],
+            "question": q["question"],
+            "reason": reason,
+            "raw": raw,
+            "retrieved": retrieved
+        })
+        print(f"[{q['qid']}] -> {answer[:80]}" + (f"   ({reason})" if reason else ""))
  
     write_predictions(out_path, preds, run_name="moteur-hybride-k12-alpha05")
+ 
+    # Fichier de diagnostic : sortie brute du modèle + raison de chaque abstention
+    debug_path = Path(str(out_path) + ".debug.jsonl")
+    debug_path.write_text(
+        "\n".join(json.dumps(d, ensure_ascii=False) for d in debug), encoding="utf-8"
+    )
+    print(f"Diagnostic écrit dans {debug_path}")
  
  
 def main() -> None:
@@ -235,4 +298,5 @@ def main() -> None:
  
 if __name__ == "__main__":
     main()
+ 
     
