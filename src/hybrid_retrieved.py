@@ -1,65 +1,72 @@
-import json
-import os
-import unicodedata
-from sentence_transformers import SentenceTransformer, util
+"""Moteur hybride : BM25 (lexical) + dense (bge-m3), fusionnés par Reciprocal Rank Fusion.
+
+- Les embeddings du corpus sont calculés UNE fois à l'indexation (emb.npy), jamais par question.
+- Le cosinus + top-k viennent de src/dense_scratch.py (bloc 1, écrit par toi).
+"""
+from __future__ import annotations
+
 import numpy as np
 
-# Chargement d'un modèle d'embedding léger, performant et multilingue
-MODEL_NAME = "all-MiniLM-L6-v2"
+try:
+    from .dense_scratch import cosine_topk
+except ImportError:  # exécution en script
+    from dense_scratch import cosine_topk
+
+EMBED_MODEL = "BAAI/bge-m3"   # multilingue, bon en français (listé dans l'énoncé)
+MAX_SEQ = 512
 _model = None
 
-def get_embedding_model():
+
+def get_embedder():
     global _model
     if _model is None:
-        print(f"[Hybride] Chargement du modèle d'embedding : {MODEL_NAME}...")
-        _model = SentenceTransformer(MODEL_NAME)
+        import torch
+        from sentence_transformers import SentenceTransformer
+
+        dev = "cuda" if torch.cuda.is_available() else "cpu"
+        print(f"[Hybride] Chargement de {EMBED_MODEL} sur {dev}...")
+        m = SentenceTransformer(EMBED_MODEL, device=dev)
+        m.max_seq_length = MAX_SEQ
+        if dev == "cuda":
+            m.half()
+        _model = m
     return _model
 
-def normalize_text(text: str) -> str:
-    """Normalise le texte pour uniformiser la recherche."""
-    return ''.join(
-        c for c in unicodedata.normalize('NFD', text)
-        if unicodedata.category(c) != 'Mn'
-    ).lower()
 
-def hybrid_search_robust(query_text, retriever, corpus_chunks, top_k=10, alpha=0.5):
-    """
-    Moteur de recherche hybride combinant BM25 (mots-clés exacts/tableaux) 
-    et Recherche Dense (sémantique) avec fusion des scores (Alpha blending).
-    """
-    # 1. Recherche Lexicale (BM25)
-    bm25_raw_results = retriever.search(query_text, top_k=top_k * 2)
-    
-    # Normalisation des scores BM25 entre 0 et 1
-    bm25_scores = {}
-    if bm25_raw_results:
-        max_bm25 = max([res.get("score", 1.0) for res in bm25_raw_results]) or 1.0
-        for res in bm25_raw_results:
-            doc_idx = res["doc_id"]
-            bm25_scores[doc_idx] = res.get("score", 0.0) / max_bm25
+def embed_texts(texts, batch_size: int = 32, show_progress: bool = False) -> np.ndarray:
+    """Embeddings normalisés (float32), forme (n, d)."""
+    m = get_embedder()
+    v = m.encode(list(texts), batch_size=batch_size, normalize_embeddings=True,
+                 convert_to_numpy=True, show_progress_bar=show_progress)
+    return np.asarray(v, dtype=np.float32)
 
-    # 2. Recherche Sémantique Dense (Embeddings)
-    model = get_embedding_model()
-    query_embedding = model.encode(query_text, convert_to_tensor=True)
-    
-    corpus_embeddings = model.encode(corpus_chunks, convert_to_tensor=True)
-    cos_scores = util.cos_sim(query_embedding, corpus_embeddings)[0].cpu().numpy()
-    
-    # Normalisation des scores cosinus entre 0 et 1 (ils le sont déjà globalement via cos_sim, mais on s'assure du format)
-    dense_scores = {idx: float(score) for idx, score in enumerate(cos_scores)}
 
-    # 3. Fusion Hybride des scores (Score final = alpha * BM25 + (1 - alpha) * Sémantique)
-    # alpha = 0.5 donne autant de poids aux mots-clés (tableaux, chiffres) qu'au sens global.
-    all_indices = set(bm25_scores.keys()).union(set(dense_scores.keys()))
-    combined_results = []
+def rrf(rankings: list[list[int]], k: int = 60, weights: list[float] | None = None):
+    """Reciprocal Rank Fusion (Cormack et al. 2009) : score(d) = somme_r w_r / (k + rang_r(d))."""
+    scores: dict[int, float] = {}
+    for r, ranking in enumerate(rankings):
+        w = 1.0 if weights is None else weights[r]
+        for rank, idx in enumerate(ranking, 1):
+            scores[idx] = scores.get(idx, 0.0) + w / (k + rank)
+    return sorted(scores.items(), key=lambda x: -x[1])
 
-    for idx in all_indices:
-        b_score = bm25_scores.get(idx, 0.0)
-        d_score = dense_scores.get(idx, 0.0)
-        final_score = (alpha * b_score) + ((1 - alpha) * d_score)
-        combined_results.append({"doc_id": int(idx), "score": float(final_score)})
 
-    # Tri par score décroissant et sélection des top_k meilleurs
-    combined_results = sorted(combined_results, key=lambda x: x["score"], reverse=True)[:top_k]
-    
-    return combined_results
+def hybrid_search(query: str, bm25, emb_matrix: np.ndarray, mode: str = "hybrid",
+                  n_candidates: int = 40, top_k: int = 30, rrf_k: int = 60,
+                  w_bm25: float = 1.0, w_dense: float = 1.0) -> list[dict]:
+    """mode : 'hybrid' | 'bm25' | 'dense' (utile pour l'ablation).
+    Renvoie [{'idx', 'score' (RRF), 'cos' (cosinus ou None)}, ...] trié par score décroissant."""
+    bm25_rank: list[int] = []
+    dense_rank: list[int] = []
+    cos: dict[int, float] = {}
+
+    if mode in ("hybrid", "bm25"):
+        bm25_rank = [r["doc_id"] for r in bm25.search(query, top_k=n_candidates)]
+    if mode in ("hybrid", "dense"):
+        q = embed_texts([query])[0]
+        for i, s in cosine_topk(q, emb_matrix, n_candidates):
+            dense_rank.append(i)
+            cos[i] = s
+
+    fused = rrf([bm25_rank, dense_rank], k=rrf_k, weights=[w_bm25, w_dense])
+    return [{"idx": int(i), "score": float(s), "cos": cos.get(i)} for i, s in fused[:top_k]]
