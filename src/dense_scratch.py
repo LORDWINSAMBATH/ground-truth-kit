@@ -12,5 +12,5 @@ def cosine_topk(query_vec, matrix, k):
     scores[ok] = dots[ok] / norms[ok]
 
     k = min(k, len(scores))
-    best = np.argsort(-scores)[:2]     
+    best = np.argsort(-scores)[:min(k, len(scores))]     
     return [(int(i), float(scores[i])) for i in best]
