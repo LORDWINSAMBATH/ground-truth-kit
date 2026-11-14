@@ -1,15 +1,21 @@
 """BLOC 1 : chunker naïf (taille fixe avec recouvrement), à écrire TOI-MÊME."""
 
 
-def chunk_text(text: str, size: int = 1200, overlap: int = 200) -> list[str]:
-    """Découpe `text` en morceaux de `size` caractères, avec `overlap` caractères communs.
 
-    Spécification (vérifiée par tests/test_block1.py) :
-    - pas entre deux débuts de chunk = size - overlap ;
-    - on s'arrête dès qu'un chunk atteint la fin du texte (pas de petit chunk final redondant) ;
-    - texte vide ou fait uniquement d'espaces -> [] ;
-    - texte plus court que `size` -> [text] ;
-    - size <= overlap -> ValueError ;
-    - recomposition : chunks[0] + chunks[1][overlap:] + chunks[2][overlap:] ... == text.
-    """
-    raise NotImplementedError("À écrire toi-même (bloc 1)")
+def chunk_text(text, size=1200, overlap=200):
+    if size <= overlap:
+        raise ValueError("size doit etre > overlap")
+    if not text.strip():
+        return []
+    if len(text) <= size:
+        return [text]
+
+    step = size-overlap         
+    chunks = []
+    start = 0
+    while True:
+        chunks.append(text[start:start + size])
+        if start+size >= len(text):         
+            break
+        start += step
+    return chunks
