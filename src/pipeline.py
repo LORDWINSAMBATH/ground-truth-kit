@@ -1,3 +1,7 @@
+import subprocess
+subprocess.run('git config --global user.email "sambeth.clb@gmail.com"', shell=True)
+subprocess.run('git config --global user.name "sambeth"', shell=True)
+
 
 from __future__ import annotations
  
