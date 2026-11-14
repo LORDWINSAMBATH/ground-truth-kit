@@ -1,3 +1,4 @@
+
 from __future__ import annotations
  
 import argparse
@@ -177,8 +178,15 @@ def _write_index(index_dir: str, pages: list[dict], chunks: list[dict], emb: np.
  
  
 def build_index(pdf_dir: str, index_dir: str, pages: list[dict] | None = None,
-                max_docs: int | None = None, tables: bool = True) -> None:
-    pages = _read_pages(pdf_dir, max_docs=max_docs, tables=tables) if pages is None else pages
+                max_docs: int | None = None, tables: bool = True, reuse_pages: bool = False) -> None:
+    cache = Path(index_dir) / "pages.json"
+    if pages is None and reuse_pages and cache.exists():
+        pages = json.loads(cache.read_text(encoding="utf-8"))
+        print(f"{len(pages)} pages relues depuis {cache} (PDF non relus).")
+    if pages is None:
+        pages = _read_pages(pdf_dir, max_docs=max_docs, tables=tables)
+        cache.parent.mkdir(parents=True, exist_ok=True)       # sauvegarde AVANT les embeddings : la lecture des PDF est la partie lente
+        cache.write_text(json.dumps(pages, ensure_ascii=False), encoding="utf-8")
     empty = sum(1 for p in pages if len(p["text"].strip()) < 30)
     chunks = _make_chunks(pages)
     emb = hy.embed_texts([_index_text(c) for c in chunks], show_progress=True)
@@ -337,6 +345,8 @@ def main() -> None:
     a.add_argument("--index-dir", required=True)
     a.add_argument("--max-docs", type=int, default=None, help="indexer seulement N PDF (test rapide)")
     a.add_argument("--no-tables", action="store_true", help="sans extraction de tableaux (plus rapide)")
+    a.add_argument("--reuse-pages", action="store_true",
+                   help="réutiliser pages.json s'il existe (ne relit pas les PDF : utile pour changer chunks/embeddings)")
  
     u = sub.add_parser("update")
     u.add_argument("--index-dir", required=True)
@@ -356,7 +366,8 @@ def main() -> None:
  
     args = ap.parse_args()
     if args.cmd == "index":
-        build_index(args.pdf_dir, args.index_dir, max_docs=args.max_docs, tables=not args.no_tables)
+        build_index(args.pdf_dir, args.index_dir, max_docs=args.max_docs, tables=not args.no_tables,
+                    reuse_pages=args.reuse_pages)
     elif args.cmd == "update":
         update_index(args.index_dir, args.pdf_dir)
     else:
