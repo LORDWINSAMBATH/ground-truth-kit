@@ -23,6 +23,8 @@ def main():
     ap.add_argument("--debug", required=True)
     ap.add_argument("--gold", required=True)
     ap.add_argument("--gen-acc", type=float, default=0.7)
+    ap.add_argument("--target-rate", type=float, default=None,
+                    help="taux d'abstention visé par le seuil (ex. 0.30) : affiche le tau correspondant")
     a = ap.parse_args()
 
     dbg = [json.loads(l) for l in Path(a.debug).read_text(encoding="utf-8").splitlines() if l.strip()]
@@ -47,6 +49,17 @@ def main():
             else:
                 tot += (a.gen_acc * 1 + (1 - a.gen_acc) * -1) if hit else -1.0
         return tot / n
+
+    if a.target_rate is not None:
+        sc = sorted(s for s, _, _ in items)
+        tau = sc[min(n - 1, int(a.target_rate * n))]
+        ab = [(s, t, h) for s, t, h in items if s < tau]
+        print(f"\n--- Cible : {a.target_rate:.0%} d'abstention par le seuil ---")
+        print(f"tau = {tau:.6f}  -> {len(ab)}/{n} questions écartées avant le générateur")
+        print(f"  dont pièges écartés (bien) : {sum(1 for _, t, _ in ab if t)}/{n_trap}")
+        print(f"  dont vraies questions avec la bonne page écartées (perte) : {sum(1 for _, t, h in ab if (not t) and h)}")
+        print(f"  score estimé à ce tau : {value(tau):+.3f}")
+        print("Rappel : l'abstention totale = ce seuil + les INTROUVABLE dits par le modèle ; vise un peu moins que 30 % ici.\n")
 
     taus = sorted({0.0} | {round(s, 4) for s, _, _ in items})
     best = max(taus, key=value)
